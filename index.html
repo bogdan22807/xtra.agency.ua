@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xtra Agency — Розробка сайтів під ключ | Лендинги, бізнес-сайти, інтернет-магазини</title>
-  <meta name="description" content="Xtra Agency — розробка сайтів під ключ для бізнесу. Односторінкові, багатосторінкові сайти, сайти-візитки, інтернет-магазини. Сучасний дизайн, адаптив, SEO.">
-  <meta name="keywords" content="розробка сайтів, створення сайту, лендинг, сайт під ключ, сайт-візитка, інтернет-магазин, веб розробка, Xtra Agency">
+  <title>Xtra Agency — Преміальна розробка сайтів та веб-систем</title>
+  <meta name="description" content="Xtra Agency проєктує і розробляє сучасні сайти та веб-системи: Landing Page, корпоративні сайти, eCommerce, CRM/ERP, SaaS і веб-додатки.">
+  <meta name="keywords" content="розробка сайтів, веб розробка, landing page, корпоративний сайт, інтернет-магазин, crm, erp, saas, веб-додаток">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Xtra Agency">
+  <meta name="theme-color" content="#090909">
   <link rel="canonical" href="https://xtra.agency.ua/">
+  <link rel="icon" type="image/png" href="assets/favicon.PNG">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://xtra.agency.ua/">
-  <meta property="og:title" content="Xtra Agency — Розробка сайтів під ключ">
-  <meta property="og:description" content="Створюємо сучасні сайти для бізнесу: лендинги, багатосторінкові сайти, візитки та інтернет-магазини. Швидко, стильно, з гарантією.">
   <meta property="og:locale" content="uk_UA">
   <meta property="og:site_name" content="Xtra Agency">
+  <meta property="og:url" content="https://xtra.agency.ua/">
+  <meta property="og:title" content="Xtra Agency — Створюємо сайти, які продають ваш бізнес 24/7">
+  <meta property="og:description" content="Розробляємо сучасні сайти будь-якої складності — від Landing Page до великих веб-платформ.">
+  <meta property="og:image" content="assets/girl.svg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Xtra Agency — Розробка сайтів під ключ">
-  <meta name="twitter:description" content="Сучасні сайти для бізнесу: лендинги, корпоративні сайти, візитки, e-commerce.">
-
-  <meta name="theme-color" content="#0A0A0A">
+  <meta name="twitter:title" content="Xtra Agency — Розробка сайтів та веб-платформ">
+  <meta name="twitter:description" content="Преміальний дизайн, висока швидкість, адаптивність і SEO Ready рішення для бізнесу.">
+  <meta name="twitter:image" content="assets/girl.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,9 +35,9 @@
       theme: {
         extend: {
           colors: {
-            black: "#0A0A0A",
-            yellow: { DEFAULT: "#FFD400", dim: "#E6BF00" },
-            gray: { dark: "#141414", mid: "#1E1E1E", border: "#2A2A2A", text: "#A3A3A3" }
+            black: "#090909",
+            yellow: { DEFAULT: "#FFD400", soft: "#FFE66A" },
+            gray: { dark: "#121212", mid: "#1A1A1A", text: "#A1A1A1" }
           },
           fontFamily: { sans: ["Manrope", "Inter", "system-ui", "sans-serif"] },
           borderRadius: { "4xl": "2rem" }
@@ -47,630 +49,304 @@
 </head>
 
 <body class="bg-black text-white antialiased">
-
   <header id="header" class="fixed top-0 inset-x-0 z-50 glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[72px]">
-      <a href="#" class="flex items-center gap-2 group" aria-label="Xtra Agency — головна">
-        <span class="w-9 h-9 rounded-xl bg-yellow flex items-center justify-center font-extrabold text-black text-sm">X</span>
-        <span class="font-bold text-lg tracking-tight">Xtra<span class="text-yellow">.</span>Agency</span>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[74px] flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2" aria-label="Xtra Agency">
+        <span class="w-10 h-10 rounded-xl bg-yellow text-black flex items-center justify-center font-extrabold">X</span>
+        <span class="text-lg font-bold tracking-tight">Xtra<span class="text-yellow">.</span>Agency</span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-8" aria-label="Головна навігація">
-        <a href="#why" class="nav-link text-sm font-medium">Чому ми</a>
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Головне меню">
         <a href="#services" class="nav-link text-sm font-medium">Послуги</a>
         <a href="#process" class="nav-link text-sm font-medium">Процес</a>
-        <a href="#cases" class="nav-link text-sm font-medium">Портфоліо</a>
+        <a href="#benefits" class="nav-link text-sm font-medium">Переваги</a>
+        <a href="#portfolio" class="nav-link text-sm font-medium">Портфоліо</a>
         <a href="#reviews" class="nav-link text-sm font-medium">Відгуки</a>
         <a href="#faq" class="nav-link text-sm font-medium">FAQ</a>
       </nav>
 
       <div class="hidden lg:block">
-        <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm">
-          Замовити сайт
-        </button>
+        <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm">Замовити сайт</button>
       </div>
 
-      <button id="burger" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-white/10" aria-label="Меню" aria-expanded="false">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h14M4 11h14M4 15h14"/></svg>
+      <button id="burger" class="lg:hidden w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center" aria-expanded="false" aria-label="Відкрити меню">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </header>
 
-  <div id="menuOverlay" class="hidden fixed inset-0 bg-black/60 z-50 lg:hidden" aria-hidden="true"></div>
-  <nav id="mobileMenu" class="mobile-menu fixed top-0 right-0 bottom-0 w-[280px] z-[60] glass p-8 pt-24 flex flex-col gap-6 lg:hidden" aria-label="Мобільна навігація">
-    <a href="#why" class="text-lg font-medium hover:text-yellow transition-colors">Чому ми</a>
-    <a href="#services" class="text-lg font-medium hover:text-yellow transition-colors">Послуги</a>
-    <a href="#process" class="text-lg font-medium hover:text-yellow transition-colors">Процес</a>
-    <a href="#cases" class="text-lg font-medium hover:text-yellow transition-colors">Портфоліо</a>
-    <a href="#reviews" class="text-lg font-medium hover:text-yellow transition-colors">Відгуки</a>
-    <a href="#faq" class="text-lg font-medium hover:text-yellow transition-colors">FAQ</a>
-    <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm mt-4">Замовити сайт</button>
+  <div id="menuOverlay" class="hidden fixed inset-0 z-50 bg-black/65 lg:hidden" aria-hidden="true"></div>
+  <nav id="mobileMenu" class="mobile-menu fixed right-0 top-0 bottom-0 z-[60] w-[300px] glass p-8 pt-24 flex flex-col gap-6 lg:hidden" aria-label="Мобільне меню">
+    <a href="#services" class="text-lg font-semibold hover:text-yellow transition-colors">Послуги</a>
+    <a href="#process" class="text-lg font-semibold hover:text-yellow transition-colors">Процес</a>
+    <a href="#benefits" class="text-lg font-semibold hover:text-yellow transition-colors">Переваги</a>
+    <a href="#portfolio" class="text-lg font-semibold hover:text-yellow transition-colors">Портфоліо</a>
+    <a href="#reviews" class="text-lg font-semibold hover:text-yellow transition-colors">Відгуки</a>
+    <a href="#faq" class="text-lg font-semibold hover:text-yellow transition-colors">FAQ</a>
+    <button data-open-consult class="btn-primary mt-4 px-6 py-3 rounded-full text-sm">Замовити сайт</button>
   </nav>
 
   <main>
-
-    <!-- Hero -->
-    <section id="hero" class="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
+    <section id="hero" class="relative pt-[74px] min-h-screen flex items-center overflow-hidden">
       <div class="absolute inset-0 grid-bg pointer-events-none"></div>
-      <div class="glow-orb glow-orb--yellow w-[500px] h-[500px] -top-32 -right-32"></div>
-      <div class="glow-orb glow-orb--soft w-[400px] h-[400px] bottom-0 left-1/4"></div>
+      <div class="glow-orb glow-orb--yellow w-[540px] h-[540px] -top-32 -right-20"></div>
+      <div class="glow-orb glow-orb--soft w-[420px] h-[420px] -bottom-32 left-10"></div>
 
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 lg:py-28 w-full">
-        <div class="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div class="reveal">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow/20 bg-yellow/5 text-yellow text-sm font-medium mb-8">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow/25 bg-yellow/5 text-yellow text-sm font-semibold mb-8">
               <span class="w-2 h-2 rounded-full bg-yellow animate-pulse"></span>
-              Розробка сайтів під ключ
-            </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
-              Створюємо сайти, які <span class="text-yellow">продають</span> ваш бізнес онлайн
+              Premium Web Development Agency
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.1rem] font-extrabold leading-[1.03] tracking-tight mb-6">
+              Створюємо сайти, які продають ваш бізнес 24/7
             </h1>
-            <p class="text-gray-text text-lg sm:text-xl leading-relaxed max-w-xl mb-10">
-              Розробляємо сучасні односторінкові, багатосторінкові сайти та інтернет-магазини для бізнесу — швидко, стильно та з фокусом на заявки.
+            <p class="text-gray-text text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
+              Розробляємо сучасні сайти будь-якої складності — від Landing Page до великих веб-платформ.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <button data-open-consult class="btn-primary px-8 py-4 rounded-full text-base font-bold">
-                Замовити сайт
-              </button>
-              <a href="#cases" class="btn-outline px-8 py-4 rounded-full text-base font-semibold text-center">
-                Переглянути роботи
-              </a>
+              <button data-open-consult class="btn-primary px-9 py-4 rounded-full text-base font-bold">Замовити сайт</button>
+              <a href="#portfolio" class="btn-outline px-9 py-4 rounded-full text-base font-semibold text-center">Переглянути роботи</a>
             </div>
           </div>
 
-          <!-- Hero Visual: browser mockup -->
-          <div class="reveal reveal-delay-2 hero-visual hidden sm:block">
-            <div class="hero-visual__panel hero-visual__panel--main hero-visual__float">
-              <div class="flex items-center gap-2 mb-4">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow/80"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                <span class="flex-1 mx-2 h-6 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-text flex items-center px-3">xtra.agency.ua</span>
+          <div class="reveal reveal-delay-2 hero-visual hidden sm:block" aria-hidden="true">
+            <div class="hero-visual__panel hero-visual__panel--laptop hero-visual__float">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                <span class="h-6 flex-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-text px-3 flex items-center ml-2">project-preview.web</span>
               </div>
-              <div class="rounded-xl bg-gray-mid border border-white/10 p-4 space-y-3">
-                <div class="h-3 w-3/4 rounded bg-yellow/40"></div>
-                <div class="h-2 w-full rounded bg-white/10"></div>
-                <div class="h-2 w-5/6 rounded bg-white/10"></div>
-                <div class="grid grid-cols-3 gap-2 mt-4">
-                  <div class="h-16 rounded-lg bg-yellow/10 border border-yellow/20"></div>
-                  <div class="h-16 rounded-lg bg-white/5 border border-white/10"></div>
-                  <div class="h-16 rounded-lg bg-white/5 border border-white/10"></div>
+              <div class="rounded-2xl border border-white/10 bg-[#111] p-4">
+                <div class="grid grid-cols-12 gap-3 mb-3">
+                  <div class="col-span-3 h-3 rounded bg-yellow/30"></div>
+                  <div class="col-span-5 h-3 rounded bg-white/10"></div>
+                  <div class="col-span-4 h-3 rounded bg-white/10"></div>
                 </div>
-                <div class="h-8 w-32 rounded-full bg-yellow mt-2"></div>
+                <div class="h-36 rounded-xl bg-gradient-to-br from-yellow/20 via-black to-gray-mid border border-white/10 mb-3"></div>
+                <div class="grid grid-cols-3 gap-2">
+                  <div class="h-14 rounded-lg bg-white/5 border border-white/10"></div>
+                  <div class="h-14 rounded-lg bg-yellow/10 border border-yellow/20"></div>
+                  <div class="h-14 rounded-lg bg-white/5 border border-white/10"></div>
+                </div>
               </div>
             </div>
-
-            <div class="hero-visual__panel hero-visual__float absolute top-0 right-0 w-40 p-3" style="animation-delay:-1s">
-              <div class="flex items-center gap-2 mb-2">
-                <svg class="w-4 h-4 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-                <span class="text-[10px] text-gray-text">Mobile</span>
-              </div>
-              <div class="w-full aspect-[9/16] rounded-lg bg-gray-mid border border-white/10 p-2">
-                <div class="h-1.5 w-8 rounded bg-yellow/50 mb-2"></div>
-                <div class="h-1 w-full rounded bg-white/10 mb-1"></div>
-                <div class="h-1 w-4/5 rounded bg-white/10"></div>
+            <div class="hero-visual__panel hero-visual__panel--mobile hero-visual__float" style="animation-delay: -1.2s">
+              <div class="w-full h-full rounded-[22px] border border-white/10 bg-[#101010] p-3">
+                <div class="h-1.5 w-10 rounded-full bg-yellow/70 mx-auto mb-4"></div>
+                <div class="h-14 rounded-lg bg-gradient-to-r from-yellow/25 to-yellow/10 mb-2"></div>
+                <div class="h-2 rounded bg-white/10 mb-1"></div>
+                <div class="h-2 w-4/5 rounded bg-white/10 mb-4"></div>
+                <div class="h-10 rounded-xl bg-white/5 border border-white/10 mb-2"></div>
+                <div class="h-10 rounded-xl bg-white/5 border border-white/10"></div>
               </div>
             </div>
-
-            <div class="hero-visual__panel hero-visual__float absolute bottom-4 left-0 w-44 p-3" style="animation-delay:-3s">
-              <div class="flex items-center gap-2 mb-2">
-                <svg class="w-4 h-4 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                <span class="text-[10px] text-gray-text">Код</span>
-              </div>
-              <div class="text-lg font-bold text-yellow">3–14 днів</div>
-              <div class="text-[10px] text-gray-text">Термін розробки</div>
-            </div>
-
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hero-visual__float" style="animation-delay:-4s">
-              <svg class="w-12 h-12 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-              </svg>
+            <div class="hero-visual__panel hero-visual__panel--browser hero-visual__float" style="animation-delay: -2.7s">
+              <div class="text-xs text-yellow font-semibold mb-2">UI / UX / Dev</div>
+              <div class="h-2 rounded bg-white/15 mb-1"></div>
+              <div class="h-2 w-4/5 rounded bg-white/15 mb-4"></div>
+              <div class="h-8 rounded-full bg-yellow"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us -->
-    <section id="why" class="py-24 lg:py-32 relative">
+    <section id="services" class="py-24 lg:py-32">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Чому саме ми</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Веб-студія, якій довіряють бізнес</h2>
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Наші послуги</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Розробляємо вебрішення для росту бізнесу</h2>
         </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal">
-            <div class="text-4xl mb-5" aria-hidden="true">⚡</div>
-            <h3 class="text-xl font-bold mb-3">Швидка розробка</h3>
-            <p class="text-gray-text leading-relaxed">Лендинг — від 3 днів, бізнес-сайт — від 5 днів. Працюємо чітко за термінами без затримок.</p>
-          </article>
-          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-1">
-            <div class="text-4xl mb-5" aria-hidden="true">🎨</div>
-            <h3 class="text-xl font-bold mb-3">Унікальний дизайн</h3>
-            <p class="text-gray-text leading-relaxed">Жодних шаблонів з конструктора. Кожен сайт — індивідуальний преміальний дизайн під ваш бренд.</p>
-          </article>
-          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-2">
-            <div class="text-4xl mb-5" aria-hidden="true">📱</div>
-            <h3 class="text-xl font-bold mb-3">Адаптив під усі пристрої</h3>
-            <p class="text-gray-text leading-relaxed">Сайт ідеально виглядає на телефоні, планшеті та компʼютері. Тестуємо на всіх розмірах екранів.</p>
-          </article>
-          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-3">
-            <div class="text-4xl mb-5" aria-hidden="true">🔍</div>
-            <h3 class="text-xl font-bold mb-3">SEO та підтримка</h3>
-            <p class="text-gray-text leading-relaxed">Базова SEO-оптимізація в подарунок. Гарантія на сайт та підтримка після запуску.</p>
-          </article>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="glass-card rounded-3xl p-7 reveal"><h3 class="font-bold text-xl mb-2">Landing Page</h3><p class="text-gray-text text-sm">Сторінки для запуску продукту та швидкого збору лідів.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1"><h3 class="font-bold text-xl mb-2">Корпоративні сайти</h3><p class="text-gray-text text-sm">Сайти компаній із презентацією послуг, кейсів і команди.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-2"><h3 class="font-bold text-xl mb-2">Інтернет-магазини</h3><p class="text-gray-text text-sm">E-commerce платформи з каталогом, кошиком і оплатою.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-3"><h3 class="font-bold text-xl mb-2">CRM системи</h3><p class="text-gray-text text-sm">Внутрішні системи для керування продажами та процесами.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal"><h3 class="font-bold text-xl mb-2">Веб-додатки</h3><p class="text-gray-text text-sm">Кастомні платформи, кабінети клієнтів і SaaS рішення.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1"><h3 class="font-bold text-xl mb-2">Редизайн сайтів</h3><p class="text-gray-text text-sm">Оновлення UI/UX, структури та технічної бази існуючих сайтів.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-2"><h3 class="font-bold text-xl mb-2">Технічна підтримка</h3><p class="text-gray-text text-sm">Підтримка, оновлення, контроль безпеки й стабільної роботи.</p></article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-3"><h3 class="font-bold text-xl mb-2">SEO оптимізація</h3><p class="text-gray-text text-sm">Технічна SEO-підготовка для кращої видимості у пошуку.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-24 lg:py-32 bg-gray-dark/50 relative">
-      <div class="glow-orb glow-orb--soft w-[300px] h-[300px] top-1/2 right-0 -translate-y-1/2"></div>
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 reveal">
-          <div>
-            <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Наші послуги</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Сайти для будь-якого бізнесу</h2>
-          </div>
-          <p class="text-gray-text max-w-md lg:text-right">Від простої візитки до складного інтернет-магазину — підберемо рішення під ваші задачі та бюджет.</p>
+    <section id="process" class="py-24 lg:py-32 bg-gray-dark/50">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-16 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Наш процес</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Прозорий шлях від ідеї до запуску</h2>
         </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Односторінковий сайт</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">Лендинг для швидкого збору заявок. Ідеально для запуску продукту або послуги.</p>
-            <span class="text-yellow text-sm font-semibold">від 100 $ · до 4 днів</span>
-          </article>
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-1">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h4M7 11h6"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Бізнес-сайт</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">Багатосторінковий сайт з послугами, портфоліо, контактами та формами заявок.</p>
-            <span class="text-yellow text-sm font-semibold">від 200 $ · до 8 днів</span>
-          </article>
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-2">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Сайт-візитка</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">Компактний сайт про вас або компанію з контактами, галереєю та соцмережами.</p>
-            <span class="text-yellow text-sm font-semibold">від 100 $ · до 4 днів</span>
-          </article>
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Інтернет-магазин</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">E-commerce з каталогом, кошиком, оплатою та зручною адмін-панеллю.</p>
-            <span class="text-yellow text-sm font-semibold">від 350 $ · до 14 днів</span>
-          </article>
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-1">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Корпоративний сайт</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">Представницький сайт для компанії з розділами, блогом та інтеграціями.</p>
-            <span class="text-yellow text-sm font-semibold">від 300 $ · до 14 днів</span>
-          </article>
-          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-2">
-            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
-              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Індивідуальний проєкт</h3>
-            <p class="text-gray-text text-sm leading-relaxed mb-3">Нестандартний функціонал, веб-платформи, CRM-інтеграції — все під ваше ТЗ.</p>
-            <span class="text-yellow text-sm font-semibold">від 350 $ · індивідуально</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" class="py-24 lg:py-32 relative">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-20 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Як ми працюємо</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Розробка під ключ — 5 кроків</h2>
-        </div>
-
         <div class="relative">
           <div class="timeline-line hidden md:block" aria-hidden="true"></div>
-          <div class="space-y-12 md:space-y-0">
-            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
-              <div class="md:text-right md:pr-12">
-                <span class="text-yellow font-bold text-sm">Крок 01</span>
-                <h3 class="text-2xl font-bold mt-2">Бриф та прототип</h3>
-                <p class="text-gray-text mt-3 leading-relaxed">Обговорюємо цілі, структуру та побажання. Створюємо прототип майбутнього сайту для узгодження.</p>
-              </div>
-              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"><div class="timeline-dot"></div></div>
-              <div class="md:pl-12"></div>
-            </article>
-            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
-              <div class="md:pr-12 hidden md:block"></div>
-              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"><div class="timeline-dot"></div></div>
-              <div class="md:pl-12">
-                <span class="text-yellow font-bold text-sm">Крок 02</span>
-                <h3 class="text-2xl font-bold mt-2">Дизайн</h3>
-                <p class="text-gray-text mt-3 leading-relaxed">Розробляємо унікальний дизайн для десктопу та мобільної версії. Узгоджуємо кожен блок.</p>
-              </div>
-            </article>
-            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
-              <div class="md:text-right md:pr-12">
-                <span class="text-yellow font-bold text-sm">Крок 03</span>
-                <h3 class="text-2xl font-bold mt-2">Верстка та розробка</h3>
-                <p class="text-gray-text mt-3 leading-relaxed">Перетворюємо макет у швидкий, адаптивний код. Підключаємо форми, аналітику та інтеграції.</p>
-              </div>
-              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"><div class="timeline-dot"></div></div>
-              <div class="md:pl-12"></div>
-            </article>
-            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
-              <div class="md:pr-12 hidden md:block"></div>
-              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"><div class="timeline-dot"></div></div>
-              <div class="md:pl-12">
-                <span class="text-yellow font-bold text-sm">Крок 04</span>
-                <h3 class="text-2xl font-bold mt-2">Тестування та SEO</h3>
-                <p class="text-gray-text mt-3 leading-relaxed">Перевіряємо на всіх пристроях, оптимізуємо швидкість завантаження та базове SEO.</p>
-              </div>
-            </article>
-            <article class="reveal md:grid md:grid-cols-2 md:gap-12 relative">
-              <div class="md:text-right md:pr-12">
-                <span class="text-yellow font-bold text-sm">Крок 05</span>
-                <h3 class="text-2xl font-bold mt-2">Запуск та передача</h3>
-                <p class="text-gray-text mt-3 leading-relaxed">Підключаємо домен і хостинг, передаємо всі права та доступи. Сайт — повністю ваш.</p>
-              </div>
-              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"><div class="timeline-dot"></div></div>
-              <div class="md:pl-12"></div>
-            </article>
+          <div class="space-y-10 md:space-y-0">
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">01</span><h3 class="text-2xl font-bold mt-2">Аналіз</h3><p class="text-gray-text mt-2">Занурюємось у бізнес-модель, конкурентів і цілі проєкту.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">02</span><h3 class="text-2xl font-bold mt-2">Прототип</h3><p class="text-gray-text mt-2">Створюємо логічну структуру і клікабельний прототип сторінок.</p></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">03</span><h3 class="text-2xl font-bold mt-2">Дизайн</h3><p class="text-gray-text mt-2">Формуємо візуальний стиль, який підкреслює бренд і довіру.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">04</span><h3 class="text-2xl font-bold mt-2">Розробка</h3><p class="text-gray-text mt-2">Верстаємо та програмуємо швидкий, безпечний і масштабований сайт.</p></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">05</span><h3 class="text-2xl font-bold mt-2">Тестування</h3><p class="text-gray-text mt-2">Перевіряємо кросбраузерність, адаптивність та продуктивність.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">06</span><h3 class="text-2xl font-bold mt-2">Запуск</h3><p class="text-gray-text mt-2">Публікуємо проєкт і передаємо команді клієнта готову систему.</p></div></article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio / Cases -->
-    <section id="cases" class="py-24 lg:py-32 bg-gray-dark/50">
+    <section id="benefits" class="py-24 lg:py-32">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Портфоліо</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Наші останні роботи</h2>
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Переваги</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Чому бізнес обирає нашу команду</h2>
         </div>
-
-        <div class="grid lg:grid-cols-3 gap-6">
-          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal group">
-            <div class="h-48 bg-gradient-to-br from-yellow/20 via-gray-mid to-black relative overflow-hidden">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <svg class="w-20 h-20 text-yellow/20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-              <div class="absolute bottom-4 left-6">
-                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">Лендинг · 3 дні</span>
-              </div>
-            </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-bold mb-1">Coffee Brew</h3>
-              <p class="text-gray-text text-sm mb-6">Кавовий магазин</p>
-              <div class="grid grid-cols-2 gap-3 mb-8">
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">1</div>
-                  <div class="text-xs text-gray-text mt-1">Сторінка</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">3 дні</div>
-                  <div class="text-xs text-gray-text mt-1">Термін</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center col-span-2">
-                  <div class="text-xl font-bold text-yellow">+180%</div>
-                  <div class="text-xs text-gray-text mt-1">Зростання заявок</div>
-                </div>
-              </div>
-              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
-            </div>
-          </article>
-
-          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal reveal-delay-1 group">
-            <div class="h-48 bg-gradient-to-br from-yellow/15 via-gray-mid to-black relative overflow-hidden">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <svg class="w-20 h-20 text-yellow/20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 11h6"/></svg>
-              </div>
-              <div class="absolute bottom-4 left-6">
-                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">Бізнес · 5 днів</span>
-              </div>
-            </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-bold mb-1">ModaStyle</h3>
-              <p class="text-gray-text text-sm mb-6">Магазин одягу</p>
-              <div class="grid grid-cols-2 gap-3 mb-8">
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">7</div>
-                  <div class="text-xs text-gray-text mt-1">Сторінок</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">5 днів</div>
-                  <div class="text-xs text-gray-text mt-1">Термін</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center col-span-2">
-                  <div class="text-xl font-bold text-yellow">+240%</div>
-                  <div class="text-xs text-gray-text mt-1">Онлайн-продажі</div>
-                </div>
-              </div>
-              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
-            </div>
-          </article>
-
-          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal reveal-delay-2 group">
-            <div class="h-48 bg-gradient-to-br from-yellow/25 via-gray-mid to-black relative overflow-hidden">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <svg class="w-20 h-20 text-yellow/20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-              </div>
-              <div class="absolute bottom-4 left-6">
-                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">Корпоратив · 7 днів</span>
-              </div>
-            </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-bold mb-1">EstatePro</h3>
-              <p class="text-gray-text text-sm mb-6">Агенція нерухомості</p>
-              <div class="grid grid-cols-2 gap-3 mb-8">
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">12</div>
-                  <div class="text-xs text-gray-text mt-1">Сторінок</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center">
-                  <div class="text-xl font-bold text-yellow">7 днів</div>
-                  <div class="text-xs text-gray-text mt-1">Термін</div>
-                </div>
-                <div class="case-metric rounded-xl p-3 text-center col-span-2">
-                  <div class="text-xl font-bold text-yellow">+95%</div>
-                  <div class="text-xs text-gray-text mt-1">Звернень з сайту</div>
-                </div>
-              </div>
-              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
-            </div>
-          </article>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-4xl mb-4">⚡</p><h3 class="text-xl font-bold mb-2">Висока швидкість</h3><p class="text-gray-text">Оптимізований код, швидке завантаження і відмінний Core Web Vitals.</p></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-4xl mb-4">📱</p><h3 class="text-xl font-bold mb-2">Адаптивність</h3><p class="text-gray-text">Коректна робота від 320px до 4K на всіх сучасних пристроях.</p></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-4xl mb-4">🔒</p><h3 class="text-xl font-bold mb-2">Безпека</h3><p class="text-gray-text">Дотримуємось best practices для безпечної і стабільної роботи сайту.</p></article>
+          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-4xl mb-4">🚀</p><h3 class="text-xl font-bold mb-2">SEO Ready</h3><p class="text-gray-text">Семантична розмітка, метадані й технічна готовність до SEO-просування.</p></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-4xl mb-4">🎨</p><h3 class="text-xl font-bold mb-2">Індивідуальний дизайн</h3><p class="text-gray-text">UI/UX рішення з акцентом на конверсію і впізнаваність бренду.</p></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-4xl mb-4">💻</p><h3 class="text-xl font-bold mb-2">Сучасні технології</h3><p class="text-gray-text">Створюємо надійні рішення для росту та масштабування бізнесу.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="py-24 lg:py-32 relative overflow-hidden">
+    <section id="portfolio" class="py-24 lg:py-32 bg-gray-dark/50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 reveal">
+          <div>
+            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Портфоліо</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Сайти для різних ніш та задач</h2>
+          </div>
+          <p class="text-gray-text lg:max-w-md">Лендинги, корпоративні портали, eCommerce, SaaS, CRM/ERP і складні вебдодатки.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="portfolio-card reveal"><img src="assets/бізнесайт.svg" loading="lazy" alt="Макет бізнес-сайту для компанії" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>Корпоративний сайт</h3><p>Фінансова компанія</p></div></article>
+          <article class="portfolio-card reveal reveal-delay-1"><img src="assets/односторінковий.svg" loading="lazy" alt="Landing Page для запуску продукту" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>Landing Page</h3><p>Сервіс для стартапу</p></div></article>
+          <article class="portfolio-card reveal reveal-delay-2"><img src="assets/сайтвізитка.svg" loading="lazy" alt="Сайт-портфоліо для персонального бренду" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>Особистий сайт</h3><p>Портфоліо експерта</p></div></article>
+          <article class="portfolio-card reveal"><img src="assets/індивідуальний.svg" loading="lazy" alt="CRM веб-система для бізнесу" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>CRM/ERP система</h3><p>Автоматизація відділу продажів</p></div></article>
+          <article class="portfolio-card reveal reveal-delay-1"><img src="assets/girl.svg" loading="lazy" alt="Сайт для салону краси" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>Сайт для салону</h3><p>Beauty & wellness</p></div></article>
+          <article class="portfolio-card reveal reveal-delay-2"><img src="assets/Vector.svg" loading="lazy" alt="SaaS платформа з адмін панеллю" class="w-full h-[280px] object-cover"><div class="portfolio-overlay"><h3>SaaS платформа</h3><p>B2B вебдодаток</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Чому обирають нас</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Цифри, які підтверджують експертизу</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="glass-card rounded-3xl p-8 text-center reveal"><div class="stat-number text-5xl font-extrabold mb-2" data-target="100" data-suffix="+">0</div><p class="text-gray-text">реалізованих сайтів</p></article>
+          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-1"><div class="stat-number text-5xl font-extrabold mb-2" data-target="5" data-suffix="+">0</div><p class="text-gray-text">років досвіду</p></article>
+          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-2"><div class="stat-number text-5xl font-extrabold mb-2" data-target="99" data-suffix="%">0</div><p class="text-gray-text">задоволених клієнтів</p></article>
+          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-3"><div class="stat-number text-5xl font-extrabold mb-2">24/7</div><p class="text-gray-text">підтримка</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="py-24 lg:py-32 bg-gray-dark/50">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 reveal">
           <div>
-            <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Відгуки</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Що кажуть клієнти</h2>
+            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Відгуки</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Що говорять наші клієнти</h2>
           </div>
           <div class="flex gap-3">
-            <button id="reviewsPrev" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all" aria-label="Попередній відгук">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 16l-6-6 6-6"/></svg>
-            </button>
-            <button id="reviewsNext" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all" aria-label="Наступний відгук">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 8l6 6-6 6"/></svg>
-            </button>
+            <button id="reviewsPrev" class="w-12 h-12 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Попередній відгук">←</button>
+            <button id="reviewsNext" class="w-12 h-12 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Наступний відгук">→</button>
           </div>
         </div>
-
         <div class="overflow-hidden reveal">
           <div id="reviewsTrack" class="reviews-track gap-6">
-            <article class="review-card glass-card rounded-3xl p-8">
-              <div class="flex items-center gap-4 mb-5">
-                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">ОР</div>
-                <div>
-                  <div class="font-bold">Ольга Романенко</div>
-                  <div class="text-sm text-gray-text">Власниця агенції</div>
-                </div>
-              </div>
-              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
-              <p class="text-gray-text leading-relaxed">«Замовляли сайт для агенції з нуля. Команда допомогла з дизайном, структурою та текстами. Отримали сучасний сайт, який реально приводить нових клієнтів щодня.»</p>
-            </article>
-            <article class="review-card glass-card rounded-3xl p-8">
-              <div class="flex items-center gap-4 mb-5">
-                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">АІ</div>
-                <div>
-                  <div class="font-bold">Аскар Ісмаїлов</div>
-                  <div class="text-sm text-gray-text">Засновник IT-проєкту</div>
-                </div>
-              </div>
-              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
-              <p class="text-gray-text leading-relaxed">«Потрібен був сайт з нестандартним функціоналом. Все зробили чітко за ТЗ, завжди були на звʼязку та швидко вносили правки. Результат перевершив очікування.»</p>
-            </article>
-            <article class="review-card glass-card rounded-3xl p-8">
-              <div class="flex items-center gap-4 mb-5">
-                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">МК</div>
-                <div>
-                  <div class="font-bold">Марія Ковальчук</div>
-                  <div class="text-sm text-gray-text">Власниця кавʼярні</div>
-                </div>
-              </div>
-              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
-              <p class="text-gray-text leading-relaxed">«Лендинг зробили за 3 дні — швидко і якісно. Сайт виглядає дорого, на мобільному працює ідеально. Заявки пішли вже в перший тиждень після запуску.»</p>
-            </article>
-            <article class="review-card glass-card rounded-3xl p-8">
-              <div class="flex items-center gap-4 mb-5">
-                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">ІП</div>
-                <div>
-                  <div class="font-bold">Ігор Петренко</div>
-                  <div class="text-sm text-gray-text">CEO IT-стартапу</div>
-                </div>
-              </div>
-              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
-              <p class="text-gray-text leading-relaxed">«Замовляли корпоративний сайт для стартапу. Професійний підхід, чистий код, швидка загрузка. Рекомендую як надійних розробників.»</p>
-            </article>
+            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Запустили новий корпоративний сайт з інтеграціями CRM. Команда закрила весь цикл: UX, дизайн, розробка і запуск. Результат — стабільний потік заявок.»</p><p class="font-bold">Олексій Кравчук, CEO</p></article>
+            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Отримали інтернет-магазин з високою швидкістю і зручною адмін-панеллю. На мобільному сайт працює бездоганно, продажі зросли вже в перший місяць.»</p><p class="font-bold">Ірина Мельник, E-commerce власниця</p></article>
+            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Потрібна була кастомна SaaS-платформа для клієнтів. Отримали продуману архітектуру, чистий код і якісну технічну підтримку після релізу.»</p><p class="font-bold">Максим Дорошенко, Product Manager</p></article>
+            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Редизайн нашого сайту повністю змінив сприйняття бренду. Новий інтерфейс виглядає преміально і краще конвертує відвідувачів у звернення.»</p><p class="font-bold">Дарина Бондар, Marketing Lead</p></article>
           </div>
           <div id="reviewsDots" class="flex justify-center gap-2 mt-8"></div>
         </div>
       </div>
     </section>
 
-    <!-- Stats -->
-    <section id="stats" class="py-24 lg:py-32 bg-gray-dark/50 relative">
-      <div class="cta-glow absolute inset-0 pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
-        <div class="text-center mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Переваги</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Цифри, якими пишаємось</h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center reveal">
-            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="150" data-suffix="+">0</div>
-            <p class="text-gray-text font-medium">Реалізованих сайтів</p>
-          </div>
-          <div class="text-center reveal reveal-delay-1">
-            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="3" data-suffix=" дні">0</div>
-            <p class="text-gray-text font-medium">Мінімальний термін лендингу</p>
-          </div>
-          <div class="text-center reveal reveal-delay-2">
-            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="98" data-suffix="%">0</div>
-            <p class="text-gray-text font-medium">Задоволених клієнтів</p>
-          </div>
-          <div class="text-center reveal reveal-delay-3">
-            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="365" data-suffix="">0</div>
-            <p class="text-gray-text font-medium">Днів гарантії на сайт</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
     <section id="faq" class="py-24 lg:py-32">
-      <div class="max-w-3xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">FAQ</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Часті питання</h2>
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-14 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">FAQ</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Питання, які задають найчастіше</h2>
         </div>
         <div class="space-y-4 reveal">
-          <div class="faq-item glass-card rounded-2xl overflow-hidden">
-            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
-              <span>Скільки коштує розробка сайту?</span>
-              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
-            </button>
-            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
-              Лендинг — від 100 $, бізнес-сайт — від 200 $, інтернет-магазин — від 350 $. Точну вартість розрахуємо після обговорення вашого проєкту.
-            </div>
-          </div>
-          <div class="faq-item glass-card rounded-2xl overflow-hidden">
-            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
-              <span>Як швидко буде готовий сайт?</span>
-              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
-            </button>
-            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
-              Односторінковий сайт — від 3 днів, багатосторінковий — від 5–8 днів, інтернет-магазин — від 14 днів. Терміни залежать від складності проєкту.
-            </div>
-          </div>
-          <div class="faq-item glass-card rounded-2xl overflow-hidden">
-            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
-              <span>Чи входить хостинг та домен у вартість?</span>
-              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
-            </button>
-            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
-              Хостинг і домен оплачуються окремо, але ми допоможемо з вибором та підключенням. За домовленістю можемо включити у вартість пакету.
-            </div>
-          </div>
-          <div class="faq-item glass-card rounded-2xl overflow-hidden">
-            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
-              <span>Чи є гарантія на сайт?</span>
-              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
-            </button>
-            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
-              Так, надаємо гарантію 365 днів на технічну справність сайту. Безкоштовно виправляємо будь-які помилки протягом гарантійного періоду.
-            </div>
-          </div>
-          <div class="faq-item glass-card rounded-2xl overflow-hidden">
-            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
-              <span>Чи потрібна повна передоплата?</span>
-              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
-            </button>
-            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
-              Ні, працюємо за схемою 50/50 — передоплата перед початком роботи та залишок після здачі готового сайту.
-            </div>
-          </div>
+          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Які типи сайтів ви розробляєте?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Розробляємо Landing Page, корпоративні сайти, інтернет-магазини, особисті сайти, портфоліо, CRM/ERP системи, SaaS-платформи, адмін-панелі та веб-додатки.</div></article>
+          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Скільки триває розробка?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Терміни залежать від складності: Landing Page зазвичай до 2 тижнів, корпоративні сайти та eCommerce довше, а складні веб-системи — за індивідуальним roadmap.</div></article>
+          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Чи можна замовити тільки дизайн або редизайн?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Так, робимо окремо UI/UX дизайн, повний редизайн поточного сайту і поступову модернізацію без зупинки бізнес-процесів.</div></article>
+          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Чи надаєте підтримку після запуску?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Так, забезпечуємо технічну підтримку 24/7: моніторинг, оновлення, виправлення й розвиток функціоналу.</div></article>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section id="cta" class="py-24 lg:py-32 relative">
-      <div class="max-w-5xl mx-auto px-5 sm:px-8 reveal">
-        <div class="relative rounded-4xl overflow-hidden border border-yellow/20">
-          <div class="absolute inset-0 bg-gradient-to-br from-yellow/15 via-gray-mid to-black"></div>
+    <section id="cta" class="pb-24 lg:pb-32">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 reveal">
+        <div class="glass-card rounded-4xl p-10 sm:p-16 text-center relative overflow-hidden">
           <div class="cta-glow absolute inset-0"></div>
-          <div class="relative p-10 sm:p-16 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-              Готові замовити <span class="text-yellow">сайт</span> для бізнесу?
-            </h2>
-            <p class="text-gray-text text-lg max-w-xl mx-auto mb-10">
-              Залиште заявку — розрахуємо вартість, терміни та запропонуємо оптимальний тип сайту під ваші цілі.
-            </p>
-            <button data-open-consult class="btn-primary px-10 py-4 rounded-full text-lg font-bold">
-              Дізнатися вартість сайту
-            </button>
+          <div class="relative">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">Готові створити сайт, який працюватиме на ваш бізнес?</h2>
+            <button data-open-consult class="btn-primary px-10 py-4 rounded-full text-base sm:text-lg font-bold">Замовити безкоштовну консультацію</button>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer class="border-t border-white/5 py-16">
+  <footer class="border-t border-white/10 py-16">
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         <div>
-          <a href="#" class="flex items-center gap-2 mb-5">
-            <span class="w-9 h-9 rounded-xl bg-yellow flex items-center justify-center font-extrabold text-black text-sm">X</span>
-            <span class="font-bold text-lg">Xtra<span class="text-yellow">.</span>Agency</span>
+          <a href="#hero" class="flex items-center gap-2 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-yellow text-black flex items-center justify-center font-extrabold">X</span>
+            <span class="text-lg font-bold">Xtra<span class="text-yellow">.</span>Agency</span>
           </a>
-          <p class="text-gray-text text-sm leading-relaxed">Веб-студія з розробки сучасних сайтів під ключ для бізнесу будь-якого масштабу.</p>
+          <p class="text-gray-text text-sm">Створюємо швидкі, сучасні та прибуткові сайти для бізнесу будь-якої складності.</p>
         </div>
         <div>
-          <h4 class="font-bold mb-5">Меню</h4>
-          <nav class="flex flex-col gap-3 text-sm text-gray-text" aria-label="Футер навігація">
-            <a href="#why" class="hover:text-yellow transition-colors">Чому ми</a>
+          <h3 class="font-bold mb-4">Навігація</h3>
+          <nav class="flex flex-col gap-2 text-sm text-gray-text" aria-label="Footer navigation">
             <a href="#services" class="hover:text-yellow transition-colors">Послуги</a>
-            <a href="#process" class="hover:text-yellow transition-colors">Процес</a>
-            <a href="#cases" class="hover:text-yellow transition-colors">Портфоліо</a>
+            <a href="#portfolio" class="hover:text-yellow transition-colors">Портфоліо</a>
+            <a href="#reviews" class="hover:text-yellow transition-colors">Відгуки</a>
             <a href="#faq" class="hover:text-yellow transition-colors">FAQ</a>
           </nav>
         </div>
         <div>
-          <h4 class="font-bold mb-5">Контакти</h4>
-          <div class="flex flex-col gap-3 text-sm text-gray-text">
-            <a href="https://t.me/xtraagency" class="hover:text-yellow transition-colors flex items-center gap-2" target="_blank" rel="noopener">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-              Telegram
-            </a>
-            <a href="https://instagram.com/xtraagency" class="hover:text-yellow transition-colors flex items-center gap-2" target="_blank" rel="noopener">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              Instagram
-            </a>
-            <a href="mailto:info@xtra.agency.ua" class="hover:text-yellow transition-colors flex items-center gap-2">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-              info@xtra.agency.ua
-            </a>
+          <h3 class="font-bold mb-4">Контакти</h3>
+          <div class="flex flex-col gap-2 text-sm text-gray-text">
+            <a href="https://instagram.com/xtraagency" target="_blank" rel="noopener" class="hover:text-yellow transition-colors">Instagram</a>
+            <a href="https://t.me/xtraagency" target="_blank" rel="noopener" class="hover:text-yellow transition-colors">Telegram</a>
+            <a href="mailto:hello@xtra.agency.ua" class="hover:text-yellow transition-colors">hello@xtra.agency.ua</a>
+            <a href="tel:+380991112233" class="hover:text-yellow transition-colors">+38 (099) 111-22-33</a>
           </div>
         </div>
         <div>
-          <h4 class="font-bold mb-5">Документи</h4>
+          <h3 class="font-bold mb-4">Документи</h3>
           <a href="#" class="text-sm text-gray-text hover:text-yellow transition-colors">Політика конфіденційності</a>
         </div>
       </div>
-      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-text">
+      <div class="pt-6 border-t border-white/10 text-sm text-gray-text flex flex-col sm:flex-row justify-between gap-3">
         <p>© 2026 Xtra Agency. Усі права захищені.</p>
-        <p>Розробка сайтів під ключ</p>
+        <p>Розробка сайтів · Веб-додатки · CRM/ERP · SaaS</p>
       </div>
     </div>
   </footer>
 
-  <div id="consultModal" class="hidden fixed inset-0 z-[100] items-center justify-center p-5 bg-black/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="glass-card rounded-3xl p-8 sm:p-10 w-full max-w-md relative">
-      <button data-close-consult class="absolute top-5 right-5 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 transition-colors" aria-label="Закрити">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
-      </button>
+  <div id="consultModal" class="hidden fixed inset-0 z-[100] items-center justify-center p-5 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="glass-card w-full max-w-md rounded-3xl p-8 sm:p-10 relative">
+      <button data-close-consult class="absolute top-4 right-4 w-10 h-10 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Закрити">✕</button>
       <h3 id="modalTitle" class="text-2xl font-bold mb-2">Замовити сайт</h3>
-      <p class="text-gray-text text-sm mb-6">Залиште контакти — розрахуємо вартість та звʼяжемося протягом 60 хвилин.</p>
+      <p class="text-sm text-gray-text mb-6">Заповніть форму — підготуємо рішення саме під ваш бізнес.</p>
       <form id="consultForm" class="space-y-4">
-        <input type="text" name="name" placeholder="Ваше імʼя" required class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text">
-        <input type="tel" name="phone" placeholder="+38 (0__) ___ __ __" required class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text">
-        <textarea name="comment" placeholder="Який сайт потрібен? (лендинг, бізнес-сайт, магазин...)" rows="3" class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text resize-none"></textarea>
+        <input type="text" name="name" required placeholder="Ваше ім'я" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none">
+        <input type="tel" name="phone" required placeholder="+38 (0__) ___ __ __" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none">
+        <textarea name="comment" rows="3" placeholder="Який тип сайту або системи вам потрібен?" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none resize-none"></textarea>
         <button type="submit" class="btn-primary w-full py-4 rounded-full font-bold">Надіслати заявку</button>
       </form>
     </div>
