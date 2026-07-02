@@ -216,17 +216,44 @@ body {
   height: 280px;
   overflow: hidden;
   background: #0b0b0b;
+  border-radius: 1.2rem;
+  position: relative;
+  padding-top: 1.85rem;
 }
 
-.portfolio-thumb iframe {
+.browser-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.85rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.browser-frame::after {
+  content: "";
+  position: absolute;
+  top: 0.65rem;
+  left: 0.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #ff5f56;
+  box-shadow: 0.85rem 0 0 #ffbd2e, 1.7rem 0 0 #27c93f;
+}
+
+.portfolio-thumb img {
   width: 100%;
-  height: 560px;
+  height: 100%;
   border: 0;
   display: block;
-  pointer-events: none;
-  transform: translateY(0) scale(1);
-  transform-origin: top center;
-  transition: transform 0.45s ease;
+  object-fit: cover;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.45s ease, filter 0.45s ease;
+  filter: contrast(1.02) saturate(1.05);
 }
 
 .portfolio-overlay {
@@ -248,8 +275,9 @@ body {
   font-size: 0.9rem;
 }
 
-.portfolio-card:hover .portfolio-thumb iframe {
-  transform: translateY(-14px) scale(1.03);
+.portfolio-card:hover .portfolio-thumb img {
+  transform: scale(1.05);
+  filter: contrast(1.08) saturate(1.1);
 }
 
 .portfolio-card:hover .portfolio-overlay {
