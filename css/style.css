@@ -212,7 +212,20 @@ body {
   position: relative;
 }
 
-.portfolio-card img {
+.portfolio-thumb {
+  height: 280px;
+  overflow: hidden;
+  background: #0b0b0b;
+}
+
+.portfolio-thumb iframe {
+  width: 100%;
+  height: 560px;
+  border: 0;
+  display: block;
+  pointer-events: none;
+  transform: translateY(0) scale(1);
+  transform-origin: top center;
   transition: transform 0.45s ease;
 }
 
@@ -235,8 +248,8 @@ body {
   font-size: 0.9rem;
 }
 
-.portfolio-card:hover img {
-  transform: scale(1.06);
+.portfolio-card:hover .portfolio-thumb iframe {
+  transform: translateY(-14px) scale(1.03);
 }
 
 .portfolio-card:hover .portfolio-overlay {
