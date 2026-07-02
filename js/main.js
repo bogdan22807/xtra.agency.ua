@@ -4,7 +4,7 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-  /* ── Mobile menu ── */
+  /* Mobile menu */
   const burger = $("#burger");
   const mobileMenu = $("#mobileMenu");
   const menuOverlay = $("#menuOverlay");
@@ -30,19 +30,19 @@
   menuOverlay?.addEventListener("click", closeMenu);
   $$("#mobileMenu a").forEach((link) => link.addEventListener("click", closeMenu));
 
-  /* ── Header scroll ── */
+  /* Header behavior on scroll */
   const header = $("#header");
   window.addEventListener(
     "scroll",
     () => {
-      header?.classList.toggle("shadow-lg", window.scrollY > 40);
+      header?.classList.toggle("shadow-2xl", window.scrollY > 40);
       header?.classList.toggle("border-b", window.scrollY > 40);
-      header?.classList.toggle("border-white/5", window.scrollY > 40);
+      header?.classList.toggle("border-white/10", window.scrollY > 40);
     },
     { passive: true }
   );
 
-  /* ── Scroll reveal ── */
+  /* Scroll reveal */
   const revealEls = $$(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -57,7 +57,7 @@
   );
   revealEls.forEach((el) => revealObserver.observe(el));
 
-  /* ── Counter animation ── */
+  /* Counter animation */
   function animateCounter(el) {
     const target = parseFloat(el.dataset.target);
     const suffix = el.dataset.suffix || "";
@@ -94,7 +94,7 @@
   );
   counterEls.forEach((el) => counterObserver.observe(el));
 
-  /* ── FAQ accordion ── */
+  /* FAQ accordion */
   $$(".faq-item").forEach((item) => {
     const btn = $(".faq-question", item);
     btn?.addEventListener("click", () => {
@@ -110,7 +110,7 @@
     });
   });
 
-  /* ── Reviews carousel ── */
+  /* Reviews slider */
   const track = $("#reviewsTrack");
   const prevBtn = $("#reviewsPrev");
   const nextBtn = $("#reviewsNext");
@@ -184,7 +184,7 @@
     updateCarousel();
   }, 6000);
 
-  /* ── Consult modal ── */
+  /* Consult modal */
   const modal = $("#consultModal");
   const openBtns = $$("[data-open-consult]");
   const closeBtns = $$("[data-close-consult]");
@@ -206,6 +206,12 @@
   modal?.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+      closeModal();
+    }
+  });
 
   $("#consultForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -220,22 +226,4 @@
     form.reset();
     closeModal();
   });
-
-  /* ── Lazy load images ── */
-  if ("loading" in HTMLImageElement.prototype) {
-    $$("img[loading='lazy']").forEach((img) => {
-      if (img.dataset.src) img.src = img.dataset.src;
-    });
-  } else {
-    const lazyObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) img.src = img.dataset.src;
-          lazyObserver.unobserve(img);
-        }
-      });
-    });
-    $$("img[data-src]").forEach((img) => lazyObserver.observe(img));
-  }
 })();
