@@ -12,13 +12,13 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment_retry.outputs.page_url || steps.deployment_primary.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,9 +28,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-          exclude-paths: |
-            .git
-            .github
 
-      - id: deployment
+      - id: deployment_primary
+        continue-on-error: true
         uses: actions/deploy-pages@v4
+
+      - id: deployment_retry
+        if: steps.deployment_primary.outcome != 'success'
+        uses: actions/deploy-pages@v4
+
+      - name: Ensure deployment eventually succeeded
+        if: steps.deployment_primary.outcome != 'success' && steps.deployment_retry.outcome != 'success'
+        run: |
+          echo "Both deploy attempts failed"
+          exit 1
