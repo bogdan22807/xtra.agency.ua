@@ -207,6 +207,11 @@ body {
   background: #111;
 }
 
+.portfolio-card > a {
+  display: block;
+  position: relative;
+}
+
 .portfolio-card img {
   transition: transform 0.45s ease;
 }
@@ -236,6 +241,11 @@ body {
 
 .portfolio-card:hover .portfolio-overlay {
   transform: translateY(0);
+}
+
+.portfolio-card > a:focus-visible {
+  outline: 2px solid rgba(255, 212, 0, 0.8);
+  outline-offset: -2px;
 }
 
 .reviews-track {
