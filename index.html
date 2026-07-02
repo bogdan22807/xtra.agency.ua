@@ -1,1397 +1,711 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.PNG">
-<link rel="apple-touch-icon" href="assets/favicon.PNG">
-<link rel="shortcut icon" href="assets/favicon.PNG">
-<link rel="stylesheet" href="style.css">
-<title>Розробка сайтів під ключ | Xtra Agency</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xtra Agency — Маркетингова агенція | Meta Ads, Google Ads, Digital</title>
+  <meta name="description" content="Xtra Agency — маркетингова агенція, яка масштабує бізнес через Meta Ads, Google Ads та комплексний digital-маркетинг. Отримуйте стабільний потік клієнтів.">
+  <meta name="keywords" content="маркетингова агенція, Meta Ads, Google Ads, TikTok Ads, digital маркетинг, реклама, Xtra Agency">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Xtra Agency">
+  <link rel="canonical" href="https://xtra.agency.ua/">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xtra.agency.ua/">
+  <meta property="og:title" content="Xtra Agency — Маркетингова агенція">
+  <meta property="og:description" content="Масштабуємо ваш бізнес за допомогою реклами, яка приносить прибуток. Meta Ads, Google Ads, AI автоматизація.">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Xtra Agency">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Xtra Agency — Маркетингова агенція">
+  <meta name="twitter:description" content="Масштабуємо ваш бізнес за допомогою реклами, яка приносить прибуток.">
 
-<meta name="description" content="Xtra Agency — професійна розробка сайтів під ключ. Створення інтернет-магазинів, лендингів та корпоративних сайтів.">
-<meta name="keywords" content="Xtra Agency, розробка сайтів під ключ, створення сайту, замовити сайт, веб розробка, лендинг, інтернет-магазин, корпоративний сайт, web development">
+  <meta name="theme-color" content="#0A0A0A">
 
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="author" content="Xtra Agency">
-<meta name="language" content="Ukrainian">
-<meta name="revisit-after" content="7 days">
-<meta name="rating" content="general">
-<meta name="coverage" content="Worldwide">
-<meta name="distribution" content="Global">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-
-<!-- ======================= CANONICAL ======================= -->
-<link rel="canonical" href="https://xtra.agency.ua">
-
-<!-- ======================= GEO DATA ======================= -->
-<meta name="geo.region" content="UA-IF">
-<meta name="geo.placename" content="Івано-Франківськ">
-<meta name="geo.position" content="48.9226;24.7111">
-<meta name="ICBM" content="48.9226, 24.7111">
-
-<!-- ======================= OPEN GRAPH (Facebook / Telegram / Linkedin) ======================= -->
-<meta property="og:title" content="Розробка сайтів під ключ | Xtra Agency">
-<meta property="og:description" content="Професійна розробка сайтів під ключ в Івано-Франківську. Створюємо інтернет-магазини, лендинги та корпоративні сайти. SEO оптимізація та сучасний дизайн.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://xtra.agency.ua">
-<meta property="og:image" content="https://xtra.agency.ua/logo.png">
-<meta property="og:image:alt" content="Xtra Agency - логотип">
-<meta property="og:site_name" content="Xtra Agency">
-
-<!-- ======================= TWITTER CARDS ======================= -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Розробка сайтів під ключ | Xtra Agency">
-<meta name="twitter:description" content="Створення сучасних сайтів для бізнесу, інтернет-магазинів та лендингів. SEO оптимізація, адаптивний дизайн та швидкі сайти.">
-<meta name="twitter:image" content="https://xtra.agency.ua/logo.png">
-<meta name="twitter:creator" content="@xtraagency">
-
-<!-- ======================= FAVICON ======================= -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-<!-- ======================= SCHEMA.ORG: LocalBusiness + Organization ======================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Xtra Agency",
-      "url": "https://xtra.agency.ua",
-      "logo": "https://xtra.agency.ua/logo.png",
-      "sameAs": [],
-      "description": "Професійна розробка сайтів під ключ в Івано-Франківську. Створення інтернет-магазинів, лендингів, корпоративних сайтів та веб платформ.",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+380XXXXXXXXX",
-          "contactType": "customer service",
-          "areaServed": "UA"
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: "#0A0A0A",
+            yellow: { DEFAULT: "#FFD400", dim: "#E6BF00" },
+            gray: { dark: "#141414", mid: "#1E1E1E", border: "#2A2A2A", text: "#A3A3A3" }
+          },
+          fontFamily: { sans: ["Manrope", "Inter", "system-ui", "sans-serif"] },
+          borderRadius: { "4xl": "2rem" }
         }
-      ]
-    },
-    {
-      "@type": "LocalBusiness",
-      "name": "Xtra Agency",
-      "image": "https://xtra.agency.ua/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "",
-        "addressLocality": "Івано-Франківськ",
-        "addressRegion": "IF",
-        "postalCode": "",
-        "addressCountry": "UA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "48.9226",
-        "longitude": "24.7111"
-      },
-      "url": "https://xtra.agency.ua",
-      "description": "Розробка сайтів під ключ: інтернет-магазини, корпоративні сайти, лендинги, веб платформи. SEO оптимізація, адаптивний дизайн, швидкі сайти для бізнесу.",
-      "telephone": "+380XXXXXXXXX",
-      "priceRange": "$$",
-      "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00"
-    }
-  ]
-}
-</script>
-
-<!-- ======================= ADDITIONAL SEO TAGS ======================= -->
-<meta name="apple-mobile-web-app-title" content="Xtra Agency">
-<meta name="theme-color" content="#1a73e8">
-<meta name="msapplication-TileColor" content="#1a73e8">
-<meta name="msapplication-TileImage" content="https://xtra.agency.ua/logo.png">
-
-<meta name="distribution" content="global">
-<meta name="coverage" content="Worldwide">
-<meta name="audience" content="All">
-
-<!-- ======================= EXTRA: HELP GOOGLE ======================= -->
-<meta name="docsearch:language" content="uk">
-<meta name="docsearch:version" content="1.0">
-
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-<div class="burger" onclick="toggleMenu()">☰</div>
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<body class="bg-black text-white antialiased">
 
-<nav class="mobile-menu" id="mobileMenu">
-    <a href="index.html#portfolio">Портфоліо</a>
-    <a href="index.html#prices">Вартість розробки сайту</a>
-    <a href="index.html#order">Залишити заявку</a>
-    <a href="index.html#contacts">Контакти</a>
-</nav>
+  <!-- Header -->
+  <header id="header" class="fixed top-0 inset-x-0 z-50 glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[72px]">
+      <a href="#" class="flex items-center gap-2 group" aria-label="Xtra Agency — головна">
+        <span class="w-9 h-9 rounded-xl bg-yellow flex items-center justify-center font-extrabold text-black text-sm">X</span>
+        <span class="font-bold text-lg tracking-tight">Xtra<span class="text-yellow">.</span>Agency</span>
+      </a>
 
-    <div class="header">
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Головна навігація">
+        <a href="#why" class="nav-link text-sm font-medium">Чому ми</a>
+        <a href="#services" class="nav-link text-sm font-medium">Послуги</a>
+        <a href="#process" class="nav-link text-sm font-medium">Процес</a>
+        <a href="#cases" class="nav-link text-sm font-medium">Кейси</a>
+        <a href="#reviews" class="nav-link text-sm font-medium">Відгуки</a>
+        <a href="#faq" class="nav-link text-sm font-medium">FAQ</a>
+      </nav>
 
+      <div class="hidden lg:block">
+        <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm">
+          Отримати консультацію
+        </button>
+      </div>
 
-        <div class="logo">
-            <img src="assets/логотип.png" alt="Розробка сайтів" width="170px">
-
-            <div class="Htext">
-                <h3>
-                    <span>Сучасні</span>
-                    <span class="highlight">IT-рішення</span>
-                    <span>для бізнесу</span>
-                </h3>
-                <div class="cont1">
-                    <div class="button">
-                         <div class="button">
-    <button onclick="openConsult(); return false;">Замовити дзвінок</button>
-</div>
-                      </div>  
-                    <div class="social-float">
-                        <div id="toggle" class="toggle">
-                            <img src="assets/Vector.svg" width="30px">
-                             <svg class="vk-arrow" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-        </svg>
-                        </div>
-                        
-                        <div id="panel" class="panel">
-                            <a href="https://t.me/xtraagency"><img src="assets/tg-icon.png"></a>
-                            <a href="mailto:info@xtra.agency.ua"><img src="assets/gmail-svgrepo-com 1.png"></a>
-                        </div>
-                </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-    
-        <div class="line">
-            <img src="assets/Полоска.svg" alt="Замовити сайт">
-        </div>
+      <button id="burger" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-white/10" aria-label="Меню" aria-expanded="false">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h14M4 11h14M4 15h14"/></svg>
+      </button>
     </div>
+  </header>
 
- 
-    <header class="nav-header">
-        <nav class="nav">
-            <ul>
-                <li class="active"><a href="#">Створення сайтів</a></li>
-                <li><a href="index.html#portfolio">Портфоліо</a></li>
-                <li><a href="#prices">Вартість розробки сайту</a></li>
-                <li><a href="#order">Залишити заявку</a></li>
-                <li><a href="#contacts">Контакти</a></li>
+  <div id="menuOverlay" class="hidden fixed inset-0 bg-black/60 z-50 lg:hidden" aria-hidden="true"></div>
+  <nav id="mobileMenu" class="mobile-menu fixed top-0 right-0 bottom-0 w-[280px] z-[60] glass p-8 pt-24 flex flex-col gap-6 lg:hidden" aria-label="Мобільна навігація">
+    <a href="#why" class="text-lg font-medium hover:text-yellow transition-colors">Чому ми</a>
+    <a href="#services" class="text-lg font-medium hover:text-yellow transition-colors">Послуги</a>
+    <a href="#process" class="text-lg font-medium hover:text-yellow transition-colors">Процес</a>
+    <a href="#cases" class="text-lg font-medium hover:text-yellow transition-colors">Кейси</a>
+    <a href="#reviews" class="text-lg font-medium hover:text-yellow transition-colors">Відгуки</a>
+    <a href="#faq" class="text-lg font-medium hover:text-yellow transition-colors">FAQ</a>
+    <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm mt-4">Консультація</button>
+  </nav>
 
-                <div class="nav-bg"></div>
-            </ul>
-        </nav>
-    </header>
+  <main>
 
-    <section class="main-section">
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
+      <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+      <div class="glow-orb glow-orb--yellow w-[500px] h-[500px] -top-32 -right-32"></div>
+      <div class="glow-orb glow-orb--soft w-[400px] h-[400px] bottom-0 left-1/4"></div>
 
-    <div class="cont2">
-        <div class="Htext2">
-            <span>Розробка</span>
-            <span class="highlight">сайтів</span>
-            <span class="break">під ключ</span>
-        </div>
-
-        <div class="Htext3">
-            <h4>Розробка сайту від 3-ох днів</h4>
-            <h4>Безкоштовна SEO - оптимізація</h4>
-            <h4>Логотип для сайту в подарунок</h4>
-        </div>
-
-        <div class="button2">
-          <a href="#order">
-            <button>Хочу сайт !</button>
-          </a>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 lg:py-28 w-full">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow/20 bg-yellow/5 text-yellow text-sm font-medium mb-8">
+              <span class="w-2 h-2 rounded-full bg-yellow animate-pulse"></span>
+              Digital-маркетинг нового рівня
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
+              Масштабуємо ваш бізнес за допомогою реклами, яка <span class="text-yellow">приносить прибуток</span>
+            </h1>
+            <p class="text-gray-text text-lg sm:text-xl leading-relaxed max-w-xl mb-10">
+              Ми допомагаємо компаніям стабільно отримувати нових клієнтів через Meta Ads, Google Ads та комплексний digital-маркетинг.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button data-open-consult class="btn-primary px-8 py-4 rounded-full text-base font-bold">
+                Отримати консультацію
+              </button>
+              <a href="#cases" class="btn-outline px-8 py-4 rounded-full text-base font-semibold text-center">
+                Переглянути кейси
+              </a>
+            </div>
           </div>
 
-    </div>
-
-    <section class="hero">
-        <div class="hero-box">
-            <div class="info-card left">
-                <div class="icon">🔒</div>
-                <h4>Умови співпраці</h4>
-                <p>Узгодження умов <br>перед початком проєкту</p>
+          <!-- Hero Visual -->
+          <div class="reveal reveal-delay-2 hero-visual hidden sm:block">
+            <div class="hero-visual__panel hero-visual__panel--main hero-visual__float">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs text-gray-text font-medium">Рекламний кабінет</span>
+                <span class="text-xs text-yellow font-bold">ROAS 4.8×</span>
+              </div>
+              <svg viewBox="0 0 320 120" class="w-full h-auto mb-4" aria-hidden="true">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#FFD400" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#FFD400" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,90 L40,75 L80,80 L120,50 L160,55 L200,30 L240,35 L280,15 L320,20 L320,120 L0,120 Z" fill="url(#chartGrad)"/>
+                <polyline class="hero-visual__chart-line" points="0,90 40,75 80,80 120,50 160,55 200,30 240,35 280,15 320,20"/>
+              </svg>
+              <div class="flex items-end gap-2 h-16">
+                <div class="hero-visual__bar flex-1" style="height:45%;animation-delay:.1s"></div>
+                <div class="hero-visual__bar flex-1" style="height:65%;animation-delay:.2s"></div>
+                <div class="hero-visual__bar flex-1" style="height:50%;animation-delay:.3s"></div>
+                <div class="hero-visual__bar flex-1" style="height:85%;animation-delay:.4s"></div>
+                <div class="hero-visual__bar flex-1" style="height:70%;animation-delay:.5s"></div>
+                <div class="hero-visual__bar flex-1" style="height:100%;animation-delay:.6s"></div>
+              </div>
             </div>
 
-            <div class="info-card right">
-                <div class="icon">🌐</div>
-                <h4>Гарантія</h4>
-                <p>Даємо гарантію<br>на сайт 365 днів</p>
+            <div class="hero-visual__panel hero-visual__float hero-visual__float--delay absolute top-0 right-0 w-36 p-3" style="animation-delay:-1s">
+              <div class="w-full aspect-[9/16] rounded-xl bg-gray-mid border border-white/10 flex flex-col items-center justify-center gap-2 p-2">
+                <div class="w-8 h-1 rounded-full bg-white/20"></div>
+                <svg class="w-10 h-10 text-yellow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                <span class="text-[10px] text-gray-text">Meta Ads</span>
+              </div>
             </div>
-        </div>
 
-        <div class="hero-person">
-            <img src="assets/man.png" alt="Business man">
+            <div class="hero-visual__panel hero-visual__float absolute bottom-4 left-0 w-44 p-3" style="animation-delay:-3s">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-6 h-6 rounded bg-yellow/20 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <span class="text-[10px] text-gray-text">Google Ads</span>
+              </div>
+              <div class="text-lg font-bold text-yellow">+247%</div>
+              <div class="text-[10px] text-gray-text">Зростання заявок</div>
+            </div>
+
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hero-visual__float" style="animation-delay:-4s">
+              <svg class="w-12 h-12 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-</section>
-<section class="benefits">
-  <div class="benefits-box">
 
-    <div class="benefits-text">
-      <h2>
-        Переваги створення сайту<br>
-        <span>для вашого бізнесу</span>
-      </h2>
+    <!-- Why Us -->
+    <section id="why" class="py-24 lg:py-32 relative">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Чому саме ми</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Партнер, якому довіряють результати</h2>
+        </div>
 
-      <p>Ви зможете:</p>
-      <ul>
-        <li>Продемонструвати вигоди для ваших клієнтів за кілька хвилин</li>
-        <li>Запустити бізнес з мінімальними вкладеннями</li>
-        <li>Швидко отримати додаткові продажі з інтернету</li>
-      </ul>
-
-      <a href="#order" class="calc-link">Калькулятор вартості</a>
-    </div>
-
-    <div class="benefits-visual">
-      <div class="circle"></div>
-
-      <img src="assets/girl.svg" alt="girl" class="girl">
-
-      <div class="stat">
-        <strong>+86%</strong>
-        <span>Збільшення бази<br>клієнтів за місяць</span>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal">
+            <div class="text-4xl mb-5" aria-hidden="true">🚀</div>
+            <h3 class="text-xl font-bold mb-3">Швидкий запуск реклами</h3>
+            <p class="text-gray-text leading-relaxed">Запускаємо кампанії за 3–5 днів після брифу. Без зайвої бюрократії — одразу до результату.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-1">
+            <div class="text-4xl mb-5" aria-hidden="true">📈</div>
+            <h3 class="text-xl font-bold mb-3">Орієнтація на прибуток</h3>
+            <p class="text-gray-text leading-relaxed">Працюємо не за кліками, а за реальним ROI. Кожне рішення — через призму вашого прибутку.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-2">
+            <div class="text-4xl mb-5" aria-hidden="true">💬</div>
+            <h3 class="text-xl font-bold mb-3">Постійний звʼязок</h3>
+            <p class="text-gray-text leading-relaxed">Щотижневі звіти, прозора аналітика та менеджер, який завжди на звʼязку у Telegram.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-8 transition-all duration-300 reveal reveal-delay-3">
+            <div class="text-4xl mb-5" aria-hidden="true">🎯</div>
+            <h3 class="text-xl font-bold mb-3">Індивідуальна стратегія</h3>
+            <p class="text-gray-text leading-relaxed">Жодних шаблонів. Кожен проєкт — унікальна воронка під вашу нішу, аудиторію та цілі.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="chat">
-        <p>Розкажіть про свій продукт</p>
-        <span class="chip blue">Розкажіть про переваги</span>
-        <span class="chip green">Відповідайте на запитання клієнтів</span>
-        <span class="chip cyan">Приймайте оплату онлайн</span>
+    <!-- Services -->
+    <section id="services" class="py-24 lg:py-32 bg-gray-dark/50 relative">
+      <div class="glow-orb glow-orb--soft w-[300px] h-[300px] top-1/2 right-0 -translate-y-1/2"></div>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 reveal">
+          <div>
+            <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Наші послуги</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Повний цикл digital-просування</h2>
+          </div>
+          <p class="text-gray-text max-w-md lg:text-right">Від запуску реклами до AI-автоматизації — закриваємо всі задачі залучення клієнтів.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Meta Ads</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Facebook та Instagram реклама з точним таргетингом і оптимізацією воронки.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-1">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Google Ads</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Пошукова та медійна реклама для захоплення гарячого попиту.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-2">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">TikTok Ads</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Вірусний контент і реклама для молодої аудиторії з високим engagement.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Створення сайтів</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Лендинги та корпоративні сайти, оптимізовані під конверсію з реклами.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-1">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0112 2z"/><path d="M9 10h6M9 14h4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">AI автоматизація</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Чат-боти, автоворонки та AI-інструменти для масштабування без зростання штату.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 group transition-all duration-300 reveal reveal-delay-2">
+            <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-yellow/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-6"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Аналітика та масштабування</h3>
+            <p class="text-gray-text text-sm leading-relaxed">Глибока аналітика, A/B тести та стратегії масштабування бюджету.</p>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- Process Timeline -->
+    <section id="process" class="py-24 lg:py-32 relative">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-20 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Як ми працюємо</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Прозорий процес від А до Я</h2>
+        </div>
 
-<section class="info-wrapper1">
-  <div class="info-section1">
+        <div class="relative">
+          <div class="timeline-line hidden md:block" aria-hidden="true"></div>
 
-  
-    <div class="info-card1">
-  
-      <h3>Оплата роботи <span>частинами</span></h3>
-  
+          <div class="space-y-12 md:space-y-0">
+            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
+              <div class="md:text-right md:pr-12">
+                <span class="text-yellow font-bold text-sm">Крок 01</span>
+                <h3 class="text-2xl font-bold mt-2">Знайомство</h3>
+                <p class="text-gray-text mt-3 leading-relaxed">Дзвінок-знайомство, де ми вивчаємо ваш бізнес, цілі та очікування від співпраці.</p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="md:pl-12"></div>
+            </article>
 
-<div class="live-payments1">
+            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
+              <div class="md:pr-12 hidden md:block"></div>
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="md:pl-12">
+                <span class="text-yellow font-bold text-sm">Крок 02</span>
+                <h3 class="text-2xl font-bold mt-2">Аналіз бізнесу</h3>
+                <p class="text-gray-text mt-3 leading-relaxed">Досліджуємо нішу, конкурентів, цільову аудиторію та поточні канали залучення.</p>
+              </div>
+            </article>
 
-  <div class="live-item1">
-    <div class="avatar1">
-      <img src="assets/галочка.png" alt="">
-    </div>
-    <div class="live-text1">
-      <strong>Андрій К</strong><br>
-      +30 000 грн
-    </div>
-    <div class="status1 success">✓</div>
-  </div>
+            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
+              <div class="md:text-right md:pr-12">
+                <span class="text-yellow font-bold text-sm">Крок 03</span>
+                <h3 class="text-2xl font-bold mt-2">Розробка стратегії</h3>
+                <p class="text-gray-text mt-3 leading-relaxed">Створюємо медіаплан, креативну концепцію та прогноз KPI для вашого проєкту.</p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="md:pl-12"></div>
+            </article>
 
-  <div class="live-item1">
-    <div class="avatar1">
-      <img src="assets/логотип.png" alt="">
-    </div>
-    <div class="live-text1">
-      <strong>Олександр</strong><br>
-      Перша частина роботи виконана 
-    </div>
-  
-  </div>
+            <article class="reveal md:grid md:grid-cols-2 md:gap-12 md:pb-16 relative">
+              <div class="md:pr-12 hidden md:block"></div>
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="md:pl-12">
+                <span class="text-yellow font-bold text-sm">Крок 04</span>
+                <h3 class="text-2xl font-bold mt-2">Запуск реклами</h3>
+                <p class="text-gray-text mt-3 leading-relaxed">Налаштовуємо кампанії, запускаємо креативи та починаємо збирати перші дані.</p>
+              </div>
+            </article>
 
-  <div class="live-item1">
-    <div class="avatar1">
-      <img src="assets/галочка.png" alt="">
-    </div>
-    <div class="live-text1">
-      <strong>Андрій К</strong><br>
-      +30 000 грн
-    </div>
-    <div class="status1 success">✓</div>
-  </div>
+            <article class="reveal md:grid md:grid-cols-2 md:gap-12 relative">
+              <div class="md:text-right md:pr-12">
+                <span class="text-yellow font-bold text-sm">Крок 05</span>
+                <h3 class="text-2xl font-bold mt-2">Масштабування</h3>
+                <p class="text-gray-text mt-3 leading-relaxed">Оптимізуємо, масштабуємо бюджет і виводимо кампанії на стабільний прибуток.</p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="md:pl-12"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- Cases -->
+    <section id="cases" class="py-24 lg:py-32 bg-gray-dark/50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Кейси</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Результати, які говорять самі</h2>
+        </div>
 
-  <div class="payment-item1">
-    <div class="payment-icon1">✓</div>
-    <div>
-      <strong>50%</strong> — Передоплата перед початком<br>
-      роботи 
-    </div>
-  </div>
-  
-  <div class="payment-item1">
-    <div class="payment-icon1">✓</div>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal group">
+            <div class="h-48 bg-gradient-to-br from-yellow/20 via-gray-mid to-black relative overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-6xl font-extrabold text-yellow/10">01</span>
+              </div>
+              <div class="absolute bottom-4 left-6">
+                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">E-commerce</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-1">StyleHub</h3>
+              <p class="text-gray-text text-sm mb-6">Інтернет-магазин одягу</p>
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">5.2×</div>
+                  <div class="text-xs text-gray-text mt-1">ROAS</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">840</div>
+                  <div class="text-xs text-gray-text mt-1">Заявок</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center col-span-2">
+                  <div class="text-xl font-bold text-yellow">+312%</div>
+                  <div class="text-xs text-gray-text mt-1">Зростання продажів</div>
+                </div>
+              </div>
+              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
+            </div>
+          </article>
+
+          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal reveal-delay-1 group">
+            <div class="h-48 bg-gradient-to-br from-yellow/15 via-gray-mid to-black relative overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-6xl font-extrabold text-yellow/10">02</span>
+              </div>
+              <div class="absolute bottom-4 left-6">
+                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">B2B</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-1">LegalPro</h3>
+              <p class="text-gray-text text-sm mb-6">Юридична компанія</p>
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">4.1×</div>
+                  <div class="text-xs text-gray-text mt-1">ROAS</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">320</div>
+                  <div class="text-xs text-gray-text mt-1">Заявок</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center col-span-2">
+                  <div class="text-xl font-bold text-yellow">+185%</div>
+                  <div class="text-xs text-gray-text mt-1">Зростання лідів</div>
+                </div>
+              </div>
+              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
+            </div>
+          </article>
+
+          <article class="glass-card rounded-3xl overflow-hidden transition-all duration-300 reveal reveal-delay-2 group">
+            <div class="h-48 bg-gradient-to-br from-yellow/25 via-gray-mid to-black relative overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-6xl font-extrabold text-yellow/10">03</span>
+              </div>
+              <div class="absolute bottom-4 left-6">
+                <span class="text-xs font-medium text-yellow bg-yellow/10 px-3 py-1 rounded-full border border-yellow/20">HoReCa</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-1">Bistro Prime</h3>
+              <p class="text-gray-text text-sm mb-6">Мережа ресторанів</p>
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">6.8×</div>
+                  <div class="text-xs text-gray-text mt-1">ROAS</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center">
+                  <div class="text-xl font-bold text-yellow">1 200</div>
+                  <div class="text-xs text-gray-text mt-1">Заявок</div>
+                </div>
+                <div class="case-metric rounded-xl p-3 text-center col-span-2">
+                  <div class="text-xl font-bold text-yellow">+420%</div>
+                  <div class="text-xs text-gray-text mt-1">Зростання бронювань</div>
+                </div>
+              </div>
+              <button data-open-consult class="btn-outline w-full py-3 rounded-full text-sm font-semibold">Детальніше</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-24 lg:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 reveal">
+          <div>
+            <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Відгуки</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Що кажуть клієнти</h2>
+          </div>
+          <div class="flex gap-3">
+            <button id="reviewsPrev" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all" aria-label="Попередній відгук">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 16l-6-6 6-6"/></svg>
+            </button>
+            <button id="reviewsNext" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all" aria-label="Наступний відгук">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 8l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden reveal">
+          <div id="reviewsTrack" class="reviews-track gap-6">
+            <article class="review-card glass-card rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">ОК</div>
+                <div>
+                  <div class="font-bold">Олена Коваль</div>
+                  <div class="text-sm text-gray-text">CEO, StyleHub</div>
+                </div>
+              </div>
+              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
+              <p class="text-gray-text leading-relaxed">«За 3 місяці ROAS виріс з 2.1 до 5.2. Команда Xtra Agency повністю взяла на себе рекламу — ми просто обробляємо заявки. Рекомендую!»</p>
+            </article>
+
+            <article class="review-card glass-card rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">АМ</div>
+                <div>
+                  <div class="font-bold">Андрій Мельник</div>
+                  <div class="text-sm text-gray-text">Засновник, LegalPro</div>
+                </div>
+              </div>
+              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
+              <p class="text-gray-text leading-relaxed">«Прозорість на кожному етапі. Щотижневі звіти, зрозумілі KPI. За півроку кількість лідів зросла майже втричі при тому ж бюджеті.»</p>
+            </article>
+
+            <article class="review-card glass-card rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">МС</div>
+                <div>
+                  <div class="font-bold">Марія Сидоренко</div>
+                  <div class="text-sm text-gray-text">Власниця, Bistro Prime</div>
+                </div>
+              </div>
+              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
+              <p class="text-gray-text leading-relaxed">«Запустили TikTok та Meta Ads для трьох ресторанів. Бронювання виросли на 420%. Найкраща інвестиція в маркетинг за останні роки.»</p>
+            </article>
+
+            <article class="review-card glass-card rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full border-2 border-yellow/30 bg-yellow/10 flex items-center justify-center text-yellow font-bold text-lg flex-shrink-0" aria-hidden="true">ДЛ</div>
+                <div>
+                  <div class="font-bold">Дмитро Лисенко</div>
+                  <div class="text-sm text-gray-text">CMO, TechFlow</div>
+                </div>
+              </div>
+              <div class="text-yellow text-sm mb-4" aria-label="5 зірок">★★★★★</div>
+              <p class="text-gray-text leading-relaxed">«AI-автоматизація від Xtra зекономила нам 40 годин на тиждень. Реклама працює, воронка закрита — ідеальний партнер для зростання.»</p>
+            </article>
+          </div>
+          <div id="reviewsDots" class="flex justify-center gap-2 mt-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="py-24 lg:py-32 bg-gray-dark/50 relative">
+      <div class="cta-glow absolute inset-0 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
+        <div class="text-center mb-16 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">Переваги</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Цифри, які надихають</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center reveal">
+            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="150" data-suffix="+">0</div>
+            <p class="text-gray-text font-medium">Успішних проєктів</p>
+          </div>
+          <div class="text-center reveal reveal-delay-1">
+            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="12" data-suffix=" млн+">0</div>
+            <p class="text-gray-text font-medium">Рекламного бюджету</p>
+          </div>
+          <div class="text-center reveal reveal-delay-2">
+            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="96" data-suffix="%">0</div>
+            <p class="text-gray-text font-medium">Клієнтів працюють понад рік</p>
+          </div>
+          <div class="text-center reveal reveal-delay-3">
+            <div class="stat-number text-5xl sm:text-6xl font-extrabold mb-3" data-target="24" data-suffix="/7">0</div>
+            <p class="text-gray-text font-medium">Підтримка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 lg:py-32">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-16 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-widest">FAQ</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Часті питання</h2>
+        </div>
+
+        <div class="space-y-4 reveal">
+          <div class="faq-item glass-card rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
+              <span>Скільки коштує запуск реклами?</span>
+              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
+              Вартість залежить від ніші та обсягу робіт. Мінімальний бюджет на рекламу — від $500/міс. Послуги агенції — від $300/міс. Точну ціну розрахуємо після безкоштовного аудиту.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
+              <span>Як швидко будуть перші результати?</span>
+              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
+              Перші заявки зазвичай надходять протягом 3–7 днів після запуску. Стабільний ROAS виходимо на 2–4 тижні після оптимізації кампаній.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
+              <span>З якими нішами ви працюєте?</span>
+              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
+              E-commerce, B2B, HoReCa, медицина, освіта, нерухомість, IT та інші. Якщо є попит — ми знайдемо спосіб його залучити.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
+              <span>Чи надаєте звітність?</span>
+              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
+              Так, щотижневі звіти у зручному форматі: витрати, заявки, ROAS, CPL та рекомендації. Доступ до рекламних кабінетів — у реальному часі.
+            </div>
+          </div>
+
+          <div class="faq-item glass-card rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-lg" aria-expanded="false">
+              <span>Чи можна розірвати співпрацю?</span>
+              <span class="faq-icon w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-yellow text-xl flex-shrink-0 ml-4">+</span>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-gray-text leading-relaxed">
+              Так, без штрафів і прихованих умов. Ми працюємо помісячно — ви завжди контролюєте ситуацію.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-24 lg:py-32 relative">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 reveal">
+        <div class="relative rounded-4xl overflow-hidden border border-yellow/20">
+          <div class="absolute inset-0 bg-gradient-to-br from-yellow/15 via-gray-mid to-black"></div>
+          <div class="cta-glow absolute inset-0"></div>
+          <div class="relative p-10 sm:p-16 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+              Готові збільшити кількість <span class="text-yellow">клієнтів</span>?
+            </h2>
+            <p class="text-gray-text text-lg max-w-xl mx-auto mb-10">
+              Залиште заявку — проведемо безкоштовний аудит вашого маркетингу та покажемо точки зростання.
+            </p>
+            <button data-open-consult class="btn-primary px-10 py-4 rounded-full text-lg font-bold">
+              Отримати безкоштовний аудит
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-16">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div>
-          <strong>50%</strong> — Оплата після завершення розробки сайту<br>
-          перед передачею проєкту
+          <a href="#" class="flex items-center gap-2 mb-5">
+            <span class="w-9 h-9 rounded-xl bg-yellow flex items-center justify-center font-extrabold text-black text-sm">X</span>
+            <span class="font-bold text-lg">Xtra<span class="text-yellow">.</span>Agency</span>
+          </a>
+          <p class="text-gray-text text-sm leading-relaxed">Маркетингова агенція, яка масштабує бізнес через прибуткову рекламу.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-5">Меню</h4>
+          <nav class="flex flex-col gap-3 text-sm text-gray-text" aria-label="Футер навігація">
+            <a href="#why" class="hover:text-yellow transition-colors">Чому ми</a>
+            <a href="#services" class="hover:text-yellow transition-colors">Послуги</a>
+            <a href="#process" class="hover:text-yellow transition-colors">Процес</a>
+            <a href="#cases" class="hover:text-yellow transition-colors">Кейси</a>
+            <a href="#faq" class="hover:text-yellow transition-colors">FAQ</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-5">Контакти</h4>
+          <div class="flex flex-col gap-3 text-sm text-gray-text">
+            <a href="https://t.me/xtraagency" class="hover:text-yellow transition-colors flex items-center gap-2" target="_blank" rel="noopener">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Telegram
+            </a>
+            <a href="https://instagram.com/xtraagency" class="hover:text-yellow transition-colors flex items-center gap-2" target="_blank" rel="noopener">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="mailto:info@xtra.agency.ua" class="hover:text-yellow transition-colors flex items-center gap-2">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              info@xtra.agency.ua
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-5">Документи</h4>
+          <a href="#" class="text-sm text-gray-text hover:text-yellow transition-colors">Політика конфіденційності</a>
         </div>
       </div>
-      
-     <a href="#" class="card-link1" onclick="openConsult(); return false;">
-  Отримати консультацію
-</a>
 
-      
-    </div>
-
-    <div class="info-card1">
-
-      <h3>Інструменти які<br>ми використовуємо</h3>
-
-      <p><strong>Мови:</strong> Python, Java Script, MySQL, PHP. </p>
-      <p><strong>Платформи та контроль:</strong> GitHub</p>
-
-      <a href="index.html#portfolio" class="card-link1">Портфоліо</a>
-
-    </div>
-    
-
-  </div>
-</section>
-
-<section id="portfolio" class="projectsj">
-  <p class="projects-subj">За 1 місяць роботи</p>
-  <h2 class="projects-titlej">Приклади 
-    <span>наших робіт</span></h2>
-
-  <div class="projects-wrapj">
-
-    
-
-
-    
-    <div class="projects-viewj">
-      <div class="cards-trackj">
-
-       
-        <div class="card-wrapj">
-          <div class="cardj beigej">
-            <span class="badjej">Термін 3 дні</span>
-
-            <div class="card-textj">
-              <h3>
-                Бізнес сайт<br>
-                для<br>
-                кавового магазину
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone.png" alt="">
-          </div>
-          <a href="index.html#portfolio"></a>
-          <button class="btnj">Детальніше</button>
-          </a>
-        </div>
-
-        <div class="card-wrapj">
-          <div class="cardj peach">
-            <span class="badjej">Термін 3 дні</span>
-
-            <div class="card-textj">
-              <h3>
-                Бізнес сайт<br>
-                для<br>
-                магазину одягу 
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone7/phone7.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj">Детальніше</button>
-          </a>
-        </div>
-
-        
-        <div class="card-wrapj">
-          <div class="cardj bluej">
-            <span class="badjej">Термін 5 днів</span>
-
-            <div class="card-textj">
-              <h3>
-                Бізнес сайт <br>
-                Маркетингове<br>
-                Агенство
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone2/phone2.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj whitej">Детальніше</button>
-          </a>
-        </div>
-
-        
-        <div class="card-wrapj">
-          <div class="cardj bluej">
-            <span class="badjej">Термін 4 дні </span>
-
-            <div class="card-textj">
-              <h3>
-                Корпоративний сайт<br>
-                у сфері<br>
-                нерухомості
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone3/phone3.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj whitej">Детальніше</button>
-          </a>
-        </div>
-
-        <div class="card-wrapj">
-          <div class="cardj bluej">
-            <span class="badjej">Термін 7 днів</span>
-
-            <div class="card-textj">
-              <h3>
-                Веб-сайт компанії<br>
-                з дизайну<br>
-                інтер'єру
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone4/phone4.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj whitej">Детальніше</button>
-          </a>
-        </div>
-
-
-        <div class="card-wrapj">
-          <div class="cardj bluej">
-            <span class="badjej">Термін 12 днів</span>
-
-            <div class="card-textj">
-              <h3>
-                Веб-сайт<br>
-                для торгівлі<br>
-                NFT
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone5/phone5.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj whitej">Детальніше</button>
-          </a>
-        </div>
-
-
-        <div class="card-wrapj">
-          <div class="cardj bluej">
-            <span class="badjej">Термін 16 днів</span>
-
-            <div class="card-textj">
-              <h3>
-                Онлайн сервіс<br>
-                для бронювання<br>
-                турів
-              </h3>
-            </div>
-
-            <img class="phonej" src="assets/phone6/phone6.png" alt="">
-          </div>
-          <a href="index.html#portfolio">
-          <button class="btnj whitej">Детальніше</button>
-          </a>
-        </div>
-
-
-
-
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-text">
+        <p>© 2026 Xtra Agency. Усі права захищені.</p>
+        <p>Зроблено з фокусом на результат</p>
       </div>
     </div>
+  </footer>
 
-    
-    
-  </div>
-  <div class="projects-navj">
-<button class="navj prevj">‹</button>
-<button class="navj nextj">›</button>
-</div>
-</section>
-
-<div id="prices" class="cards-container">
-
- 
-  <div class="card1">
-    <div class="badge">До 4 днів</div>
-    <div class="image-box">
-      <img src="assets/односторінковий.svg" alt="Веб-дизайн" width="170px">
-    </div>
-    <h2>Односторінковий сайт</h2>
-    <p class="price">Від <span>100 $</span></p>
-    <ul>
-      <li>✅ Унікальний дизайн</li>
-      <li>✅ Швидка загрузка сторінки</li>
-      <li>✅ Підключення форм заявки</li>
-      <li>✅ Адаптив під всі пристрої</li>
-      <li>✅ Базове SEO</li>
-    </ul>
-    <div class="more-items">
-      <ul>
-        <li>✅ Інтеграція з соцмережами</li>
-        <li>✅ Підключення аналітики</li>
-      </ul>
-    </div>
-    <button class="show-more-btn">Дивитись більше</button>
-     <button onclick="openConsult(); return false;">Отримати консультацію</button>
-  </div>
-
-  
-  <div class="card1">
-    <div class="badge">До 8 днів</div>
-    <div class="image-box">
-      <img src="assets/бізнесайт.svg" alt="Веб-дизайн" width="100px">
-    </div>
-    <h2>Бізнес Сайт</h2>
-    <p class="price">Від <span>200 $</span></p>
-    <ul>
-      <li>✅ Стильний та сучасний дизайн</li>
-      <li>✅ Комерційні послуги</li>
-      <li>✅ Карта з місцезнаходженням</li>
-      <li>✅ Адаптив на всі пристрої</li>
-      <li>✅ Базове SEO</li>
-    </ul>
-    <div class="more-items">
-      <ul>
-        <li>✅ Розширення сайту</li>
-        <li>✅ Підключення месенджерів</li>
-      </ul>
-    </div>
-    <button class="show-more-btn">Дивитись більше</button>
-    <button onclick="openConsult(); return false;">Отримати консультацію</button>
-
-  </div>
-
-  <div class="card1">
-    <div class="badge">До 4 днів</div>
-    <div class="image-box">
-      <img src="assets/сайтвізитка.svg" alt="Веб-дизайн" width="100px">
-    </div>
-    <h2>Сайт Візитка</h2>
-    <p class="price">Від <span>100 $</span></p>
-    <ul>
-      <li>✅ Простий та зрозумілий дизайн</li>
-      <li>✅ Блок про вас </li>
-      <li>✅ Контакти + соцмережі</li>
-      <li>✅ Галерея робіт (за бажанням)</li>
-      <li>✅ Адаптація під всі екрани</li>
-    </ul>
-    <div class="more-items">
-      <ul>
-        <li>✅ Можливість додати відгуки</li>
-        <li>✅ Форма швидкого звʼязку</li>
-      </ul>
-    </div>
-    <button class="show-more-btn">Дивитись більше</button>
-    <button onclick="openConsult(); return false;">Отримати консультацію</button>
-
-  </div>
-
- 
-  <div class="card1">
-    <div class="badge">До 14 днів</div>
-    <div class="image-box">
-      <img src="assets/індивідуальний.svg" alt="Веб-дизайн" width="100px">
-    </div>
-    <h2>Блог / Новинний сайт</h2>
-    <p class="price">Від <span>300 $</span></p>
-    <ul>
-      <li>✅ Унікальний дизайн</li>
-      <li>✅ Розширений функціонал</li>
-      <li>✅ Розділи за побажанням</li>
-      <li>✅ Оптимізація швидкості</li>
-      <li>✅ Адаптивна верстка</li>
-    </ul>
-    <div class="more-items">
-      <ul>
-        <li>✅ Панель керування</li>
-        <li>✅ Інтеграція з месенджерами</li>
-      </ul>
-    </div>
-    <button class="show-more-btn">Дивитись більше</button>
-    <button onclick="openConsult(); return false;">Отримати консультацію</button>
-
-  </div>
-
-
-  <div class="card1">
-    <div class="badge">До 5 днів</div>
-    <div class="image-box">
-      <img src="assets/сайтвізитка.svg" alt="Веб-дизайн" width="100px">
-    </div>
-    <h2>Сайт Портфоліо</h2>
-    <p class="price">Від <span>120 $</span></p>
-    <ul>
-      <li>✅ Охайний та стильний дизайн</li>
-      <li>✅ Галерея ваших робіт</li>
-      <li>✅ Розділ "Про мене"</li>
-      <li>✅ Контакти + соцмережі</li>
-      <li>✅ Адаптив під всі пристрої</li>
-    </ul>
-    <div class="more-items">
-      <ul>
-        <li>✅ Керування роботами</li>
-        <li>✅ Зручна навігація</li>
-      </ul>
-    </div>
-    <button class="show-more-btn">Дивитись більше</button>
-    <button onclick="openConsult(); return false;">Отримати консультацію</button>
-
-  </div>
-
-<div class="card1">
-  <div class="badge">До 14 днів</div>
-
-  <div class="image-box">
-    <img src="assets/бізнесайт.svg" alt="Веб-дизайн" width="100px">
-  </div>
-
-  <h2>Індивідуальний Сайт</h2>
-  <p class="price">Від <span>350 $</span></p>
-
-  <ul>
-    <li>✅ Унікальний зовнішній вигляд</li>
-    <li>✅ Гнучкі можливості</li>
-    <li>✅ Будь-які розділи</li>
-    <li>✅ Технічна підтримка</li>
-    <li>✅ Адаптивність під всі екрани</li>
-  </ul>
-
-  <div class="more-items">
-    <ul>
-      <li>✅ Інтеграція додаткових сервісів</li>
-      <li>✅ Панель керування</li>
-    </ul>
-  </div>
-
-  <button class="show-more-btn">Дивитись більше</button>
-  <button onclick="openConsult(); return false;">Отримати консультацію</button>
-
-</div>
-<section class="process">
-  <div class="process-left">
-    <h2>
-      Розробка під ключ<br>
-      <span>включає</span>
-    </h2>
-
-    <p>
-      Від нашої студії ви отримуєте подарунок —<br>
-      безкоштовний логотип сайту та SEO-оптимізацію для нього
-    </p>
-
-    <a href="javascript:void(0);" class="btn" onclick="openConsult(); return false;">
-  Замовити консультацію
-</a>
-  </div>
-
-  <div class="process-right">
-    <div class="step">
-      <span>01</span>
-      <h3>Створення прототипу <a>інтерфейсу</a></h3>
-      <p>На основі побажань клієнта та аналізу конкурентів визначається спеціаліст і розробляється структура сайту.</p>
-    </div>
-
-    <div class="step">
-      <span>02</span>
-      <h3>Розробка дизайну <a>під пристрої</a></h3>
-      <p>Після затвердження прототипу дизайнер приступає до роботи. Створюються версії дизайну для мобільних та ПК.</p>
-    </div>
-
-    <div class="step">
-      <span>03</span>
-      <h3>Верстка сайту <a>під пристрої</a></h3>
-      <p>Після завершення дизайну макет передається розробнику для написання коду.</p>
-    </div>
-
-    <div class="step">
-      <span>04</span>
-      <h3>Доробка <a>функціоналу сайту</a></h3>
-      <p>Тестування сайту, оптимізація швидкості завантаження. Підключення хостингу та домену + безкоштовна SEO-оптимізація.</p>
-    </div>
-
-    <div class="step">
-      <span>05</span>
-      <h3>Передача сайту <a>власнику</a></h3>
-      <p>Ми передаємо всі права на сайт замовнику .</p>
-    </div>
-  </div>
-</section>
-<section id="order" class="pdrop-quiz-section">
-    <div class="pdrop-container">
-        <div class="pdrop-quiz-content">
-            <h1 id="pdrop-core-heading">Залиш заявку і дізнайся ціну сайту</h1>
-            <p class="pdrop-subtitle" id="pdrop-core-sub">Зроби всього - 4 кроки і наш менеджер з Вами зв'яжеться протягом 60 хв.</p>
-            
-            <div class="pdrop-steps-indicator">
-                <span class="pdrop-step pdrop-dot active"></span>
-                <span class="pdrop-step pdrop-dot"></span>
-                <span class="pdrop-step pdrop-dot"></span>
-                <span class="pdrop-step pdrop-dot"></span>
-            </div>
-
-            <div class="pdrop-frame pdrop-frame-active">
-                <div class="pdrop-options-grid">
-                    <label class="pdrop-option"><input type="radio" name="pdrop-site-type" value="single"><span class="pdrop-custom-radio"></span>Односторінковий</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-site-type" value="multi"><span class="pdrop-custom-radio"></span>Багатосторінковий</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-site-type" value="shop"><span class="pdrop-custom-radio"></span>Інтернет магазин</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-site-type" value="custom"><span class="pdrop-custom-radio"></span>Індивідуальний сайт</label>
-                </div>
-            </div>
-
-            <div class="pdrop-frame">
-                <div class="pdrop-options-grid">
-                    <label class="pdrop-option"><input type="radio" name="pdrop-budget" value="500"><span class="pdrop-custom-radio"></span>До 500$</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-budget" value="1500"><span class="pdrop-custom-radio"></span>500$ - 1500$</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-budget" value="3000"><span class="pdrop-custom-radio"></span>1500$ - 3000$</label>
-                    <label class="pdrop-option"><input type="radio" name="pdrop-budget" value="none"><span class="pdrop-custom-radio"></span>Не визначився</label>
-                </div>
-            </div>
-
-            <div class="pdrop-frame">
-                <div style="margin-bottom: 25px;">
-                    <textarea id="pdrop-wishes" placeholder="Опишіть ваші побажання..."></textarea>
-                </div>
-            </div>
-
-            <div class="pdrop-frame">
-                <div class="pdrop-contact-stack">
-                    <input type="text" id="pdrop-name" placeholder="Ваше ім'я" class="pdrop-input">
-                    <input type="tel" id="pdrop-phone" placeholder="Номер телефону" class="pdrop-input">
-                    <input type="email" id="pdrop-email" placeholder="Ваш Email" class="pdrop-input">
-                </div>
-            </div>
-
-            <div class="pdrop-quiz-footer">
-                <button class="pdrop-btn-next" id="pdrop-proceed">Наступний етап</button>
-               
-            </div>
-        </div>
-
-        <div class="pdrop-quiz-mockup">
-            <div class="pdrop-phone-frame">
-                <div class="pdrop-phone-screen">
-                    <div class="pdrop-logo-in-phone">
-                        <span style="color: #5D5FEF; font-weight: 900;">Xtra</span><br>
-                        <span style="color: #5D5FEF; font-weight: 700;">Agency</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="reviews3">
-  <h2>
-  Що говорять наші
-  <span>клієнти про нас!</span>
-</h2>
-
-
-  <div class="slider3">
-
-    <div class="slider-window3">
-      <div class="slider-track3">
-
-        
-        <div class="review-card3">
-          
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Ольга <span>Романенко</span></div>
-              <div class="role3">Власниця агенства</div>
-            </div>
-          </div>
-          <div class="text3">
-            Замовляли сайт для нашого агенства з нуля. Команда допомогла з дизайном, структурою та текстами.
-            У результаті отримали сучасний сайт, який реально приводить нових клієнтів щодня.
-            Дуже задоволена співпрацею.
-          </div>
-        </div>
-
-        
-        <div class="review-card3">
-         
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Аскар <span>Ісмаїлов</span></div>
-              <div class="role3">Засновник NFT-проєкту</div>
-            </div>
-          </div>
-          <div class="text3">
-            Потрібен був сайт з нестандартним функціоналом для криптопроєкту.
-            Все зробили чітко за технічним завданням, завжди були на зв’язку та швидко вносили правки.
-            Результат перевершив очікування.
-          </div>
-        </div>
-
-        
-        <div class="review-card3">
-          
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Марія <span>Ковальчук</span></div>
-              <div class="role3">Маркетолог</div>
-            </div>
-          </div>
-          <div class="text3">
-            Працюємо вже над другим проєктом. Дуже подобається підхід до деталей та розуміння бізнес-логіки.
-            Сайти не просто гарні, а реально зручні для користувачів.
-          </div>
-        </div>
-
-        
-        <div class="review-card3">
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Ігор <span>Петренко</span></div>
-              <div class="role3">CEO IT-стартапу</div>
-            </div>
-          </div>
-          <div class="text3">
-            Замовляли логотип.
-            Все виглядає професійно і головне швидко .
-            Рекомендую як надійних виконавців.
-          </div>
-        </div>
-
-        
-        <div class="review-card3">
-      
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Анна <span>Сидоренко</span></div>
-              <div class="role3">Власниця нерухомості</div>
-            </div>
-          </div>
-          <div class="text3">
-            Після запуску нового сайту кількість заявок зросла майже вдвічі.
-            Дуже зручно керувати послугами та обробляти заявки.
-            Дякую за якісну роботу та підтримку після запуску.
-          </div>
-        </div>
-
-        
-        <div class="review-card3">
-        
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Дмитро <span>Лисенко</span></div>
-              <div class="role3">Підприємець</div>
-            </div>
-          </div>
-          <div class="text3">
-            Дуже сподобалося, що все пояснюють простою мовою і пропонують оптимальні рішення,
-            а не нав’язують зайві функції. Роботою повністю задоволений.
-          </div>
-        </div>
-
-
-        <div class="review-card3">
-          
-          <div class="header3">
-            <img src="assets/іконка.png" class="avatar3">
-            <div>
-              <div class="name3">Катерина <span>Мороз</span></div>
-              <div class="role3">SMM-спеціаліст</div>
-            </div>
-          </div>
-          <div class="text3">
-          Працюю SMM-стратегом, тому візуальна частина для мене — це все. Потрібно було розробити логотип, який би транслював експертність, але залишався стильним і легким. Результат перевершив очікування! Дизайн вийшов дуже «інстаграмним» і сучасним. Також замовляла дизайн візиток з QR-кодом на моє портфоліо — це просто розрив, на кожній зустрічі питають, хто робив. Дякую за крутий візуал!
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-
-  </div>
-</section>
-
-
-<section class="faq">
-  <h2>Питання та відповіді</h2>
-
-  <div class="faq-item active">
-    <div class="faq-question">
-      <span>Чи потрібно вносити повну передоплату перед початком?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Ні, ми працюємо за схемою 50/50 — передоплата та залишок після фінального результату.
+  <!-- Consult Modal -->
+  <div id="consultModal" class="hidden fixed inset-0 z-[100] items-center justify-center p-5 bg-black/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="glass-card rounded-3xl p-8 sm:p-10 w-full max-w-md relative">
+      <button data-close-consult class="absolute top-5 right-5 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-yellow/50 transition-colors" aria-label="Закрити">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>
+      </button>
+      <h3 id="modalTitle" class="text-2xl font-bold mb-2">Безкоштовна консультація</h3>
+      <p class="text-gray-text text-sm mb-6">Залиште контакти — звʼяжемося протягом 60 хвилин.</p>
+      <form id="consultForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Ваше імʼя" required class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text">
+        <input type="tel" name="phone" placeholder="+38 (0__) ___ __ __" required class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text">
+        <textarea name="comment" placeholder="Розкажіть коротко про бізнес" rows="3" class="w-full px-5 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-yellow/50 focus:outline-none transition-colors text-white placeholder:text-gray-text resize-none"></textarea>
+        <button type="submit" class="btn-primary w-full py-4 rounded-full font-bold">Надіслати заявку</button>
+      </form>
     </div>
   </div>
 
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Чи входить у вартість сайту хостинг та домен?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Хостинг і домен оплачуються окремо або за домовленістю можуть бути включені у вартість.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Чи є гарантія на сайт?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Так, ми надаємо гарантію на сайт після завершення розробки.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Які подарунки ви підготували?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Безкоштовна базова SEO-оптимізація, підключення аналітики та консультація.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Які способи оплати ви приймаєте?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Банківська картка, переказ на рахунок або готівка.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Чи надаєте ви підтримку після запуску проекту?</span>
-      <span class="arrow">⌄</span>
-    </div>
-    <div class="faq-answer">
-      Так, ми безкоштовно консультуємо та допомагаємо з сайтом протягом першого місяця.
-    </div>
-  </div>
-</section>
-
-<footer id="contacts" class="site-footer">
-  <div class="footer-container">
-
-    
-    <div class="footer-logo">
-
-      <img src="assets/логотип.png" alt="" width="160px">
-    </div>
-
-   
-    <div class="footer-stats">
-      <span>Працюємо понад 1 місяць</span>
-      <span>Виконано 5+ проєктів</span>
-      <span>100% задоволених клієнтів</span>
-    </div>
-
-   
-    <div class="footer-icons">
-      <a href="https://t.me/xtraagency" class="icon telegram">✈</a>
-      <a href="tel:+380XXXXXXXXX" class="icon whatsapp">☎</a>
-      <a href="#" class="icon dots">●●●</a>
-      <a href="mailto:info@xtra.agency.ua" class="icon mail">✉</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div>Україна</div>
-    <div>
-      Політика конфіденційності
-    </div>
-    <div>
-      📧 info@xtra.agency.ua
-    </div>
-    <div>
-      📞 +380 XX XXX XX XX
-    </div>
-  </div>
-</footer>
-
-<script>
-(function() {
-    document.addEventListener("DOMContentLoaded", function() {
-        const frames = document.querySelectorAll('.pdrop-frame');
-        const dots = document.querySelectorAll('.pdrop-dot');
-        const goBtn = document.getElementById('pdrop-proceed');
-        const headText = document.getElementById('pdrop-core-heading');
-        const subText = document.getElementById('pdrop-core-sub');
-        
-        let idx = 0;
-        const answers = {};
-
-        const dataSet = [
-            { t: "Залиш заявку і дізнайся ціну сайту", s: "Крок 1: Оберіть тип проекту" },
-            { t: "Який ваш приблизний бюджет?", s: "Крок 2: Оберіть ціновий діапазон" },
-            { t: "Ваші побажання до сайту", s: "Крок 3: Опишіть деталі для розрахунку" },
-            { t: "Залишилося останнє!", s: "Крок 4: Куди надіслати готовий розрахунок?" }
-        ];
-
-        goBtn.addEventListener('click', function() {
-            if (idx === 0) {
-                const opt = document.querySelector('input[name="pdrop-site-type"]:checked');
-                if (!opt) return alert("Оберіть тип сайту!");
-                answers.type = opt.value;
-            } 
-            else if (idx === 1) {
-                const opt = document.querySelector('input[name="pdrop-budget"]:checked');
-                if (!opt) return alert("Вкажіть ваш бюджет!");
-                answers.budget = opt.value;
-            } 
-            else if (idx === 2) {
-                const wishes = document.getElementById('pdrop-wishes').value;
-                if (wishes.length < 5) return alert("Будь ласка, опишіть ваші побажання.");
-                answers.wishes = wishes;
-            }
-
-            if (idx < frames.length - 1) {
-                frames[idx].classList.remove('pdrop-frame-active');
-                if(dots[idx]) dots[idx].classList.remove('active');
-                idx++;
-                frames[idx].classList.add('pdrop-frame-active');
-                if(dots[idx]) dots[idx].classList.add('active');
-                
-                headText.innerText = dataSet[idx].t;
-                subText.innerText = dataSet[idx].s;
-                if (idx === frames.length - 1) goBtn.innerText = "Отримати розрахунок";
-            } else {
-                const name = document.getElementById('pdrop-name').value;
-                const phone = document.getElementById('pdrop-phone').value;
-                const email = document.getElementById('pdrop-email').value;
-
-                if (!name || !phone || !email) return alert("Заповніть всі контактні поля!");
-
-                answers.name = name;
-                answers.phone = phone;
-                answers.email = email;
-
-                const botToken = "YOUR_BOT_TOKEN";
-                const chatId = "YOUR_CHAT_ID";
-                
-                let message = `<b>🔥 Нова заявка:</b>\n\n`;
-                message += `<b>👤 Ім'я:</b> ${answers.name}\n`;
-                message += `<b>📞 Тел:</b> ${answers.phone}\n`;
-                message += `<b>📧 Email:</b> ${answers.email}\n`;
-                message += `<b>🏗 Тип:</b> ${answers.type}\n`;
-                message += `<b>💰 Бюджет:</b> ${answers.budget}\n`;
-                message += `<b>📝 ТЗ:</b> ${answers.wishes}`;
-
-                goBtn.innerText = "Відправка...";
-                goBtn.disabled = true;
-
-                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: "HTML" })
-                })
-                .then(() => {
-                    alert("Дякуємо! Заявку відправлено.");
-                    window.location.reload();
-                });
-            }
-        });
-    });
-})();
-</script>
-
-
-
-
-
-
-
-
-<script>
-document.querySelectorAll(".card1").forEach(card => {
-  const btn = card.querySelector(".show-more-btn");
-  const more = card.querySelector(".more-items");
-
-  if (btn && more) {
-    more.style.display = "none"; 
-
-    btn.addEventListener("click", () => {
-      const open = more.style.display === "block";
-      more.style.display = open ? "none" : "block";
-      btn.textContent = open ? "Дивитись більше" : "Приховати";
-    });
-  }
-});
-
-
-</script>
-
-    <script>
-    const box = document.querySelector('.social-float');
-    const panel = document.getElementById('panel');
-    const toggle = document.getElementById('toggle');
-
-    toggle.addEventListener("click", () => {
-      box.classList.toggle("open");
-      panel.classList.toggle("active");
-    });
-    </script>
-
-    <script>
-    const items = document.querySelectorAll(".nav ul li");
-    const bg = document.querySelector(".nav-bg");
-
-    items.forEach((item, index) => {
-        item.addEventListener("mouseenter", () => {
-            const rect = item.getBoundingClientRect();
-            const parentRect = item.parentElement.getBoundingClientRect();
-            bg.style.width = rect.width + "px";
-            bg.style.transform = `translateX(${rect.left - parentRect.left}px)`;
-        });
-    });
-
-    document.querySelector(".nav").addEventListener("mouseleave", () => {
-        const active = document.querySelector(".nav ul li.active");
-        const rect = active.getBoundingClientRect();
-        const parentRect = active.parentElement.getBoundingClientRect();
-        bg.style.width = rect.width + "px";
-        bg.style.transform = `translateX(${rect.left - parentRect.left}px)`;
-    });
-
-    window.onload = () => {
-        const active = document.querySelector(".nav ul li.active");
-        const rect = active.getBoundingClientRect();
-        const parentRect = active.parentElement.getBoundingClientRect();
-        bg.style.width = rect.width + "px";
-        bg.style.transform = `translateX(${rect.left - parentRect.left}px)`;
-    };
-    </script>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const overlay = document.getElementById("overlay");
-
-  menu.classList.toggle("show");
-  overlay.classList.toggle("show");
-}
-</script>
-
-
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-    document.getElementById("overlay").classList.toggle("show");
-}
-</script>
-<script>
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const item = question.parentElement;
-    item.classList.toggle('active');
-  });
-});
-</script>
-
-
-
-
-<script>
-function openConsult() {
-  document.getElementById('consultModal').classList.add('active');
-}
-
-function closeConsult() {
-  document.getElementById('consultModal').classList.remove('active');
-}
-</script>
-
-
-
-
-
-<div class="consult-modal" id="consultModal">
-  <div class="consult-overlay" onclick="closeConsult()"></div>
-
-  <div class="consult-box">
-    <button class="consult-close" onclick="closeConsult()">×</button>
-
-    <h2>Замовити дзвінок</h2>
-
-    <form id="consultForm">
-      <input type="text" name="name" placeholder="Імʼя">
-      <input type="tel" name="phone" placeholder="+38 (0__) ___ __ __">
-      <textarea name="comment" placeholder="Коментар"></textarea>
-
-      <!-- ❗ ВАЖЛИВО -->
-      <button type="button" id="sendConsult">Надіслати</button>
-    </form>
-  </div>
-</div>
-
-  <script>
-  const BOT_TOKEN = "YOUR_BOT_TOKEN";
-  const CHAT_ID = "YOUR_CHAT_ID";
-  
-  document.getElementById("sendConsult").addEventListener("click", function () {
-  
-    const form = document.getElementById("consultForm");
-    const name = form.name.value.trim();
-    const phone = form.phone.value.trim();
-    const comment = form.comment.value.trim();
-  
-    if (!name || !phone) {
-      alert("Заповніть імʼя та телефон");
-      return;
-    }
-  
-    const message =
-  `📞 Нова заявка на консультацію
-  
-  👤 Імʼя: ${name}
-  📱 Телефон: ${phone}
-  💬 Коментар: ${comment || "—"}`;
-  
-    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: message
-      })
-    })
-    .then(r => r.json())
-    .then(data => {
-      if (data.ok) {
-        alert("Надіслано 👍");
-        form.reset();
-        closeConsult();
-      } else {
-        console.log(data);
-        alert("Помилка Telegram");
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      alert("Помилка зʼєднання");
-    });
-  
-  });
-  </script>
-<script>
-(function() {
-    const sliderWindow = document.querySelector('.slider-window3');
-    
-    if (!sliderWindow) return;
-
-    // Оскільки ми тепер використовуємо CSS scroll-snap, 
-    // браузер сам знає, де кінець і де початок.
-    // Порожнечі в кінці не буде, бо скрол просто зупиниться на останній картці.
-    
-    console.log("Слайдер 3 тепер працює нативним скролом.");
-})();
-</script>
-
-<script>(function() {
-    const slider = document.querySelector('.slider-window3');
-    if (!slider) return;
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Початок натискання мишки
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        slider.style.scrollSnapType = 'none'; // Вимикаємо магніт під час руху
-    });
-
-    // Коли мишка виходить за межі
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
-
-    // Коли відпускаємо мишку
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.style.scrollSnapType = 'x mandatory'; // Повертаємо магніт
-    });
-
-    // Сам рух мишки
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Швидкість гортання
-        slider.scrollLeft = scrollLeft - walk;
-    });
-})();</script>
-<script>
-const slider = document.getElementById('projectsSlider');
-const nextBtn = document.querySelector('.slider-btn.next');
-const prevBtn = document.querySelector('.slider-btn.prev');
-
-const slideWidth = 445;
-
-nextBtn.onclick = () => {
-  slider.scrollLeft += slideWidth;
-};
-
-prevBtn.onclick = () => {
-  slider.scrollLeft -= slideWidth;
-};
-</script>
-
-<script>
-  const track = document.querySelector('.cards-trackj');
-  const cards = document.querySelectorAll('.card-wrapj');
-  const prev = document.querySelector('.prevj');
-  const next = document.querySelector('.nextj');
-
-  let index = 0;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  next.addEventListener('click', () => {
-    index++;
-    if (index >= cards.length) index = 0;
-    updateCarousel();
-  });
-
-  prev.addEventListener('click', () => {
-    index--;
-    if (index < 0) index = cards.length - 1;
-    updateCarousel();
-  });
-</script>
-
-
-<script></script>
- 
-
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
