@@ -226,4 +226,22 @@
     form.reset();
     closeModal();
   });
+
+  /* Premium configurator choices */
+  $$("#siteConfigurator [data-choice-group]").forEach((group) => {
+    const buttons = $$("[data-choice]", group);
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((item) => item.classList.remove("is-selected"));
+        button.classList.add("is-selected");
+        const input = group.nextElementSibling;
+        if (input?.tagName === "INPUT") input.value = button.dataset.choice || "";
+      });
+    });
+  });
+
+  $("#siteConfigurator")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    openModal();
+  });
 })();
