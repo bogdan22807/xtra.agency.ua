@@ -58,10 +58,10 @@
 
       <nav class="hidden lg:flex items-center gap-8" aria-label="Головне меню">
         <a href="#services" class="nav-link text-sm font-medium">Послуги</a>
-        <a href="#process" class="nav-link text-sm font-medium">Процес</a>
-        <a href="#benefits" class="nav-link text-sm font-medium">Переваги</a>
+        <a href="#prices" class="nav-link text-sm font-medium">Ціни</a>
         <a href="#portfolio" class="nav-link text-sm font-medium">Портфоліо</a>
-        <a href="#reviews" class="nav-link text-sm font-medium">Відгуки</a>
+        <a href="#process" class="nav-link text-sm font-medium">Етапи</a>
+        <a href="#calculator" class="nav-link text-sm font-medium">Калькулятор</a>
         <a href="#faq" class="nav-link text-sm font-medium">FAQ</a>
       </nav>
 
@@ -78,10 +78,10 @@
   <div id="menuOverlay" class="hidden fixed inset-0 z-50 bg-black/65 lg:hidden" aria-hidden="true"></div>
   <nav id="mobileMenu" class="mobile-menu fixed right-0 top-0 bottom-0 z-[60] w-[300px] glass p-8 pt-24 flex flex-col gap-6 lg:hidden" aria-label="Мобільне меню">
     <a href="#services" class="text-lg font-semibold hover:text-yellow transition-colors">Послуги</a>
-    <a href="#process" class="text-lg font-semibold hover:text-yellow transition-colors">Процес</a>
-    <a href="#benefits" class="text-lg font-semibold hover:text-yellow transition-colors">Переваги</a>
+    <a href="#prices" class="text-lg font-semibold hover:text-yellow transition-colors">Ціни</a>
     <a href="#portfolio" class="text-lg font-semibold hover:text-yellow transition-colors">Портфоліо</a>
-    <a href="#reviews" class="text-lg font-semibold hover:text-yellow transition-colors">Відгуки</a>
+    <a href="#process" class="text-lg font-semibold hover:text-yellow transition-colors">Етапи</a>
+    <a href="#calculator" class="text-lg font-semibold hover:text-yellow transition-colors">Калькулятор</a>
     <a href="#faq" class="text-lg font-semibold hover:text-yellow transition-colors">FAQ</a>
     <button data-open-consult class="btn-primary mt-4 px-6 py-3 rounded-full text-sm">Замовити сайт</button>
   </nav>
@@ -97,17 +97,17 @@
           <div class="reveal">
             <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow/25 bg-yellow/5 text-yellow text-sm font-semibold mb-8">
               <span class="w-2 h-2 rounded-full bg-yellow animate-pulse"></span>
-              Premium Web Development Agency
+              Сучасні IT-рішення для бізнесу
             </span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.1rem] font-extrabold leading-[1.03] tracking-tight mb-6">
-              Створюємо сайти, які продають ваш бізнес 24/7
+              Розробка сайтів під ключ для вашого бізнесу
             </h1>
             <p class="text-gray-text text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
-              Розробляємо сучасні сайти будь-якої складності — від Landing Page до великих веб-платформ.
+              Створюємо односторінкові, багатосторінкові сайти, інтернет-магазини та веб-системи. Працюємо швидко, прозоро і з гарантією.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <button data-open-consult class="btn-primary px-9 py-4 rounded-full text-base font-bold">Замовити сайт</button>
-              <a href="#portfolio" class="btn-outline px-9 py-4 rounded-full text-base font-semibold text-center">Переглянути роботи</a>
+              <button data-open-consult class="btn-primary px-9 py-4 rounded-full text-base font-bold">Хочу сайт</button>
+              <a href="#prices" class="btn-outline px-9 py-4 rounded-full text-base font-semibold text-center">Перейти до цін</a>
             </div>
           </div>
 
@@ -154,6 +154,23 @@
       </div>
     </section>
 
+    <section class="py-14">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="glass-card rounded-3xl p-7 reveal">
+            <p class="text-yellow text-sm font-semibold uppercase tracking-[0.2em] mb-3">Умови співпраці</p>
+            <h3 class="text-2xl font-bold mb-2">Узгодження перед стартом</h3>
+            <p class="text-gray-text">Перед початком проєкту фіксуємо обсяг робіт, етапи та результат. Ви розумієте, за що платите на кожному кроці.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1">
+            <p class="text-yellow text-sm font-semibold uppercase tracking-[0.2em] mb-3">Гарантія</p>
+            <h3 class="text-2xl font-bold mb-2">365 днів технічної підтримки</h3>
+            <p class="text-gray-text">Після запуску проєкту супроводжуємо сайт і оперативно закриваємо технічні питання в рамках гарантійного періоду.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="py-24 lg:py-32">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14 reveal">
@@ -176,18 +193,18 @@
     <section id="process" class="py-24 lg:py-32 bg-gray-dark/50">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Наш процес</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Прозорий шлях від ідеї до запуску</h2>
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Розробка під ключ включає</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">5 етапів до запуску вашого сайту</h2>
+          <p class="text-gray-text mt-4">Додатково від студії: базова SEO-оптимізація та логотип у подарунок.</p>
         </div>
         <div class="relative">
           <div class="timeline-line hidden md:block" aria-hidden="true"></div>
           <div class="space-y-10 md:space-y-0">
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">01</span><h3 class="text-2xl font-bold mt-2">Аналіз</h3><p class="text-gray-text mt-2">Занурюємось у бізнес-модель, конкурентів і цілі проєкту.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">02</span><h3 class="text-2xl font-bold mt-2">Прототип</h3><p class="text-gray-text mt-2">Створюємо логічну структуру і клікабельний прототип сторінок.</p></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">03</span><h3 class="text-2xl font-bold mt-2">Дизайн</h3><p class="text-gray-text mt-2">Формуємо візуальний стиль, який підкреслює бренд і довіру.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">04</span><h3 class="text-2xl font-bold mt-2">Розробка</h3><p class="text-gray-text mt-2">Верстаємо та програмуємо швидкий, безпечний і масштабований сайт.</p></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">05</span><h3 class="text-2xl font-bold mt-2">Тестування</h3><p class="text-gray-text mt-2">Перевіряємо кросбраузерність, адаптивність та продуктивність.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">06</span><h3 class="text-2xl font-bold mt-2">Запуск</h3><p class="text-gray-text mt-2">Публікуємо проєкт і передаємо команді клієнта готову систему.</p></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">01</span><h3 class="text-2xl font-bold mt-2">Створення прототипу</h3><p class="text-gray-text mt-2">На основі ваших цілей і аналізу конкурентів формуємо структуру майбутнього сайту.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">02</span><h3 class="text-2xl font-bold mt-2">Дизайн під пристрої</h3><p class="text-gray-text mt-2">Робимо адаптивні дизайн-макети для мобільних і ПК з узгодженням кожного ключового блоку.</p></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">03</span><h3 class="text-2xl font-bold mt-2">Верстка та розробка</h3><p class="text-gray-text mt-2">Перетворюємо макет у швидкий, сучасний сайт, підключаємо форми, інтеграції та аналітику.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">04</span><h3 class="text-2xl font-bold mt-2">Тестування та оптимізація</h3><p class="text-gray-text mt-2">Перевірка на всіх пристроях, оптимізація швидкості, базова SEO-підготовка.</p></div></article>
+            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative"><div class="md:text-right md:pr-12"><span class="timeline-step">05</span><h3 class="text-2xl font-bold mt-2">Передача власнику</h3><p class="text-gray-text mt-2">Публікуємо сайт, передаємо доступи, права на проєкт і погоджений набір матеріалів.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
           </div>
         </div>
       </div>
@@ -206,6 +223,35 @@
           <article class="glass-card rounded-3xl p-8 reveal"><p class="text-4xl mb-4">🚀</p><h3 class="text-xl font-bold mb-2">SEO Ready</h3><p class="text-gray-text">Семантична розмітка, метадані й технічна готовність до SEO-просування.</p></article>
           <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-4xl mb-4">🎨</p><h3 class="text-xl font-bold mb-2">Індивідуальний дизайн</h3><p class="text-gray-text">UI/UX рішення з акцентом на конверсію і впізнаваність бренду.</p></article>
           <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-4xl mb-4">💻</p><h3 class="text-xl font-bold mb-2">Сучасні технології</h3><p class="text-gray-text">Створюємо надійні рішення для росту та масштабування бізнесу.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-dark/50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <article class="glass-card rounded-3xl p-8 reveal">
+            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Оплата роботи частинами</span>
+            <h2 class="text-3xl font-extrabold mt-4 mb-5">Працюємо за схемою 50/50</h2>
+            <ul class="space-y-3 text-gray-text">
+              <li>✓ 50% — передоплата перед стартом розробки</li>
+              <li>✓ 50% — після завершення і перевірки сайту</li>
+              <li>✓ Передаємо всі доступи, код і права на проєкт</li>
+            </ul>
+            <button data-open-consult class="btn-primary mt-7 px-7 py-3 rounded-full">Отримати консультацію</button>
+          </article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1">
+            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Інструменти</span>
+            <h3 class="text-2xl font-bold mt-4 mb-5">Технології, які ми використовуємо</h3>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">JavaScript / TypeScript</div>
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">PHP / Python</div>
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">MySQL / PostgreSQL</div>
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">React / Next.js</div>
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">GitHub / CI</div>
+              <div class="rounded-xl border border-white/10 bg-black/30 p-3">SEO / Analytics</div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -289,18 +335,55 @@
       </div>
     </section>
 
-    <section id="stats" class="py-24 lg:py-32">
+    <section id="prices" class="py-24 lg:py-32">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Чому обирають нас</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Цифри, які підтверджують експертизу</h2>
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Тарифи</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Вартість розробки сайтів</h2>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <article class="glass-card rounded-3xl p-8 text-center reveal"><div class="stat-number text-5xl font-extrabold mb-2" data-target="100" data-suffix="+">0</div><p class="text-gray-text">реалізованих сайтів</p></article>
-          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-1"><div class="stat-number text-5xl font-extrabold mb-2" data-target="5" data-suffix="+">0</div><p class="text-gray-text">років досвіду</p></article>
-          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-2"><div class="stat-number text-5xl font-extrabold mb-2" data-target="99" data-suffix="%">0</div><p class="text-gray-text">задоволених клієнтів</p></article>
-          <article class="glass-card rounded-3xl p-8 text-center reveal reveal-delay-3"><div class="stat-number text-5xl font-extrabold mb-2">24/7</div><p class="text-gray-text">підтримка</p></article>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-sm text-gray-text mb-2">До 4 днів</p><h3 class="text-2xl font-bold mb-2">Односторінковий сайт</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 100 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Унікальний дизайн</li><li>✅ Підключення форм заявки</li><li>✅ Базове SEO</li></ul></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-sm text-gray-text mb-2">До 8 днів</p><h3 class="text-2xl font-bold mb-2">Бізнес-сайт</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 200 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Розділи послуг і кейсів</li><li>✅ Контактні форми та карта</li><li>✅ Адаптив на всі пристрої</li></ul></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-sm text-gray-text mb-2">До 14 днів</p><h3 class="text-2xl font-bold mb-2">Інтернет-магазин</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 350 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Каталог і фільтри</li><li>✅ Кошик та checkout</li><li>✅ Адмін-панель</li></ul></article>
+          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-sm text-gray-text mb-2">До 5 днів</p><h3 class="text-2xl font-bold mb-2">Сайт-візитка</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 120 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Блок «Про мене/компанію»</li><li>✅ Контакти + соцмережі</li><li>✅ Швидкий запуск</li></ul></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-sm text-gray-text mb-2">До 16 днів</p><h3 class="text-2xl font-bold mb-2">CRM / ERP система</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 500 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Аналітика і ролі доступу</li><li>✅ Таблиці та automation</li><li>✅ Масштабована архітектура</li></ul></article>
+          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-sm text-gray-text mb-2">Індивідуально</p><h3 class="text-2xl font-bold mb-2">SaaS / Веб-додаток</h3><p class="text-yellow font-extrabold text-3xl mb-4">Від 700 $</p><ul class="text-sm text-gray-text space-y-2"><li>✅ Кастомний функціонал</li><li>✅ Кабінети користувачів</li><li>✅ Підтримка та розвиток</li></ul></article>
         </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="py-24 lg:py-32 bg-gray-dark/50">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Калькулятор вартості</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Залиште заявку і дізнайтесь ціну сайту</h2>
+          <p class="text-gray-text mt-4">4 короткі кроки — і менеджер звʼяжеться з вами протягом 60 хвилин.</p>
+        </div>
+        <form class="glass-card rounded-3xl p-8 sm:p-10 space-y-7 reveal">
+          <div>
+            <h3 class="font-bold mb-3">1. Який тип сайту вам потрібен?</h3>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm">
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2" checked>Односторінковий</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Багатосторінковий</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Інтернет-магазин</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Індивідуальний сайт</label>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3">2. Орієнтовний бюджет</h3>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm">
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2" checked>До 500 $</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">500–1500 $</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">1500–3000 $</label>
+              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">Ще не визначився</label>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="Ваше ім'я" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:outline-none focus:border-yellow/50">
+            <input type="tel" placeholder="+38 (0__) ___ __ __" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:outline-none focus:border-yellow/50">
+          </div>
+          <button type="button" data-open-consult class="btn-primary px-8 py-4 rounded-full font-bold">Наступний етап</button>
+        </form>
       </div>
     </section>
 
