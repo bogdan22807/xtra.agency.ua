@@ -4,6 +4,12 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+  function initIcons() {
+    if (typeof lucide !== "undefined") lucide.createIcons();
+  }
+
+  initIcons();
+
   /* Mobile menu */
   const burger = $("#burger");
   const mobileMenu = $("#mobileMenu");
@@ -11,14 +17,14 @@
 
   function closeMenu() {
     mobileMenu?.classList.remove("is-open");
-    menuOverlay?.classList.add("hidden");
+    if (menuOverlay) menuOverlay.hidden = true;
     burger?.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
 
   function openMenu() {
     mobileMenu?.classList.add("is-open");
-    menuOverlay?.classList.remove("hidden");
+    if (menuOverlay) menuOverlay.hidden = false;
     burger?.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
   }
@@ -35,9 +41,7 @@
   window.addEventListener(
     "scroll",
     () => {
-      header?.classList.toggle("shadow-2xl", window.scrollY > 40);
-      header?.classList.toggle("border-b", window.scrollY > 40);
-      header?.classList.toggle("border-white/10", window.scrollY > 40);
+      header?.classList.toggle("is-scrolled", window.scrollY > 40);
     },
     { passive: true }
   );
@@ -56,43 +60,6 @@
     { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
   );
   revealEls.forEach((el) => revealObserver.observe(el));
-
-  /* Counter animation */
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.target);
-    const suffix = el.dataset.suffix || "";
-    const prefix = el.dataset.prefix || "";
-    const isDecimal = el.dataset.decimal === "true";
-    const duration = 2000;
-    const start = performance.now();
-
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = target * eased;
-      el.textContent =
-        prefix +
-        (isDecimal ? value.toFixed(1) : Math.floor(value).toLocaleString("uk-UA")) +
-        suffix;
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-
-    requestAnimationFrame(tick);
-  }
-
-  const counterEls = $$(".stat-number[data-target]");
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  counterEls.forEach((el) => counterObserver.observe(el));
 
   /* FAQ accordion */
   $$(".faq-item").forEach((item) => {
@@ -136,8 +103,7 @@
     const cardWidth = cards[0].offsetWidth + gap;
     track.style.transform = `translateX(-${reviewIndex * cardWidth}px)`;
     $$(".review-dot").forEach((dot, i) => {
-      dot.classList.toggle("bg-[#FFD400]", i === reviewIndex);
-      dot.classList.toggle("bg-white/20", i !== reviewIndex);
+      dot.classList.toggle("is-active", i === reviewIndex);
     });
   }
 
@@ -147,9 +113,7 @@
     const max = getMaxIndex();
     for (let i = 0; i <= max; i++) {
       const dot = document.createElement("button");
-      dot.className =
-        "review-dot w-2.5 h-2.5 rounded-full transition-colors duration-300 " +
-        (i === 0 ? "bg-[#FFD400]" : "bg-white/20");
+      dot.className = "review-dot" + (i === 0 ? " is-active" : "");
       dot.setAttribute("aria-label", `Відгук ${i + 1}`);
       dot.addEventListener("click", () => {
         reviewIndex = i;
@@ -177,7 +141,6 @@
     updateCarousel();
   });
 
-  /* Auto-advance reviews */
   setInterval(() => {
     if (getMaxIndex() === 0) return;
     reviewIndex = reviewIndex >= getMaxIndex() ? 0 : reviewIndex + 1;
@@ -190,14 +153,13 @@
   const closeBtns = $$("[data-close-consult]");
 
   function openModal() {
-    modal?.classList.remove("hidden");
-    modal?.classList.add("flex");
+    if (modal) modal.hidden = false;
     document.body.style.overflow = "hidden";
+    initIcons();
   }
 
   function closeModal() {
-    modal?.classList.add("hidden");
-    modal?.classList.remove("flex");
+    if (modal) modal.hidden = true;
     document.body.style.overflow = "";
   }
 
@@ -227,7 +189,7 @@
     closeModal();
   });
 
-  /* Premium configurator choices */
+  /* Configurator choices */
   $$("#siteConfigurator [data-choice-group]").forEach((group) => {
     const buttons = $$("[data-choice]", group);
     buttons.forEach((button) => {
