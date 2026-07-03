@@ -160,6 +160,54 @@ h1 {
   object-fit: cover;
 }
 
+.screens-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.screen-shot {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #0d0d0d;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.screen-shot:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 212, 0, 0.38);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.45);
+}
+
+.screen-shot__bar {
+  height: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  position: relative;
+}
+
+.screen-shot__bar::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ff5f56;
+  box-shadow: 14px 0 0 #ffbd2e, 28px 0 0 #27c93f;
+}
+
+.screen-shot img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
 .section {
   margin: 3rem 0;
 }
@@ -231,7 +279,8 @@ footer {
 
 @media (max-width: 900px) {
   .metrics,
-  .cards {
+  .cards,
+  .screens-grid {
     grid-template-columns: 1fr;
   }
 }
