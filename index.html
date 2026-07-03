@@ -387,38 +387,64 @@
       </div>
     </section>
 
-    <section id="calculator" class="py-24 lg:py-32 bg-gray-dark/50">
-      <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-12 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Калькулятор вартості</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Залиште заявку і дізнайтесь ціну сайту</h2>
-          <p class="text-gray-text mt-4">4 короткі кроки — і менеджер звʼяжеться з вами протягом 60 хвилин.</p>
+    <section id="calculator" class="configurator-section py-24 lg:py-32">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="configurator-shell reveal">
+          <div class="configurator-top">
+            <div>
+              <span class="configurator-step">Крок 1/4</span>
+              <h2>Сконфігуруйте свій майбутній сайт</h2>
+              <p>Виберіть тип проєкту, бюджет і залиште контакти — ми підготуємо точний розрахунок.</p>
+            </div>
+            <div class="configurator-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+
+          <form id="siteConfigurator" class="configurator-form">
+            <fieldset class="configurator-group">
+              <legend>1. Який тип сайту вам потрібен?</legend>
+              <div class="configurator-options configurator-options--types" data-choice-group>
+                <button type="button" class="config-card is-selected" data-choice="Односторінковий">
+                  <span class="config-card__check"></span><span class="config-card__icon">▱</span>
+                  <span><strong>Односторінковий</strong><small>Лендинг або сайт-візитка для просування послуги чи товару.</small></span>
+                </button>
+                <button type="button" class="config-card" data-choice="Багатосторінковий">
+                  <span class="config-card__check"></span><span class="config-card__icon">▣</span>
+                  <span><strong>Багатосторінковий</strong><small>Корпоративний сайт з кількома сторінками та розділами.</small></span>
+                </button>
+                <button type="button" class="config-card" data-choice="Інтернет-магазин">
+                  <span class="config-card__check"></span><span class="config-card__icon">◎</span>
+                  <span><strong>Інтернет-магазин</strong><small>Повноцінний магазин з каталогом, кошиком та оплатою онлайн.</small></span>
+                </button>
+                <button type="button" class="config-card" data-choice="Індивідуальний сайт">
+                  <span class="config-card__check"></span><span class="config-card__icon">◇</span>
+                  <span><strong>Індивідуальний сайт</strong><small>Унікальне рішення під ваші задачі та побажання.</small></span>
+                </button>
+              </div>
+              <input type="hidden" name="siteType" value="Односторінковий">
+            </fieldset>
+
+            <fieldset class="configurator-group">
+              <legend>2. Орієнтовний бюджет</legend>
+              <div class="budget-row" data-choice-group>
+                <button type="button" class="budget-pill" data-choice="До 500 $"><span></span>До 500 $</button>
+                <button type="button" class="budget-pill is-selected" data-choice="500–1500 $"><span></span>500–1500 $</button>
+                <button type="button" class="budget-pill" data-choice="1500–3000 $"><span></span>1500–3000 $</button>
+              </div>
+              <input type="hidden" name="budget" value="500–1500 $">
+            </fieldset>
+
+            <div class="configurator-fields">
+              <label><span>Ваше імʼя</span><div><i>👤</i><input type="text" name="name" placeholder="Введіть ваше імʼя"></div></label>
+              <label><span>Телефон для звʼязку</span><div><i>📞</i><input type="tel" name="phone" placeholder="+38 (0__) ___ __ __"></div></label>
+              <label><span>Telegram для звʼязку</span><div><i>✈</i><input type="text" name="telegram" placeholder="@username або номер"></div></label>
+            </div>
+
+            <div class="configurator-bottom">
+              <button type="submit" class="config-submit">Наступний етап <span>→</span></button>
+              <p><span>🔒</span> Ми не передаємо ваші дані третім особам і використовуємо їх тільки для звʼязку з вами.</p>
+            </div>
+          </form>
         </div>
-        <form class="glass-card rounded-3xl p-8 sm:p-10 space-y-7 reveal">
-          <div>
-            <h3 class="font-bold mb-3">1. Який тип сайту вам потрібен?</h3>
-            <div class="grid sm:grid-cols-2 gap-3 text-sm">
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2" checked>Односторінковий</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Багатосторінковий</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Інтернет-магазин</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="type" class="mr-2">Індивідуальний сайт</label>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-bold mb-3">2. Орієнтовний бюджет</h3>
-            <div class="grid sm:grid-cols-2 gap-3 text-sm">
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2" checked>До 500 $</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">500–1500 $</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">1500–3000 $</label>
-              <label class="rounded-xl border border-white/10 p-3"><input type="radio" name="budget" class="mr-2">Ще не визначився</label>
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <input type="text" placeholder="Ваше ім'я" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:outline-none focus:border-yellow/50">
-            <input type="tel" placeholder="+38 (0__) ___ __ __" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:outline-none focus:border-yellow/50">
-          </div>
-          <button type="button" data-open-consult class="btn-primary px-8 py-4 rounded-full font-bold">Наступний етап</button>
-        </form>
       </div>
     </section>
 
