@@ -1,0 +1,72 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="640" y1="0" x2="640" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090909"/><stop offset="1" stop-color="#0E0E0E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="25%" r="50%">
+      <stop stop-color="#FFD400" stop-opacity="0.18"/><stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="80%" r="40%">
+      <stop stop-color="#FFD400" stop-opacity="0.08"/><stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="24" stdDeviation="40" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="yellowGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#FFD400" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <rect width="1280" height="720" fill="url(#glow2)"/>
+  <!-- Grid -->
+  <g opacity="0.035" stroke="#FFD400" stroke-width="0.5">
+    <line x1="0" y1="90" x2="1280" y2="90"/><line x1="0" y1="180" x2="1280" y2="180"/>
+    <line x1="0" y1="270" x2="1280" y2="270"/><line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="90" y1="0" x2="90" y2="720"/><line x1="180" y1="0" x2="180" y2="720"/>
+    <line x1="270" y1="0" x2="270" y2="720"/><line x1="360" y1="0" x2="360" y2="720"/>
+  </g>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="56" rx="14" fill="#121212" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="104" y="56" width="36" height="24" rx="8" fill="#FFD400"/>
+  <text x="152" y="74" fill="#FFFFFF" font-family="system-ui,sans-serif" font-size="16" font-weight="800">Xtra.Agency</text>
+  <rect x="480" y="62" width="56" height="10" rx="4" fill="rgba(255,255,255,0.45)"/>
+  <rect x="552" y="62" width="56" height="10" rx="4" fill="rgba(255,255,255,0.45)"/>
+  <rect x="624" y="62" width="56" height="10" rx="4" fill="rgba(255,255,255,0.45)"/>
+  <rect x="696" y="62" width="56" height="10" rx="4" fill="rgba(255,255,255,0.45)"/>
+  <rect x="1040" y="52" width="132" height="32" rx="16" fill="#FFD400" filter="url(#yellowGlow)"/>
+  <!-- Hero text -->
+  <text x="80" y="200" fill="#FFD400" font-family="system-ui,sans-serif" font-size="14" font-weight="700" letter-spacing="3">WEB DEVELOPMENT AGENCY</text>
+  <text x="80" y="280" fill="#FFFFFF" font-family="system-ui,sans-serif" font-size="56" font-weight="800">!B2>@NT<> A09B8,</text>
+  <text x="80" y="348" fill="#FFFFFF" font-family="system-ui,sans-serif" font-size="56" font-weight="800">O:V <tspan fill="#FFD400">?@>40NBL</tspan></text>
+  <rect x="80" y="380" width="480" height="16" rx="5" fill="rgba(255,255,255,0.45)"/>
+  <rect x="80" y="404" width="420" height="16" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="80" y="460" width="200" height="52" rx="26" fill="#FFD400" filter="url(#yellowGlow)"/>
+  <rect x="300" y="460" width="200" height="52" rx="26" fill="transparent" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <!-- Device mockup -->
+  <rect x="680" y="120" width="520" height="520" rx="24" fill="#121212" stroke="rgba(255,255,255,0.08)" stroke-width="1" filter="url(#cardShadow)"/>
+  <circle cx="716" cy="156" r="6" fill="#FF5F56"/><circle cx="736" cy="156" r="6" fill="#FFBD2E"/><circle cx="756" cy="156" r="6" fill="#27C93F"/>
+  <rect x="780" y="150" width="240" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="704" y="188" width="472" height="420" rx="14" fill="#0A0A0A"/>
+  <!-- Mini site inside -->
+  <rect x="728" y="212" width="200" height="12" rx="4" fill="rgba(255,212,0,0.5)"/>
+  <rect x="728" y="236" width="280" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="728" y="268" width="424" height="140" rx="12" fill="rgba(255,212,0,0.06)" stroke="rgba(255,212,0,0.15)" stroke-width="1"/>
+  <rect x="752" y="296" width="160" height="20" rx="5" fill="#FFFFFF"/>
+  <rect x="752" y="328" width="120" height="10" rx="4" fill="rgba(255,255,255,0.4)"/>
+  <rect x="752" y="360" width="100" height="32" rx="16" fill="#FFD400"/>
+  <rect x="728" y="428" width="130" height="80" rx="10" fill="#1A1A1A"/>
+  <rect x="872" y="428" width="130" height="80" rx="10" fill="#1A1A1A"/>
+  <rect x="1016" y="428" width="130" height="80" rx="10" fill="rgba(255,212,0,0.1)"/>
+  <rect x="728" y="524" width="130" height="60" rx="10" fill="#1A1A1A"/>
+  <rect x="872" y="524" width="130" height="60" rx="10" fill="#1A1A1A"/>
+  <rect x="1016" y="524" width="130" height="60" rx="10" fill="#1A1A1A"/>
+  <!-- Floating cards -->
+  <rect x="600" y="200" width="140" height="80" rx="14" fill="#121212" stroke="rgba(255,212,0,0.3)" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="620" y="220" width="60" height="10" rx="4" fill="#FFD400"/>
+  <rect x="620" y="240" width="80" height="8" rx="3" fill="rgba(255,255,255,0.35)"/>
+  <rect x="620" y="256" width="60" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="1120" y="380" width="120" height="72" rx="14" fill="#121212" stroke="rgba(255,255,255,0.08)" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="1136" y="396" width="48" height="48" rx="24" fill="rgba(255,212,0,0.15)"/>
+  <rect x="1148" y="412" width="24" height="16" rx="4" fill="#FFD400"/>
+</svg>

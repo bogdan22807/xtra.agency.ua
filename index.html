@@ -18,405 +18,417 @@
   <meta property="og:url" content="https://xtra.agency.ua/">
   <meta property="og:title" content="Xtra Agency — Створюємо сайти, які продають ваш бізнес 24/7">
   <meta property="og:description" content="Розробляємо сучасні сайти будь-якої складності — від Landing Page до великих веб-платформ.">
-  <meta property="og:image" content="assets/girl.svg">
+  <meta property="og:image" content="assets/agency-hero-mockup.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Xtra Agency — Розробка сайтів та веб-платформ">
   <meta name="twitter:description" content="Преміальний дизайн, висока швидкість, адаптивність і SEO Ready рішення для бізнесу.">
-  <meta name="twitter:image" content="assets/girl.svg">
+  <meta name="twitter:image" content="assets/agency-hero-mockup.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            black: "#090909",
-            yellow: { DEFAULT: "#FFD400", soft: "#FFE66A" },
-            gray: { dark: "#121212", mid: "#1A1A1A", text: "#A1A1A1" }
-          },
-          fontFamily: { sans: ["Manrope", "Inter", "system-ui", "sans-serif"] },
-          borderRadius: { "4xl": "2rem" }
-        }
-      }
-    };
-  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-black text-white antialiased">
-  <header id="header" class="fixed top-0 inset-x-0 z-50 glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[74px] flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2" aria-label="Xtra Agency">
-        <span class="w-10 h-10 rounded-xl bg-yellow text-black flex items-center justify-center font-extrabold">X</span>
-        <span class="text-lg font-bold tracking-tight">Xtra<span class="text-yellow">.</span>Agency</span>
+<body>
+  <!-- Header -->
+  <header id="header" class="site-header">
+    <div class="ds-container site-header__inner">
+      <a href="#hero" class="site-logo" aria-label="Xtra Agency">
+        <span class="site-logo__mark">X</span>
+        <span>Xtra<span style="color:var(--accent)">.</span>Agency</span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-8" aria-label="Головне меню">
-        <a href="#services" class="nav-link text-sm font-medium">Послуги</a>
-        <a href="#prices" class="nav-link text-sm font-medium">Ціни</a>
-        <a href="#cases" class="nav-link text-sm font-medium">Приклади робіт</a>
-        <a href="#process" class="nav-link text-sm font-medium">Етапи</a>
-        <a href="#calculator" class="nav-link text-sm font-medium">Калькулятор</a>
-        <a href="#faq" class="nav-link text-sm font-medium">FAQ</a>
+      <nav class="site-nav" aria-label="Головне меню">
+        <a href="#services" class="nav-link">Послуги</a>
+        <a href="#cases" class="nav-link">Портфоліо</a>
+        <a href="#prices" class="nav-link">Ціни</a>
+        <a href="#process" class="nav-link">Процес</a>
+        <a href="#calculator" class="nav-link">Калькулятор</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
-      <div class="hidden lg:block">
-        <button data-open-consult class="btn-primary px-6 py-3 rounded-full text-sm">Замовити сайт</button>
-      </div>
+      <button data-open-consult class="ds-btn ds-btn--primary">Замовити сайт</button>
 
-      <button id="burger" class="lg:hidden w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center" aria-expanded="false" aria-label="Відкрити меню">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="burger" class="burger-btn" aria-expanded="false" aria-label="Відкрити меню">
+        <i data-lucide="menu"></i>
       </button>
     </div>
   </header>
 
-  <div id="menuOverlay" class="hidden fixed inset-0 z-50 bg-black/65 lg:hidden" aria-hidden="true"></div>
-  <nav id="mobileMenu" class="mobile-menu fixed right-0 top-0 bottom-0 z-[60] w-[300px] glass p-8 pt-24 flex flex-col gap-6 lg:hidden" aria-label="Мобільне меню">
-    <a href="#services" class="text-lg font-semibold hover:text-yellow transition-colors">Послуги</a>
-    <a href="#prices" class="text-lg font-semibold hover:text-yellow transition-colors">Ціни</a>
-    <a href="#cases" class="text-lg font-semibold hover:text-yellow transition-colors">Приклади робіт</a>
-    <a href="#process" class="text-lg font-semibold hover:text-yellow transition-colors">Етапи</a>
-    <a href="#calculator" class="text-lg font-semibold hover:text-yellow transition-colors">Калькулятор</a>
-    <a href="#faq" class="text-lg font-semibold hover:text-yellow transition-colors">FAQ</a>
-    <button data-open-consult class="btn-primary mt-4 px-6 py-3 rounded-full text-sm">Замовити сайт</button>
+  <div id="menuOverlay" class="menu-overlay" hidden aria-hidden="true"></div>
+  <nav id="mobileMenu" class="mobile-menu" aria-label="Мобільне меню">
+    <a href="#services">Послуги</a>
+    <a href="#cases">Портфоліо</a>
+    <a href="#prices">Ціни</a>
+    <a href="#process">Процес</a>
+    <a href="#calculator">Калькулятор</a>
+    <a href="#faq">FAQ</a>
+    <button data-open-consult class="ds-btn ds-btn--primary ds-btn--full">Замовити сайт</button>
   </nav>
 
   <main>
-    <section id="hero" class="relative pt-[74px] min-h-screen flex items-center overflow-hidden">
-      <div class="absolute inset-0 grid-bg pointer-events-none"></div>
-      <div class="glow-orb glow-orb--yellow w-[540px] h-[540px] -top-32 -right-20"></div>
-      <div class="glow-orb glow-orb--soft w-[420px] h-[420px] -bottom-32 left-10"></div>
+    <!-- Hero -->
+    <section id="hero" class="hero ds-section">
+      <div class="absolute inset-0 grid-bg pointer-events-none" style="position:absolute;inset:0"></div>
+      <div class="glow-orb glow-orb--yellow" style="width:540px;height:540px;position:absolute;top:-128px;right:-80px"></div>
+      <div class="glow-orb glow-orb--soft" style="width:420px;height:420px;position:absolute;bottom:-128px;left:40px"></div>
 
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24 w-full">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="ds-container" style="position:relative;z-index:1">
+        <div class="hero__grid">
           <div class="reveal">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow/25 bg-yellow/5 text-yellow text-sm font-semibold mb-8">
-              <span class="w-2 h-2 rounded-full bg-yellow animate-pulse"></span>
+            <span class="ds-kicker hero__badge">
+              <span class="pulse"></span>
               Сучасні IT-рішення для бізнесу
             </span>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.1rem] font-extrabold leading-[1.03] tracking-tight mb-6">
-              Розробка сайтів під ключ для вашого бізнесу
+            <h1 class="ds-title ds-title--display" style="margin-top:0">
+              <span class="accent">Розробка сайтів</span> під ключ для вашого бізнесу
             </h1>
-            <p class="text-gray-text text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
+            <p class="ds-desc" style="max-width:520px">
               Створюємо односторінкові, багатосторінкові сайти, інтернет-магазини та веб-системи. Працюємо швидко, прозоро і з гарантією.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button data-open-consult class="btn-primary px-9 py-4 rounded-full text-base font-bold">Хочу сайт</button>
-              <a href="#prices" class="btn-outline px-9 py-4 rounded-full text-base font-semibold text-center">Перейти до цін</a>
+            <div class="hero__actions">
+              <button data-open-consult class="ds-btn ds-btn--primary ds-btn--lg">Хочу сайт</button>
+              <a href="#prices" class="ds-btn ds-btn--outline ds-btn--lg">Перейти до цін</a>
             </div>
           </div>
 
-          <div class="reveal reveal-delay-2 hero-visual hidden sm:block" aria-hidden="true">
-            <div class="hero-visual__panel hero-visual__panel--laptop hero-visual__float">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
-                <span class="h-6 flex-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-text px-3 flex items-center ml-2">project-preview.web</span>
-              </div>
-              <div class="rounded-2xl border border-white/10 bg-[#111] p-4">
-                <div class="grid grid-cols-12 gap-3 mb-3">
-                  <div class="col-span-3 h-3 rounded bg-yellow/30"></div>
-                  <div class="col-span-5 h-3 rounded bg-white/10"></div>
-                  <div class="col-span-4 h-3 rounded bg-white/10"></div>
-                </div>
-                <div class="h-36 rounded-xl bg-gradient-to-br from-yellow/20 via-black to-gray-mid border border-white/10 mb-3"></div>
-                <div class="grid grid-cols-3 gap-2">
-                  <div class="h-14 rounded-lg bg-white/5 border border-white/10"></div>
-                  <div class="h-14 rounded-lg bg-yellow/10 border border-yellow/20"></div>
-                  <div class="h-14 rounded-lg bg-white/5 border border-white/10"></div>
-                </div>
-              </div>
+          <div class="reveal reveal-delay-2 hero-visual" aria-hidden="true">
+            <div class="hero-visual__showcase hero-visual__float">
+              <img src="assets/agency-showcase.svg" alt="" width="640" height="360" loading="eager">
             </div>
-            <div class="hero-visual__panel hero-visual__panel--mobile hero-visual__float" style="animation-delay: -1.2s">
-              <div class="w-full h-full rounded-[22px] border border-white/10 bg-[#101010] p-3">
-                <div class="h-1.5 w-10 rounded-full bg-yellow/70 mx-auto mb-4"></div>
-                <div class="h-14 rounded-lg bg-gradient-to-r from-yellow/25 to-yellow/10 mb-2"></div>
-                <div class="h-2 rounded bg-white/10 mb-1"></div>
-                <div class="h-2 w-4/5 rounded bg-white/10 mb-4"></div>
-                <div class="h-10 rounded-xl bg-white/5 border border-white/10 mb-2"></div>
-                <div class="h-10 rounded-xl bg-white/5 border border-white/10"></div>
-              </div>
-            </div>
-            <div class="hero-visual__panel hero-visual__panel--browser hero-visual__float" style="animation-delay: -2.7s">
-              <div class="text-xs text-yellow font-semibold mb-2">UI / UX / Dev</div>
-              <div class="h-2 rounded bg-white/15 mb-1"></div>
-              <div class="h-2 w-4/5 rounded bg-white/15 mb-4"></div>
-              <div class="h-8 rounded-full bg-yellow"></div>
+            <div class="hero-visual__panel hero-visual__panel--mobile hero-visual__float" style="animation-delay:-1.2s">
+              <img src="assets/mockup-landing.svg" alt="" width="140" height="200" style="width:100%;height:100%;object-fit:cover;border-radius:20px">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-14">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="grid md:grid-cols-2 gap-6">
-          <article class="glass-card rounded-3xl p-7 reveal">
-            <p class="text-yellow text-sm font-semibold uppercase tracking-[0.2em] mb-3">Умови співпраці</p>
-            <h3 class="text-2xl font-bold mb-2">Узгодження перед стартом</h3>
-            <p class="text-gray-text">Перед початком проєкту фіксуємо обсяг робіт, етапи та результат. Ви розумієте, за що платите на кожному кроці.</p>
+    <!-- Trust strip -->
+    <section class="ds-section" style="padding-block:48px">
+      <div class="ds-container">
+        <div class="ds-grid ds-grid--2">
+          <article class="ds-card ds-card--interactive info-card reveal">
+            <span class="ds-kicker">Умови співпраці</span>
+            <h3>Узгодження перед стартом</h3>
+            <p>Перед початком проєкту фіксуємо обсяг робіт, етапи та результат. Ви розумієте, за що платите на кожному кроці.</p>
           </article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1">
-            <p class="text-yellow text-sm font-semibold uppercase tracking-[0.2em] mb-3">Гарантія</p>
-            <h3 class="text-2xl font-bold mb-2">365 днів технічної підтримки</h3>
-            <p class="text-gray-text">Після запуску проєкту супроводжуємо сайт і оперативно закриваємо технічні питання в рамках гарантійного періоду.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="py-24 lg:py-32">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Наші послуги</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Розробляємо вебрішення для росту бізнесу</h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <article class="glass-card rounded-3xl p-7 reveal"><h3 class="font-bold text-xl mb-2">Landing Page</h3><p class="text-gray-text text-sm">Сторінки для запуску продукту та швидкого збору лідів.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1"><h3 class="font-bold text-xl mb-2">Корпоративні сайти</h3><p class="text-gray-text text-sm">Сайти компаній із презентацією послуг, кейсів і команди.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-2"><h3 class="font-bold text-xl mb-2">Інтернет-магазини</h3><p class="text-gray-text text-sm">E-commerce платформи з каталогом, кошиком і оплатою.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-3"><h3 class="font-bold text-xl mb-2">CRM системи</h3><p class="text-gray-text text-sm">Внутрішні системи для керування продажами та процесами.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal"><h3 class="font-bold text-xl mb-2">Веб-додатки</h3><p class="text-gray-text text-sm">Кастомні платформи, кабінети клієнтів і SaaS рішення.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-1"><h3 class="font-bold text-xl mb-2">Редизайн сайтів</h3><p class="text-gray-text text-sm">Оновлення UI/UX, структури та технічної бази існуючих сайтів.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-2"><h3 class="font-bold text-xl mb-2">Технічна підтримка</h3><p class="text-gray-text text-sm">Підтримка, оновлення, контроль безпеки й стабільної роботи.</p></article>
-          <article class="glass-card rounded-3xl p-7 reveal reveal-delay-3"><h3 class="font-bold text-xl mb-2">SEO оптимізація</h3><p class="text-gray-text text-sm">Технічна SEO-підготовка для кращої видимості у пошуку.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="py-24 lg:py-32 bg-gray-dark/50">
-      <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-16 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Розробка під ключ включає</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">5 етапів до запуску вашого сайту</h2>
-          <p class="text-gray-text mt-4">Додатково від студії: базова SEO-оптимізація та логотип у подарунок.</p>
-        </div>
-        <div class="relative">
-          <div class="timeline-line hidden md:block" aria-hidden="true"></div>
-          <div class="space-y-10 md:space-y-0">
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">01</span><h3 class="text-2xl font-bold mt-2">Створення прототипу</h3><p class="text-gray-text mt-2">На основі ваших цілей і аналізу конкурентів формуємо структуру майбутнього сайту.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">02</span><h3 class="text-2xl font-bold mt-2">Дизайн під пристрої</h3><p class="text-gray-text mt-2">Робимо адаптивні дизайн-макети для мобільних і ПК з узгодженням кожного ключового блоку.</p></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div class="md:text-right md:pr-12"><span class="timeline-step">03</span><h3 class="text-2xl font-bold mt-2">Верстка та розробка</h3><p class="text-gray-text mt-2">Перетворюємо макет у швидкий, сучасний сайт, підключаємо форми, інтеграції та аналітику.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative md:pb-14"><div></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div class="md:pl-12"><span class="timeline-step">04</span><h3 class="text-2xl font-bold mt-2">Тестування та оптимізація</h3><p class="text-gray-text mt-2">Перевірка на всіх пристроях, оптимізація швидкості, базова SEO-підготовка.</p></div></article>
-            <article class="timeline-item reveal md:grid md:grid-cols-2 md:gap-12 relative"><div class="md:text-right md:pr-12"><span class="timeline-step">05</span><h3 class="text-2xl font-bold mt-2">Передача власнику</h3><p class="text-gray-text mt-2">Публікуємо сайт, передаємо доступи, права на проєкт і погоджений набір матеріалів.</p></div><div class="hidden md:flex absolute left-1/2 -translate-x-1/2"><div class="timeline-dot"></div></div><div></div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="benefits" class="py-24 lg:py-32">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Переваги</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Чому бізнес обирає нашу команду</h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-4xl mb-4">⚡</p><h3 class="text-xl font-bold mb-2">Висока швидкість</h3><p class="text-gray-text">Оптимізований код, швидке завантаження і відмінний Core Web Vitals.</p></article>
-          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-4xl mb-4">📱</p><h3 class="text-xl font-bold mb-2">Адаптивність</h3><p class="text-gray-text">Коректна робота від 320px до 4K на всіх сучасних пристроях.</p></article>
-          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-4xl mb-4">🔒</p><h3 class="text-xl font-bold mb-2">Безпека</h3><p class="text-gray-text">Дотримуємось best practices для безпечної і стабільної роботи сайту.</p></article>
-          <article class="glass-card rounded-3xl p-8 reveal"><p class="text-4xl mb-4">🚀</p><h3 class="text-xl font-bold mb-2">SEO Ready</h3><p class="text-gray-text">Семантична розмітка, метадані й технічна готовність до SEO-просування.</p></article>
-          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1"><p class="text-4xl mb-4">🎨</p><h3 class="text-xl font-bold mb-2">Індивідуальний дизайн</h3><p class="text-gray-text">UI/UX рішення з акцентом на конверсію і впізнаваність бренду.</p></article>
-          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-2"><p class="text-4xl mb-4">💻</p><h3 class="text-xl font-bold mb-2">Сучасні технології</h3><p class="text-gray-text">Створюємо надійні рішення для росту та масштабування бізнесу.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 bg-gray-dark/50">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="grid lg:grid-cols-2 gap-8 items-start">
-          <article class="glass-card rounded-3xl p-8 reveal">
-            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Оплата роботи частинами</span>
-            <h2 class="text-3xl font-extrabold mt-4 mb-5">Працюємо за схемою 50/50</h2>
-            <ul class="space-y-3 text-gray-text">
-              <li>✓ 50% — передоплата перед стартом розробки</li>
-              <li>✓ 50% — після завершення і перевірки сайту</li>
-              <li>✓ Передаємо всі доступи, код і права на проєкт</li>
-            </ul>
-            <button data-open-consult class="btn-primary mt-7 px-7 py-3 rounded-full">Отримати консультацію</button>
-          </article>
-          <article class="glass-card rounded-3xl p-8 reveal reveal-delay-1">
-            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Інструменти</span>
-            <h3 class="text-2xl font-bold mt-4 mb-5">Технології, які ми використовуємо</h3>
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">JavaScript / TypeScript</div>
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">PHP / Python</div>
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">MySQL / PostgreSQL</div>
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">React / Next.js</div>
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">GitHub / CI</div>
-              <div class="rounded-xl border border-white/10 bg-black/30 p-3">SEO / Analytics</div>
-            </div>
+          <article class="ds-card ds-card--interactive info-card reveal reveal-delay-1">
+            <span class="ds-kicker">Гарантія</span>
+            <h3>365 днів технічної підтримки</h3>
+            <p>Після запуску проєкту супроводжуємо сайт і оперативно закриваємо технічні питання в рамках гарантійного періоду.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="cases" class="py-24 lg:py-32 bg-gray-dark/50">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 reveal">
+    <!-- Services -->
+    <section id="services" class="ds-section">
+      <div class="ds-container">
+        <div class="ds-heading ds-heading--center reveal">
+          <span class="ds-kicker">Наші послуги</span>
+          <h2 class="ds-title">Розробляємо <span class="accent">вебрішення</span> для росту бізнесу</h2>
+          <p class="ds-desc">Від лендингу до складних веб-платформ — повний цикл розробки під ваші бізнес-цілі.</p>
+        </div>
+
+        <div class="ds-grid ds-grid--4">
+          <article class="ds-card ds-card--interactive service-card reveal">
+            <span class="ds-icon"><i data-lucide="layout-template"></i></span>
+            <h3>Landing Page</h3>
+            <p>Сторінки для запуску продукту та швидкого збору лідів.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-1">
+            <span class="ds-icon"><i data-lucide="building-2"></i></span>
+            <h3>Корпоративні сайти</h3>
+            <p>Сайти компаній із презентацією послуг, кейсів і команди.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-2">
+            <span class="ds-icon"><i data-lucide="shopping-bag"></i></span>
+            <h3>Інтернет-магазини</h3>
+            <p>E-commerce платформи з каталогом, кошиком і оплатою.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-3">
+            <span class="ds-icon ds-icon--violet"><i data-lucide="database"></i></span>
+            <h3>CRM системи</h3>
+            <p>Внутрішні системи для керування продажами та процесами.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal">
+            <span class="ds-icon ds-icon--blue"><i data-lucide="code-2"></i></span>
+            <h3>Веб-додатки</h3>
+            <p>Кастомні платформи, кабінети клієнтів і SaaS рішення.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-1">
+            <span class="ds-icon"><i data-lucide="paintbrush"></i></span>
+            <h3>Редизайн сайтів</h3>
+            <p>Оновлення UI/UX, структури та технічної бази існуючих сайтів.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-2">
+            <span class="ds-icon ds-icon--green"><i data-lucide="shield-check"></i></span>
+            <h3>Технічна підтримка</h3>
+            <p>Підтримка, оновлення, контроль безпеки й стабільної роботи.</p>
+          </article>
+          <article class="ds-card ds-card--interactive service-card reveal reveal-delay-3">
+            <span class="ds-icon"><i data-lucide="search"></i></span>
+            <h3>SEO оптимізація</h3>
+            <p>Технічна SEO-підготовка для кращої видимості у пошуку.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="cases" class="ds-section cases-section">
+      <div class="ds-container">
+        <div class="ds-heading reveal" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
           <div>
-            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Приклади наших робіт</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Сайти, які ми реалізували за останній період</h2>
+            <span class="ds-kicker">Портфоліо</span>
+            <h2 class="ds-title">Сайти, які ми <span class="accent">реалізували</span></h2>
           </div>
-          <p class="text-gray-text lg:max-w-md">Різні формати проєктів: бізнес-сайти, корпоративні сайти, eCommerce та індивідуальні рішення.</p>
+          <p class="ds-desc" style="margin:0;max-width:400px">Різні формати проєктів: бізнес-сайти, корпоративні сайти, eCommerce та індивідуальні рішення.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-          <article class="portfolio-card reveal">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
+        <div class="ds-grid ds-grid--3">
+          <article class="ds-card case-card reveal">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
                 <img src="assets/mockup-business.svg" loading="lazy" alt="Бізнес сайт для кавового магазину">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="coffee"></i> Бізнес-сайт</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 3 дні</span>
               </div>
-              <div class="portfolio-overlay"><h3>Бізнес сайт для кавового магазину</h3><p>Термін: 3 дні · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Бізнес сайт для кавового магазину</h3>
+                <p>Сучасний односторінковий сайт з каталогом продукції та формою замовлення.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
-          <article class="portfolio-card reveal reveal-delay-1">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
+
+          <article class="ds-card case-card reveal reveal-delay-1">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
                 <img src="assets/mockup-ecommerce.svg" loading="lazy" alt="Бізнес сайт для магазину одягу">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="shirt"></i> E-commerce</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 3 дні</span>
               </div>
-              <div class="portfolio-overlay"><h3>Бізнес сайт для магазину одягу</h3><p>Термін: 3 дні · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Бізнес сайт для магазину одягу</h3>
+                <p>Інтернет-магазин з фільтрами, кошиком та адаптивним дизайном.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
-          <article class="portfolio-card reveal reveal-delay-2">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
+
+          <article class="ds-card case-card reveal reveal-delay-2">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
                 <img src="assets/mockup-corporate.svg" loading="lazy" alt="Корпоративний сайт у сфері нерухомості">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="building"></i> Корпоративний</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 7 днів</span>
               </div>
-              <div class="portfolio-overlay"><h3>Корпоративний сайт у сфері нерухомості</h3><p>Термін: 7 днів · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Корпоративний сайт у сфері нерухомості</h3>
+                <p>Багатосторінковий сайт з каталогом об'єктів та CRM-інтеграцією.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
-          <article class="portfolio-card reveal">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
-                <img src="assets/mockup-landing.svg" loading="lazy" alt="Сайт маркетингової агенції">
+
+          <article class="ds-card case-card reveal">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
+                <img src="assets/mockup-landing.svg" loading="lazy" alt="Сайт агенції для послуг">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="megaphone"></i> Landing</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 5 днів</span>
               </div>
-              <div class="portfolio-overlay"><h3>Сайт агенції для послуг</h3><p>Термін: 5 днів · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Сайт агенції для послуг</h3>
+                <p>Конверсійний лендинг з калькулятором та формою заявки.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
-          <article class="portfolio-card reveal reveal-delay-1">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
+
+          <article class="ds-card case-card reveal reveal-delay-1">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
                 <img src="assets/mockup-webapp.svg" loading="lazy" alt="Веб-сайт компанії з дизайну інтер'єру">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="sofa"></i> Веб-додаток</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 12 днів</span>
               </div>
-              <div class="portfolio-overlay"><h3>Веб-сайт компанії з дизайну інтерʼєру</h3><p>Термін: 12 днів · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Веб-сайт компанії з дизайну інтерʼєру</h3>
+                <p>Портфоліо-проєкт з 3D-галереєю та системою бронювання консультацій.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
-          <article class="portfolio-card reveal reveal-delay-2">
-            <a href="#calculator" aria-label="Детальніше про кейс">
-              <div class="portfolio-thumb browser-frame" aria-hidden="true">
+
+          <article class="ds-card case-card reveal reveal-delay-2">
+            <a href="#calculator">
+              <div class="case-card__media browser-frame">
                 <img src="assets/mockup-saas.svg" loading="lazy" alt="Онлайн сервіс для бронювання турів">
+                <div class="case-card__gradient"></div>
+                <span class="case-card__category"><i data-lucide="plane"></i> SaaS</span>
+                <span class="case-card__time ds-badge"><i data-lucide="clock"></i> 16 днів</span>
               </div>
-              <div class="portfolio-overlay"><h3>Онлайн сервіс для бронювання турів</h3><p>Термін: 16 днів · Детальніше</p></div>
+              <div class="case-card__body">
+                <h3>Онлайн сервіс для бронювання турів</h3>
+                <p>Платформа з пошуком, оплатою та особистим кабінетом клієнта.</p>
+                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+              </div>
             </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="prices" class="prices-section py-24 lg:py-32">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <!-- Pricing -->
+    <section id="prices" class="ds-section prices-section">
+      <div class="ds-container">
         <div class="prices-panel reveal">
           <div class="prices-heading">
-            <span class="prices-kicker">Тарифи під задачі бізнесу</span>
-            <h2 class="prices-title"><span>Вартість</span><br>розробки сайтів</h2>
-            <p>Прозорі ціни без прихованих платежів. Оберіть пакет під ваш бізнес.</p>
+            <span class="ds-kicker">Тарифи під задачі бізнесу</span>
+            <h2 class="prices-title"><span class="accent">Вартість</span><br>розробки сайтів</h2>
+            <p class="ds-desc" style="margin-inline:auto">Прозорі ціни без прихованих платежів. Оберіть пакет під ваш бізнес.</p>
           </div>
+
           <div class="prices-grid">
             <article class="price-card">
-              <span class="price-chip">До 4 днів</span>
-              <div class="price-icon">◎</div>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> До 4 днів</span>
+              <span class="ds-icon"><i data-lucide="file-text"></i></span>
               <h3>Односторінковий сайт</h3>
-              <p class="price-value">Від 100 $</p>
-              <ul><li>Унікальний дизайн</li><li>Підключення форм заявки</li><li>Базове SEO</li></ul>
-              <button data-open-consult class="price-order" type="button">Замовити</button>
+              <p class="price-card__value">Від 100 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Унікальний дизайн</li>
+                <li><i data-lucide="check"></i> Підключення форм заявки</li>
+                <li><i data-lucide="check"></i> Базове SEO</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--ghost ds-btn--full" type="button">Замовити</button>
             </article>
+
             <article class="price-card price-card--featured">
-              <span class="price-popular">Популярний</span>
-              <span class="price-chip">До 8 днів</span>
-              <div class="price-icon">▣</div>
+              <span class="price-card__popular ds-badge ds-badge--accent">Популярний</span>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> До 8 днів</span>
+              <span class="ds-icon"><i data-lucide="layout-grid"></i></span>
               <h3>Бізнес-сайт</h3>
-              <p class="price-value">Від 200 $</p>
-              <ul><li>Розділи послуг і кейсів</li><li>Контактні форми та карта</li><li>Адаптив на всі пристрої</li></ul>
-              <button data-open-consult class="price-order price-order--featured" type="button">Замовити</button>
+              <p class="price-card__value">Від 200 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Розділи послуг і кейсів</li>
+                <li><i data-lucide="check"></i> Контактні форми та карта</li>
+                <li><i data-lucide="check"></i> Адаптив на всі пристрої</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--primary ds-btn--full" type="button">Замовити</button>
             </article>
+
             <article class="price-card">
-              <span class="price-chip">До 14 днів</span>
-              <div class="price-icon">⌁</div>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> До 14 днів</span>
+              <span class="ds-icon"><i data-lucide="shopping-cart"></i></span>
               <h3>Інтернет-магазин</h3>
-              <p class="price-value">Від 350 $</p>
-              <ul><li>Каталог і фільтри</li><li>Кошик та checkout</li><li>Адмін-панель</li></ul>
-              <button data-open-consult class="price-order" type="button">Замовити</button>
+              <p class="price-card__value">Від 350 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Каталог і фільтри</li>
+                <li><i data-lucide="check"></i> Кошик та checkout</li>
+                <li><i data-lucide="check"></i> Адмін-панель</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--ghost ds-btn--full" type="button">Замовити</button>
             </article>
+
             <article class="price-card">
-              <span class="price-chip">До 5 днів</span>
-              <div class="price-icon price-icon--violet">▤</div>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> До 5 днів</span>
+              <span class="ds-icon ds-icon--violet"><i data-lucide="id-card"></i></span>
               <h3>Сайт-візитка</h3>
-              <p class="price-value">Від 120 $</p>
-              <ul><li>Блок «Про мене/компанію»</li><li>Контакти + соцмережі</li><li>Швидкий запуск</li></ul>
-              <button data-open-consult class="price-order" type="button">Замовити</button>
+              <p class="price-card__value">Від 120 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Блок «Про мене/компанію»</li>
+                <li><i data-lucide="check"></i> Контакти + соцмережі</li>
+                <li><i data-lucide="check"></i> Швидкий запуск</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--ghost ds-btn--full" type="button">Замовити</button>
             </article>
+
             <article class="price-card">
-              <span class="price-chip">До 16 днів</span>
-              <div class="price-icon price-icon--green">▧</div>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> До 16 днів</span>
+              <span class="ds-icon ds-icon--green"><i data-lucide="bar-chart-3"></i></span>
               <h3>CRM / ERP система</h3>
-              <p class="price-value">Від 500 $</p>
-              <ul><li>Аналітика і ролі доступу</li><li>Таблиці та automation</li><li>Масштабована архітектура</li></ul>
-              <button data-open-consult class="price-order" type="button">Замовити</button>
+              <p class="price-card__value">Від 500 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Аналітика і ролі доступу</li>
+                <li><i data-lucide="check"></i> Таблиці та automation</li>
+                <li><i data-lucide="check"></i> Масштабована архітектура</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--ghost ds-btn--full" type="button">Замовити</button>
             </article>
+
             <article class="price-card">
-              <span class="price-chip">Індивідуально</span>
-              <div class="price-icon price-icon--blue">▰</div>
+              <span class="price-card__chip ds-badge"><i data-lucide="timer"></i> Індивідуально</span>
+              <span class="ds-icon ds-icon--blue"><i data-lucide="cloud"></i></span>
               <h3>SaaS / Веб-додаток</h3>
-              <p class="price-value">Від 700 $</p>
-              <ul><li>Кастомний функціонал</li><li>Кабінети користувачів</li><li>Підтримка та розвиток</li></ul>
-              <button data-open-consult class="price-order" type="button">Замовити</button>
+              <p class="price-card__value">Від 700 $</p>
+              <ul class="ds-checklist">
+                <li><i data-lucide="check"></i> Кастомний функціонал</li>
+                <li><i data-lucide="check"></i> Кабінети користувачів</li>
+                <li><i data-lucide="check"></i> Підтримка та розвиток</li>
+              </ul>
+              <button data-open-consult class="ds-btn ds-btn--ghost ds-btn--full" type="button">Замовити</button>
             </article>
           </div>
+
           <div class="prices-cta">
-            <span class="prices-cta__icon">⚡</span>
-            <div><strong>Потрібен індивідуальний розрахунок?</strong><p>Підберемо оптимальне рішення під ваш бюджет та задачі.</p></div>
-            <a href="#calculator" class="prices-cta__btn">Розрахувати вартість <span>→</span></a>
+            <span class="prices-cta__icon"><i data-lucide="zap"></i></span>
+            <div>
+              <strong>Потрібен індивідуальний розрахунок?</strong>
+              <p>Підберемо оптимальне рішення під ваш бюджет та задачі.</p>
+            </div>
+            <a href="#calculator" class="ds-btn ds-btn--primary">Розрахувати вартість <i data-lucide="arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="calculator" class="configurator-section py-24 lg:py-32">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <!-- Calculator -->
+    <section id="calculator" class="ds-section configurator-section">
+      <div class="ds-container" style="max-width:960px">
         <div class="configurator-shell reveal">
           <div class="configurator-top">
             <div>
-              <span class="configurator-step">Крок 1/4</span>
-              <h2>Сконфігуруйте свій майбутній сайт</h2>
-              <p>Виберіть тип проєкту, бюджет і залиште контакти — ми підготуємо точний розрахунок.</p>
+              <span class="ds-kicker">Крок 1/4</span>
+              <h2>Сконфігуруйте свій <span class="accent">майбутній сайт</span></h2>
+              <p>Виберіть тип проєкту, бюджет, терміни і залиште контакти — ми підготуємо точний розрахунок.</p>
             </div>
-            <div class="configurator-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="configurator-progress" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span><span></span>
+            </div>
           </div>
 
           <form id="siteConfigurator" class="configurator-form">
             <fieldset class="configurator-group">
               <legend>1. Який тип сайту вам потрібен?</legend>
-              <div class="configurator-options configurator-options--types" data-choice-group>
+              <div class="configurator-options" data-choice-group>
                 <button type="button" class="config-card is-selected" data-choice="Односторінковий">
-                  <span class="config-card__check"></span><span class="config-card__icon">▱</span>
+                  <span class="config-card__check"></span>
+                  <span class="config-card__icon"><i data-lucide="file-text"></i></span>
                   <span><strong>Односторінковий</strong><small>Лендинг або сайт-візитка для просування послуги чи товару.</small></span>
                 </button>
                 <button type="button" class="config-card" data-choice="Багатосторінковий">
-                  <span class="config-card__check"></span><span class="config-card__icon">▣</span>
+                  <span class="config-card__check"></span>
+                  <span class="config-card__icon"><i data-lucide="layout-grid"></i></span>
                   <span><strong>Багатосторінковий</strong><small>Корпоративний сайт з кількома сторінками та розділами.</small></span>
                 </button>
                 <button type="button" class="config-card" data-choice="Інтернет-магазин">
-                  <span class="config-card__check"></span><span class="config-card__icon">◎</span>
+                  <span class="config-card__check"></span>
+                  <span class="config-card__icon"><i data-lucide="shopping-cart"></i></span>
                   <span><strong>Інтернет-магазин</strong><small>Повноцінний магазин з каталогом, кошиком та оплатою онлайн.</small></span>
                 </button>
                 <button type="button" class="config-card" data-choice="Індивідуальний сайт">
-                  <span class="config-card__check"></span><span class="config-card__icon">◇</span>
+                  <span class="config-card__check"></span>
+                  <span class="config-card__icon"><i data-lucide="sparkles"></i></span>
                   <span><strong>Індивідуальний сайт</strong><small>Унікальне рішення під ваші задачі та побажання.</small></span>
                 </button>
               </div>
@@ -425,135 +437,326 @@
 
             <fieldset class="configurator-group">
               <legend>2. Орієнтовний бюджет</legend>
-              <div class="budget-row" data-choice-group>
-                <button type="button" class="budget-pill" data-choice="До 500 $"><span></span>До 500 $</button>
-                <button type="button" class="budget-pill is-selected" data-choice="500–1500 $"><span></span>500–1500 $</button>
-                <button type="button" class="budget-pill" data-choice="1500–3000 $"><span></span>1500–3000 $</button>
+              <div class="configurator-options configurator-options--pills" data-choice-group>
+                <button type="button" class="choice-pill" data-choice="До 500 $"><span class="choice-pill__dot"></span>До 500 $</button>
+                <button type="button" class="choice-pill is-selected" data-choice="500–1500 $"><span class="choice-pill__dot"></span>500–1500 $</button>
+                <button type="button" class="choice-pill" data-choice="1500–3000 $"><span class="choice-pill__dot"></span>1500–3000 $</button>
               </div>
               <input type="hidden" name="budget" value="500–1500 $">
             </fieldset>
 
+            <fieldset class="configurator-group">
+              <legend>3. Бажані терміни реалізації</legend>
+              <div class="configurator-options configurator-options--pills" data-choice-group>
+                <button type="button" class="choice-pill is-selected" data-choice="До 2 тижнів"><span class="choice-pill__dot"></span>До 2 тижнів</button>
+                <button type="button" class="choice-pill" data-choice="2–4 тижні"><span class="choice-pill__dot"></span>2–4 тижні</button>
+                <button type="button" class="choice-pill" data-choice="Більше місяця"><span class="choice-pill__dot"></span>Більше місяця</button>
+              </div>
+              <input type="hidden" name="timeline" value="До 2 тижнів">
+            </fieldset>
+
             <div class="configurator-fields">
-              <label><span>Ваше імʼя</span><div><i>👤</i><input type="text" name="name" placeholder="Введіть ваше імʼя"></div></label>
-              <label><span>Телефон для звʼязку</span><div><i>📞</i><input type="tel" name="phone" placeholder="+38 (0__) ___ __ __"></div></label>
-              <label><span>Telegram для звʼязку</span><div><i>✈</i><input type="text" name="telegram" placeholder="@username або номер"></div></label>
+              <label>
+                <span class="ds-label">Ваше імʼя</span>
+                <div class="ds-input-wrap">
+                  <i data-lucide="user"></i>
+                  <input class="ds-input" type="text" name="name" placeholder="Введіть ваше імʼя">
+                </div>
+              </label>
+              <label>
+                <span class="ds-label">Телефон для звʼязку</span>
+                <div class="ds-input-wrap">
+                  <i data-lucide="phone"></i>
+                  <input class="ds-input" type="tel" name="phone" placeholder="+38 (0__) ___ __ __">
+                </div>
+              </label>
+              <label>
+                <span class="ds-label">Telegram для звʼязку</span>
+                <div class="ds-input-wrap">
+                  <i data-lucide="send"></i>
+                  <input class="ds-input" type="text" name="telegram" placeholder="@username або номер">
+                </div>
+              </label>
             </div>
 
             <div class="configurator-bottom">
-              <button type="submit" class="config-submit">Наступний етап <span>→</span></button>
-              <p><span>🔒</span> Ми не передаємо ваші дані третім особам і використовуємо їх тільки для звʼязку з вами.</p>
+              <button type="submit" class="ds-btn ds-btn--primary ds-btn--lg">Наступний етап <i data-lucide="arrow-right"></i></button>
+              <p><i data-lucide="lock"></i> Ми не передаємо ваші дані третім особам і використовуємо їх тільки для звʼязку з вами.</p>
             </div>
           </form>
         </div>
       </div>
     </section>
 
-    <section id="reviews" class="py-24 lg:py-32 bg-gray-dark/50">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 reveal">
+    <!-- Process -->
+    <section id="process" class="ds-section ds-section--alt">
+      <div class="ds-container" style="max-width:800px">
+        <div class="ds-heading ds-heading--center reveal">
+          <span class="ds-kicker">Розробка під ключ</span>
+          <h2 class="ds-title">5 етапів до <span class="accent">запуску</span> вашого сайту</h2>
+          <p class="ds-desc">Додатково від студії: базова SEO-оптимізація та логотип у подарунок.</p>
+        </div>
+
+        <div class="process-timeline reveal">
+          <div class="process-line" aria-hidden="true"></div>
+
+          <article class="process-step">
+            <div class="process-step__content">
+              <span class="process-step__num">01</span>
+              <h3>Створення прототипу</h3>
+              <p>На основі ваших цілей і аналізу конкурентів формуємо структуру майбутнього сайту.</p>
+            </div>
+            <div class="process-dot" aria-hidden="true"></div>
+            <div class="process-step__content"></div>
+          </article>
+
+          <article class="process-step">
+            <div class="process-step__content"></div>
+            <div class="process-dot" aria-hidden="true"></div>
+            <div class="process-step__content">
+              <span class="process-step__num">02</span>
+              <h3>Дизайн під пристрої</h3>
+              <p>Робимо адаптивні дизайн-макети для мобільних і ПК з узгодженням кожного ключового блоку.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="process-step__content">
+              <span class="process-step__num">03</span>
+              <h3>Верстка та розробка</h3>
+              <p>Перетворюємо макет у швидкий, сучасний сайт, підключаємо форми, інтеграції та аналітику.</p>
+            </div>
+            <div class="process-dot" aria-hidden="true"></div>
+            <div class="process-step__content"></div>
+          </article>
+
+          <article class="process-step">
+            <div class="process-step__content"></div>
+            <div class="process-dot" aria-hidden="true"></div>
+            <div class="process-step__content">
+              <span class="process-step__num">04</span>
+              <h3>Тестування та оптимізація</h3>
+              <p>Перевірка на всіх пристроях, оптимізація швидкості, базова SEO-підготовка.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="process-step__content">
+              <span class="process-step__num">05</span>
+              <h3>Передача власнику</h3>
+              <p>Публікуємо сайт, передаємо доступи, права на проєкт і погоджений набір матеріалів.</p>
+            </div>
+            <div class="process-dot" aria-hidden="true"></div>
+            <div class="process-step__content"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits + Tech -->
+    <section class="ds-section">
+      <div class="ds-container">
+        <div class="ds-grid ds-grid--2" style="align-items:start">
+          <article class="ds-card info-card reveal">
+            <span class="ds-kicker">Оплата частинами</span>
+            <h3>Працюємо за схемою 50/50</h3>
+            <ul class="ds-checklist" style="margin-top:16px">
+              <li><i data-lucide="check"></i> 50% — передоплата перед стартом розробки</li>
+              <li><i data-lucide="check"></i> 50% — після завершення і перевірки сайту</li>
+              <li><i data-lucide="check"></i> Передаємо всі доступи, код і права на проєкт</li>
+            </ul>
+            <button data-open-consult class="ds-btn ds-btn--primary" style="margin-top:24px">Отримати консультацію</button>
+          </article>
+          <article class="ds-card info-card reveal reveal-delay-1">
+            <span class="ds-kicker">Інструменти</span>
+            <h3>Технології, які ми використовуємо</h3>
+            <div class="tech-grid" style="margin-top:16px">
+              <div class="tech-item">JavaScript / TypeScript</div>
+              <div class="tech-item">PHP / Python</div>
+              <div class="tech-item">MySQL / PostgreSQL</div>
+              <div class="tech-item">React / Next.js</div>
+              <div class="tech-item">GitHub / CI</div>
+              <div class="tech-item">SEO / Analytics</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="ds-section ds-section--alt">
+      <div class="ds-container">
+        <div class="ds-heading reveal" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px">
           <div>
-            <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">Відгуки</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Що говорять наші клієнти</h2>
+            <span class="ds-kicker">Відгуки</span>
+            <h2 class="ds-title">Що говорять <span class="accent">наші клієнти</span></h2>
           </div>
-          <div class="flex gap-3">
-            <button id="reviewsPrev" class="w-12 h-12 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Попередній відгук">←</button>
-            <button id="reviewsNext" class="w-12 h-12 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Наступний відгук">→</button>
+          <div class="review-nav">
+            <button id="reviewsPrev" aria-label="Попередній відгук"><i data-lucide="chevron-left"></i></button>
+            <button id="reviewsNext" aria-label="Наступний відгук"><i data-lucide="chevron-right"></i></button>
           </div>
         </div>
-        <div class="overflow-hidden reveal">
-          <div id="reviewsTrack" class="reviews-track gap-6">
-            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Запустили новий корпоративний сайт з інтеграціями CRM. Команда закрила весь цикл: UX, дизайн, розробка і запуск. Результат — стабільний потік заявок.»</p><p class="font-bold">Олексій Кравчук, CEO</p></article>
-            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Отримали інтернет-магазин з високою швидкістю і зручною адмін-панеллю. На мобільному сайт працює бездоганно, продажі зросли вже в перший місяць.»</p><p class="font-bold">Ірина Мельник, E-commerce власниця</p></article>
-            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Потрібна була кастомна SaaS-платформа для клієнтів. Отримали продуману архітектуру, чистий код і якісну технічну підтримку після релізу.»</p><p class="font-bold">Максим Дорошенко, Product Manager</p></article>
-            <article class="review-card glass-card rounded-3xl p-8"><p class="text-yellow text-sm mb-3">★★★★★</p><p class="text-gray-text leading-relaxed mb-5">«Редизайн нашого сайту повністю змінив сприйняття бренду. Новий інтерфейс виглядає преміально і краще конвертує відвідувачів у звернення.»</p><p class="font-bold">Дарина Бондар, Marketing Lead</p></article>
+
+        <div class="overflow-hidden reveal" style="overflow:hidden">
+          <div id="reviewsTrack" class="reviews-track">
+            <article class="ds-card review-card">
+              <div class="review-card__stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p>«Запустили новий корпоративний сайт з інтеграціями CRM. Команда закрила весь цикл: UX, дизайн, розробка і запуск. Результат — стабільний потік заявок.»</p>
+              <span class="review-card__author">Олексій Кравчук, CEO</span>
+            </article>
+            <article class="ds-card review-card">
+              <div class="review-card__stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p>«Отримали інтернет-магазин з високою швидкістю і зручною адмін-панеллю. На мобільному сайт працює бездоганно, продажі зросли вже в перший місяць.»</p>
+              <span class="review-card__author">Ірина Мельник, E-commerce власниця</span>
+            </article>
+            <article class="ds-card review-card">
+              <div class="review-card__stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p>«Потрібна була кастомна SaaS-платформа для клієнтів. Отримали продуману архітектуру, чистий код і якісну технічну підтримку після релізу.»</p>
+              <span class="review-card__author">Максим Дорошенко, Product Manager</span>
+            </article>
+            <article class="ds-card review-card">
+              <div class="review-card__stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p>«Редизайн нашого сайту повністю змінив сприйняття бренду. Новий інтерфейс виглядає преміально і краще конвертує відвідувачів у звернення.»</p>
+              <span class="review-card__author">Дарина Бондар, Marketing Lead</span>
+            </article>
           </div>
-          <div id="reviewsDots" class="flex justify-center gap-2 mt-8"></div>
+          <div id="reviewsDots" class="review-dots"></div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="py-24 lg:py-32">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-14 reveal">
-          <span class="text-yellow text-sm font-semibold uppercase tracking-[0.2em]">FAQ</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 tracking-tight">Питання, які задають найчастіше</h2>
+    <!-- FAQ -->
+    <section id="faq" class="ds-section">
+      <div class="ds-container" style="max-width:800px">
+        <div class="ds-heading ds-heading--center reveal">
+          <span class="ds-kicker">FAQ</span>
+          <h2 class="ds-title">Питання, які задають <span class="accent">найчастіше</span></h2>
         </div>
-        <div class="space-y-4 reveal">
-          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Які типи сайтів ви розробляєте?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Розробляємо Landing Page, корпоративні сайти, інтернет-магазини, особисті сайти, портфоліо, CRM/ERP системи, SaaS-платформи, адмін-панелі та веб-додатки.</div></article>
-          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Скільки триває розробка?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Терміни залежать від складності: Landing Page зазвичай до 2 тижнів, корпоративні сайти та eCommerce довше, а складні веб-системи — за індивідуальним roadmap.</div></article>
-          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Чи можна замовити тільки дизайн або редизайн?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Так, робимо окремо UI/UX дизайн, повний редизайн поточного сайту і поступову модернізацію без зупинки бізнес-процесів.</div></article>
-          <article class="faq-item glass-card rounded-2xl overflow-hidden"><button class="faq-question w-full p-6 text-left flex justify-between items-center text-lg font-semibold" aria-expanded="false"><span>Чи надаєте підтримку після запуску?</span><span class="faq-icon">+</span></button><div class="faq-answer px-6 pb-6 text-gray-text">Так, забезпечуємо технічну підтримку 24/7: моніторинг, оновлення, виправлення й розвиток функціоналу.</div></article>
+
+        <div class="faq-list reveal">
+          <article class="ds-card faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Які типи сайтів ви розробляєте?</span>
+              <span class="faq-icon-wrap"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">Розробляємо Landing Page, корпоративні сайти, інтернет-магазини, особисті сайти, портфоліо, CRM/ERP системи, SaaS-платформи, адмін-панелі та веб-додатки.</div>
+          </article>
+          <article class="ds-card faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Скільки триває розробка?</span>
+              <span class="faq-icon-wrap"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">Терміни залежать від складності: Landing Page зазвичай до 2 тижнів, корпоративні сайти та eCommerce довше, а складні веб-системи — за індивідуальним roadmap.</div>
+          </article>
+          <article class="ds-card faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Чи можна замовити тільки дизайн або редизайн?</span>
+              <span class="faq-icon-wrap"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">Так, робимо окремо UI/UX дизайн, повний редизайн поточного сайту і поступову модернізацію без зупинки бізнес-процесів.</div>
+          </article>
+          <article class="ds-card faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Чи надаєте підтримку після запуску?</span>
+              <span class="faq-icon-wrap"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">Так, забезпечуємо технічну підтримку 24/7: моніторинг, оновлення, виправлення й розвиток функціоналу.</div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="cta" class="pb-24 lg:pb-32">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8 reveal">
-        <div class="glass-card rounded-4xl p-10 sm:p-16 text-center relative overflow-hidden">
-          <div class="cta-glow absolute inset-0"></div>
-          <div class="relative">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">Готові створити сайт, який працюватиме на ваш бізнес?</h2>
-            <button data-open-consult class="btn-primary px-10 py-4 rounded-full text-base sm:text-lg font-bold">Замовити безкоштовну консультацію</button>
-          </div>
+    <!-- CTA -->
+    <section id="cta" class="ds-section" style="padding-top:0">
+      <div class="ds-container reveal">
+        <div class="ds-card cta-block">
+          <h2>Готові створити сайт, який працюватиме на ваш бізнес?</h2>
+          <button data-open-consult class="ds-btn ds-btn--primary ds-btn--lg">Замовити безкоштовну консультацію</button>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-white/10 py-16">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="ds-container">
+      <div class="site-footer__grid">
         <div>
-          <a href="#hero" class="flex items-center gap-2 mb-4">
-            <span class="w-10 h-10 rounded-xl bg-yellow text-black flex items-center justify-center font-extrabold">X</span>
-            <span class="text-lg font-bold">Xtra<span class="text-yellow">.</span>Agency</span>
+          <a href="#hero" class="site-logo" style="margin-bottom:16px">
+            <span class="site-logo__mark">X</span>
+            <span>Xtra<span style="color:var(--accent)">.</span>Agency</span>
           </a>
-          <p class="text-gray-text text-sm">Створюємо швидкі, сучасні та прибуткові сайти для бізнесу будь-якої складності.</p>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4">Навігація</h3>
-          <nav class="flex flex-col gap-2 text-sm text-gray-text" aria-label="Footer navigation">
-            <a href="#services" class="hover:text-yellow transition-colors">Послуги</a>
-            <a href="#cases" class="hover:text-yellow transition-colors">Приклади робіт</a>
-            <a href="#reviews" class="hover:text-yellow transition-colors">Відгуки</a>
-            <a href="#faq" class="hover:text-yellow transition-colors">FAQ</a>
-          </nav>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4">Контакти</h3>
-          <div class="flex flex-col gap-2 text-sm text-gray-text">
-            <a href="https://instagram.com/xtraagency" target="_blank" rel="noopener" class="hover:text-yellow transition-colors">Instagram</a>
-            <a href="https://t.me/xtraagency" target="_blank" rel="noopener" class="hover:text-yellow transition-colors">Telegram</a>
-            <a href="mailto:hello@xtra.agency.ua" class="hover:text-yellow transition-colors">hello@xtra.agency.ua</a>
-            <a href="tel:+380991112233" class="hover:text-yellow transition-colors">+38 (099) 111-22-33</a>
+          <p>Створюємо швидкі, сучасні та прибуткові сайти для бізнесу будь-якої складності.</p>
+          <div class="site-footer__social">
+            <a href="https://instagram.com/xtraagency" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://t.me/xtraagency" target="_blank" rel="noopener" aria-label="Telegram"><i data-lucide="send"></i></a>
+            <a href="mailto:hello@xtra.agency.ua" aria-label="Email"><i data-lucide="mail"></i></a>
           </div>
         </div>
         <div>
-          <h3 class="font-bold mb-4">Документи</h3>
-          <a href="#" class="text-sm text-gray-text hover:text-yellow transition-colors">Політика конфіденційності</a>
+          <h3>Навігація</h3>
+          <nav class="site-footer__links" aria-label="Footer navigation">
+            <a href="#services">Послуги</a>
+            <a href="#cases">Портфоліо</a>
+            <a href="#prices">Ціни</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </div>
+        <div>
+          <h3>Контакти</h3>
+          <div class="site-footer__links">
+            <a href="https://t.me/xtraagency" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:hello@xtra.agency.ua">hello@xtra.agency.ua</a>
+            <a href="tel:+380991112233">+38 (099) 111-22-33</a>
+          </div>
+        </div>
+        <div>
+          <h3>Документи</h3>
+          <div class="site-footer__links">
+            <a href="#">Політика конфіденційності</a>
+          </div>
         </div>
       </div>
-      <div class="pt-6 border-t border-white/10 text-sm text-gray-text flex flex-col sm:flex-row justify-between gap-3">
+      <div class="site-footer__bottom">
         <p>© 2026 Xtra Agency. Усі права захищені.</p>
         <p>Розробка сайтів · Веб-додатки · CRM/ERP · SaaS</p>
       </div>
     </div>
   </footer>
 
-  <div id="consultModal" class="hidden fixed inset-0 z-[100] items-center justify-center p-5 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="glass-card w-full max-w-md rounded-3xl p-8 sm:p-10 relative">
-      <button data-close-consult class="absolute top-4 right-4 w-10 h-10 rounded-full border border-white/10 hover:border-yellow/40 transition-colors" aria-label="Закрити">✕</button>
-      <h3 id="modalTitle" class="text-2xl font-bold mb-2">Замовити сайт</h3>
-      <p class="text-sm text-gray-text mb-6">Заповніть форму — підготуємо рішення саме під ваш бізнес.</p>
-      <form id="consultForm" class="space-y-4">
-        <input type="text" name="name" required placeholder="Ваше ім'я" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none">
-        <input type="tel" name="phone" required placeholder="+38 (0__) ___ __ __" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none">
-        <textarea name="comment" rows="3" placeholder="Який тип сайту або системи вам потрібен?" class="w-full px-5 py-3 rounded-xl bg-black/60 border border-white/15 focus:border-yellow/50 focus:outline-none resize-none"></textarea>
-        <button type="submit" class="btn-primary w-full py-4 rounded-full font-bold">Надіслати заявку</button>
+  <!-- Modal -->
+  <div id="consultModal" class="modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="ds-card modal-card">
+      <button data-close-consult class="modal-close" aria-label="Закрити"><i data-lucide="x"></i></button>
+      <h3 id="modalTitle">Замовити сайт</h3>
+      <p>Заповніть форму — підготуємо рішення саме під ваш бізнес.</p>
+      <form id="consultForm" class="modal-form">
+        <div class="ds-input-wrap">
+          <i data-lucide="user"></i>
+          <input class="ds-input" type="text" name="name" required placeholder="Ваше ім'я">
+        </div>
+        <div class="ds-input-wrap">
+          <i data-lucide="phone"></i>
+          <input class="ds-input" type="tel" name="phone" required placeholder="+38 (0__) ___ __ __">
+        </div>
+        <div class="ds-input-wrap" style="align-items:flex-start;padding-top:16px">
+          <i data-lucide="message-square" style="margin-top:2px"></i>
+          <textarea class="ds-input" name="comment" rows="3" placeholder="Який тип сайту або системи вам потрібен?"></textarea>
+        </div>
+        <button type="submit" class="ds-btn ds-btn--primary ds-btn--full ds-btn--lg">Надіслати заявку</button>
       </form>
     </div>
   </div>
 
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
