@@ -617,24 +617,28 @@ a {
   backdrop-filter: blur(14px);
 }
 
-.hero-visual__panel--laptop {
-  inset: 8% 10% 15% 2%;
-  padding: 16px;
+.hero-visual__showcase {
+  position: absolute;
+  inset: 0 5% 10% 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-card), 0 0 60px rgba(255, 212, 0, 0.08);
+}
+
+.hero-visual__showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-visual__panel--mobile {
-  right: 0;
-  top: 8%;
-  width: 140px;
-  height: 280px;
-  padding: 6px;
-}
-
-.hero-visual__panel--browser {
-  left: -8px;
-  bottom: 10px;
-  width: 190px;
-  padding: 16px;
+  right: -12px;
+  top: 12%;
+  width: 130px;
+  height: 220px;
+  padding: 4px;
+  overflow: hidden;
 }
 
 .hero-visual__float {
