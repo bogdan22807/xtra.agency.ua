@@ -18,10 +18,10 @@ STATE_PATH = DATA_DIR / "state.json"
 class Settings:
     bot_token: str
     owner_id: int
-    mrkt_token: str
     discount_percent: float
     max_price_ton: float
     poll_interval: float
+    tonnel_auth: str
 
 
 def load_settings() -> Settings:
@@ -35,8 +35,8 @@ def load_settings() -> Settings:
     return Settings(
         bot_token=bot_token,
         owner_id=int(owner_raw),
-        mrkt_token=os.getenv("MRKT_TOKEN", "").strip(),
         discount_percent=float(os.getenv("DISCOUNT_PERCENT", "15")),
         max_price_ton=float(os.getenv("MAX_PRICE_TON", "0")),
         poll_interval=float(os.getenv("POLL_INTERVAL", "3")),
+        tonnel_auth=os.getenv("TONNEL_AUTH", "").strip(),
     )

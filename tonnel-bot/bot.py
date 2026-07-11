@@ -13,33 +13,33 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from config import load_settings, STATE_PATH
+from config import STATE_PATH, load_settings
 from monitor import PriceMonitor, is_lol_price
-from mrkt_client import GiftDeal, MrktClient
 from storage import StateStore
+from tonnel_client import GiftDeal, TonnelClient
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s: %(message)s",
 )
-logger = logging.getLogger("mrkt-bot")
+logger = logging.getLogger("tonnel-bot")
 
 settings = load_settings()
 store = StateStore(
     STATE_PATH,
     defaults={
-        "mrkt_token": settings.mrkt_token,
         "discount_percent": settings.discount_percent,
         "max_price_ton": settings.max_price_ton,
         "poll_interval": settings.poll_interval,
         "enabled": False,
         "collections": [],
+        "tonnel_auth": settings.tonnel_auth,
     },
 )
 
 bot = Bot(token=settings.bot_token)
 dp = Dispatcher()
-client = MrktClient(store.state.mrkt_token)
+client = TonnelClient(store.state.tonnel_auth)
 monitor: PriceMonitor | None = None
 _monitor_task: asyncio.Task | None = None
 
@@ -50,11 +50,9 @@ def owner_only(message: Message) -> bool:
 
 def format_deal(deal: GiftDeal) -> str:
     lines = [
-        "🔥 <b>LOL PRICE</b>",
+        "🔥 <b>TONNEL LOL PRICE</b>",
         f"<b>{deal.display_name}</b>",
     ]
-    if deal.collection:
-        lines.append(f"Коллекция: {deal.collection}")
     if deal.model:
         lines.append(f"Модель: {deal.model}")
     if deal.backdrop:
@@ -63,11 +61,13 @@ def format_deal(deal: GiftDeal) -> str:
         lines.append(f"Узор: {deal.symbol}")
 
     lines.append(f"Цена: <b>{deal.price_ton:.4f} TON</b>")
+    lines.append(f"С комиссией ~{deal.buyer_price_ton:.4f} TON")
     if deal.floor_ton is not None:
         lines.append(f"Floor: {deal.floor_ton:.4f} TON")
     if deal.discount_pct is not None:
         lines.append(f"Скидка к floor: <b>{deal.discount_pct:.1f}%</b>")
-    lines.append(f'<a href="{deal.link}">Открыть на MRKT</a>')
+    lines.append(f"ID: <code>{deal.id}</code>")
+    lines.append(f'<a href="{deal.link}">Открыть Tonnel</a>')
     return "\n".join(lines)
 
 
@@ -104,7 +104,7 @@ def ensure_monitor() -> PriceMonitor:
     if monitor is None:
         monitor = PriceMonitor(client, store, send_alert)
     if _monitor_task is None or _monitor_task.done():
-        _monitor_task = asyncio.create_task(monitor_loop(), name="mrkt-monitor")
+        _monitor_task = asyncio.create_task(monitor_loop(), name="tonnel-monitor")
     return monitor
 
 
@@ -115,25 +115,21 @@ async def cmd_start(message: Message) -> None:
         return
     ensure_monitor()
     await message.answer(
-        "MRKT sniper bot\n\n"
+        "Tonnel sniper bot\n\n"
         "Команды:\n"
-        "/token &lt;uuid&gt; — MRKT auth token\n"
         "/on — включить мониторинг\n"
         "/off — выключить\n"
         "/status — статус\n"
         "/discount 15 — % ниже floor\n"
         "/maxprice 5 — потолок цены в TON (0 = выкл)\n"
-        "/add Deserter — коллекция\n"
-        "/del Deserter\n"
+        "/add Desk Calendar — коллекция (gift name)\n"
+        "/del Desk Calendar\n"
         "/collections — список\n"
         "/interval 3 — секунды между сканами\n"
-        "/test — проверить API и показать пример\n"
+        "/test — проверить API\n"
         "/check — скан сейчас\n\n"
-        "Как взять MRKT token:\n"
-        "1) web.telegram.org → @mrkt\n"
-        "2) F12 → Network → auth\n"
-        "3) Response → token\n"
-        "4) /token &lt;вставить&gt;",
+        "Токен Tonnel не обязателен для мониторинга.\n"
+        "Без /add будет шумно — лучше добавить 3–10 коллекций.",
         parse_mode="HTML",
     )
 
@@ -144,38 +140,19 @@ async def cmd_status(message: Message) -> None:
         return
     m = ensure_monitor()
     s = store.state
-    token_ok = "да" if s.mrkt_token else "нет"
     cols = ", ".join(s.collections) if s.collections else "все (шумно)"
     err = m.last_error or "—"
     await message.answer(
         f"Мониторинг: {'ON' if s.enabled else 'OFF'}\n"
-        f"MRKT token: {token_ok}\n"
         f"Discount: {s.discount_percent:g}%\n"
         f"Max price: {s.max_price_ton:g} TON\n"
         f"Interval: {s.poll_interval:g}s\n"
         f"Collections: {cols}\n"
+        f"Known floors: {len(s.floors)}\n"
         f"Alerts sent: {s.alerts_sent}\n"
         f"Last scan gifts: {m.last_scan_count}\n"
         f"Last error: {err}"
     )
-
-
-@dp.message(Command("token"))
-async def cmd_token(message: Message, command: CommandObject) -> None:
-    if not owner_only(message):
-        return
-    token = (command.args or "").strip()
-    if not token:
-        await message.answer("Формат: /token &lt;uuid&gt;", parse_mode="HTML")
-        return
-    store.state.mrkt_token = token
-    store.save()
-    client.set_token(token)
-    try:
-        await client.ping()
-        await message.answer("MRKT token сохранён и работает.")
-    except Exception as exc:
-        await message.answer(f"Токен сохранён, но API ответил ошибкой:\n{exc}")
 
 
 @dp.message(Command("on"))
@@ -183,12 +160,15 @@ async def cmd_on(message: Message) -> None:
     if not owner_only(message):
         return
     ensure_monitor()
-    if not store.state.mrkt_token:
-        await message.answer("Сначала /token &lt;uuid&gt;", parse_mode="HTML")
+    await message.answer("Проверяю Tonnel API...")
+    try:
+        await asyncio.get_event_loop().run_in_executor(None, client.ping)
+    except Exception as exc:
+        await message.answer(f"API недоступен: {exc}")
         return
     store.state.enabled = True
     store.save()
-    await message.answer("Мониторинг включён.")
+    await message.answer("Мониторинг Tonnel включён.")
 
 
 @dp.message(Command("off"))
@@ -260,7 +240,7 @@ async def cmd_add(message: Message, command: CommandObject) -> None:
         return
     name = (command.args or "").strip()
     if not name:
-        await message.answer("Формат: /add Deserter")
+        await message.answer("Формат: /add Desk Calendar")
         return
     existing = {c.lower() for c in store.state.collections}
     if name.lower() in existing:
@@ -277,7 +257,7 @@ async def cmd_del(message: Message, command: CommandObject) -> None:
         return
     name = (command.args or "").strip().lower()
     if not name:
-        await message.answer("Формат: /del Deserter")
+        await message.answer("Формат: /del Desk Calendar")
         return
     before = len(store.state.collections)
     store.state.collections = [c for c in store.state.collections if c.lower() != name]
@@ -295,25 +275,46 @@ async def cmd_collections(message: Message) -> None:
     if not store.state.collections:
         await message.answer("Список пуст → мониторю всё (будет много алертов).")
         return
-    await message.answer("Коллекции:\n" + "\n".join(f"• {c}" for c in store.state.collections))
+    await message.answer(
+        "Коллекции:\n" + "\n".join(f"• {c}" for c in store.state.collections)
+    )
 
 
 @dp.message(Command("test"))
 async def cmd_test(message: Message) -> None:
     if not owner_only(message):
         return
-    if not store.state.mrkt_token:
-        await message.answer("Сначала /token")
-        return
-    client.set_token(store.state.mrkt_token)
-    await message.answer("Проверяю MRKT API...")
+    await message.answer("Проверяю Tonnel API...")
+
+    def _fetch() -> list[GiftDeal]:
+        name = store.state.collections[0] if store.state.collections else None
+        deals = client.search(gift_name=name, newest=False, limit=5)
+        if name:
+            floor = client.collection_floor(name)
+            if floor is not None:
+                store.state.floors[name.lower()] = floor
+                store.save()
+                return [
+                    GiftDeal(
+                        id=d.id,
+                        title=d.title,
+                        collection=d.collection,
+                        model=d.model,
+                        backdrop=d.backdrop,
+                        symbol=d.symbol,
+                        number=d.number,
+                        price_ton=d.price_ton,
+                        floor_ton=floor,
+                        discount_pct=(1 - d.price_ton / floor) * 100 if floor else None,
+                        link=d.link,
+                        raw=d.raw,
+                    )
+                    for d in deals
+                ]
+        return deals
+
     try:
-        gifts = await client.search_gifts(
-            collection_names=store.state.collections[:1] if store.state.collections else [],
-            ordering="Price",
-            low_to_high=True,
-            count=5,
-        )
+        gifts = await asyncio.get_event_loop().run_in_executor(None, _fetch)
     except Exception as exc:
         await message.answer(f"Ошибка: {exc}")
         return
@@ -341,40 +342,63 @@ async def cmd_check(message: Message) -> None:
     if not owner_only(message):
         return
     m = ensure_monitor()
-    if not store.state.mrkt_token:
-        await message.answer("Сначала /token")
-        return
-    await message.answer("Сканирую...")
-    try:
-        # Force re-evaluate without priming skip for manual check of current deals
-        # but still respect seen for alerts; show summary instead
-        client.set_token(store.state.mrkt_token)
-        gifts = await client.search_gifts(
-            collection_names=store.state.collections or [],
-            ordering="Price",
-            low_to_high=True,
-            count=20,
-        )
-        deals = [
-            g
-            for g in gifts
-            if is_lol_price(g, store.state.discount_percent, store.state.max_price_ton)
-        ]
-        if not deals:
-            await message.answer(
-                f"Скан ок ({len(gifts)} лотов). Сейчас lol-price нет "
-                f"по порогу {store.state.discount_percent:g}%."
+    await message.answer("Сканирую Tonnel...")
+
+    def _check() -> tuple[int, list[GiftDeal]]:
+        name = store.state.collections[0] if store.state.collections else None
+        gifts = client.search(gift_name=name, newest=False, limit=20)
+        if name:
+            floor = client.collection_floor(name) or store.state.floors.get(name.lower())
+        else:
+            floor = None
+        deals: list[GiftDeal] = []
+        for g in gifts:
+            key = g.collection.lower()
+            f = floor if name else store.state.floors.get(key)
+            if f is None and not name:
+                # approximate: use min in batch for same name
+                same = [x.price_ton for x in gifts if x.collection.lower() == key]
+                f = min(same) if same else None
+            enriched = GiftDeal(
+                id=g.id,
+                title=g.title,
+                collection=g.collection,
+                model=g.model,
+                backdrop=g.backdrop,
+                symbol=g.symbol,
+                number=g.number,
+                price_ton=g.price_ton,
+                floor_ton=f,
+                discount_pct=(1 - g.price_ton / f) * 100 if f else None,
+                link=g.link,
+                raw=g.raw,
             )
-            return
-        await message.answer(f"Найдено {len(deals)} lol-price. Шлю первые...")
-        for deal in deals[:5]:
-            if store.state.mark_seen(deal.id):
-                await send_alert(deal)
-                store.state.alerts_sent += 1
-        store.save()
-        m.last_scan_count = len(gifts)
+            if is_lol_price(
+                enriched, store.state.discount_percent, store.state.max_price_ton
+            ):
+                deals.append(enriched)
+        return len(gifts), deals
+
+    try:
+        total, deals = await asyncio.get_event_loop().run_in_executor(None, _check)
     except Exception as exc:
         await message.answer(f"Ошибка: {exc}")
+        return
+
+    m.last_scan_count = total
+    if not deals:
+        await message.answer(
+            f"Скан ок ({total} лотов). Сейчас lol-price нет "
+            f"по порогу {store.state.discount_percent:g}%."
+        )
+        return
+
+    await message.answer(f"Найдено {len(deals)} lol-price. Шлю первые...")
+    for deal in deals[:5]:
+        if store.state.mark_seen(deal.id):
+            await send_alert(deal)
+            store.state.alerts_sent += 1
+    store.save()
 
 
 @dp.message(F.text)
@@ -386,20 +410,17 @@ async def fallback(message: Message) -> None:
 async def main() -> None:
     ensure_monitor()
     me = await bot.get_me()
-    logger.info("Bot started as @%s", me.username)
+    logger.info("Bot started as @%s (Tonnel)", me.username)
     try:
         await bot.send_message(
             settings.owner_id,
-            "MRKT bot онлайн. Напиши /help\n"
-            "Нужен MRKT token: /token &lt;uuid&gt;, потом /on",
-            parse_mode="HTML",
+            "Tonnel bot онлайн. Напиши /start → /on",
         )
     except Exception as exc:
         logger.warning("Could not DM owner on startup: %s", exc)
     try:
         await dp.start_polling(bot)
     finally:
-        await client.close()
         await bot.session.close()
 
 
