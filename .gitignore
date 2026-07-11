@@ -10,4 +10,6 @@ venv/
 *.session
 *.session-journal
 mrkt-bot/data/
+tonnel-bot/data/
+!tonnel-bot/.env.example
 .DS_Store

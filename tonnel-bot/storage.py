@@ -8,17 +8,17 @@ from typing import Any
 
 @dataclass
 class BotState:
-    mrkt_token: str = ""
     enabled: bool = False
     discount_percent: float = 15.0
     max_price_ton: float = 0.0
     poll_interval: float = 3.0
     collections: list[str] = field(default_factory=list)
     seen_ids: list[str] = field(default_factory=list)
+    floors: dict[str, float] = field(default_factory=dict)
     alerts_sent: int = 0
+    tonnel_auth: str = ""
 
     def mark_seen(self, gift_id: str, limit: int = 5000) -> bool:
-        """Return True if this id is new."""
         if gift_id in self.seen_ids:
             return False
         self.seen_ids.append(gift_id)
@@ -35,7 +35,13 @@ class StateStore:
 
     def _load(self) -> BotState:
         if not self.path.exists():
-            state = BotState(**{k: v for k, v in self.defaults.items() if k in BotState.__dataclass_fields__})
+            state = BotState(
+                **{
+                    k: v
+                    for k, v in self.defaults.items()
+                    if k in BotState.__dataclass_fields__
+                }
+            )
             self._write(state)
             return state
         raw = json.loads(self.path.read_text(encoding="utf-8"))
