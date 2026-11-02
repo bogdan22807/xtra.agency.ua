@@ -206,4 +206,205 @@
     e.preventDefault();
     openModal();
   });
+
+  /* Phone sleep, dimming, phone vs PC */
+  const deviceLab = $("#deviceLab");
+  if (deviceLab) {
+    const CASES = {
+      coffee: {
+        label: "Кава",
+        kind: "photo",
+        phone: "assets/devices/coffee.webp",
+        phoneAlt: "Сайт кавʼярні на екрані телефону",
+        desktop: "assets/mockup-business.svg",
+        desktopAlt: "Десктопна версія сайту кавʼярні",
+        url: "pricedrop.ua",
+      },
+      clothes: {
+        label: "Одяг",
+        kind: "photo",
+        phone: "assets/devices/clothes.webp",
+        phoneAlt: "Інтернет-магазин одягу на телефоні",
+        desktop: "assets/mockup-ecommerce.svg",
+        desktopAlt: "Десктопна версія інтернет-магазину",
+        url: "chloe.shop",
+      },
+      realty: {
+        label: "Нерухомість",
+        kind: "photo",
+        phone: "assets/devices/realty.webp",
+        phoneAlt: "Сайт нерухомості на телефоні",
+        desktop: "assets/mockup-corporate.svg",
+        desktopAlt: "Десктопна версія сайту нерухомості",
+        url: "ulfry.com",
+      },
+      landing: {
+        label: "Агенція",
+        kind: "screen",
+        phone: "assets/mockup-landing.svg",
+        phoneAlt: "Лендинг агенції на телефоні",
+        desktop: "assets/mockup-landing.svg",
+        desktopAlt: "Лендинг агенції на компʼютері",
+        url: "xtra.agency",
+      },
+      interior: {
+        label: "Інтерʼєр",
+        kind: "photo",
+        phone: "assets/devices/interior.webp",
+        phoneAlt: "Сайт інтерʼєру на телефоні",
+        desktop: "assets/mockup-webapp.svg",
+        desktopAlt: "Десктопна версія сайту інтерʼєру",
+        url: "feather.design",
+      },
+      tours: {
+        label: "Тури",
+        kind: "photo",
+        phone: "assets/devices/tours.webp",
+        phoneAlt: "Сервіс турів на телефоні",
+        desktop: "assets/mockup-saas.svg",
+        desktopAlt: "Десктопна версія сервісу турів",
+        url: "trvl.app",
+      },
+      analytics: {
+        label: "Аналітика",
+        kind: "photo",
+        phone: "assets/devices/analytics.webp",
+        phoneAlt: "Аналітична платформа на телефоні",
+        desktop: "assets/mockup-crm.svg",
+        desktopAlt: "Десктопна версія аналітичної платформи",
+        url: "spaatz.app",
+      },
+      nft: {
+        label: "NFT",
+        kind: "photo",
+        phone: "assets/devices/nft.webp",
+        phoneAlt: "NFT-маркетплейс на телефоні",
+        desktop: "assets/mockup-personal.svg",
+        desktopAlt: "Десктопний макет цифрової платформи",
+        url: "nft.market",
+      },
+    };
+
+    const caseRow = $(".device-lab__cases", deviceLab);
+    const phonePhotoWrap = $("#phonePhotoWrap");
+    const phoneCssWrap = $("#phoneCssWrap");
+    const phoneImg = $("#devicePhoneImg");
+    const phoneScreen = $("#devicePhoneScreen");
+    const pcImg = $("#devicePcImg");
+    const urlEl = $("#deviceUrl");
+    const sleepBtn = $("#deviceSleep");
+    const sleepLabel = $("span", sleepBtn);
+    const dimInput = $("#deviceDim");
+    const dimValue = $("#deviceDimValue");
+    const statusEl = $("#deviceStatus");
+    const modeButtons = $$("[data-device-mode]", deviceLab);
+
+    let caseId = "coffee";
+    let mode = "phone";
+    let asleep = false;
+
+    Object.entries(CASES).forEach(([id, item]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "device-chip" + (id === caseId ? " is-selected" : "");
+      button.dataset.caseId = id;
+      button.setAttribute("role", "tab");
+      button.textContent = item.label;
+      button.addEventListener("click", () => selectCase(id));
+      caseRow.appendChild(button);
+    });
+
+    function paintClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString("uk-UA", { hour: "2-digit", minute: "2-digit" });
+      const date = now.toLocaleDateString("uk-UA", { weekday: "long", day: "numeric", month: "long" });
+      $$(".device-clock", deviceLab).forEach((el) => {
+        el.textContent = time;
+      });
+      $$(".device-date", deviceLab).forEach((el) => {
+        el.textContent = date;
+      });
+    }
+
+    function selectCase(id) {
+      if (!CASES[id]) return;
+      caseId = id;
+      const item = CASES[id];
+      $$(".device-chip", deviceLab).forEach((chip) => {
+        const on = chip.dataset.caseId === id;
+        chip.classList.toggle("is-selected", on);
+        chip.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      const photo = item.kind === "photo";
+      phonePhotoWrap.hidden = !photo;
+      phoneCssWrap.hidden = photo;
+      if (photo) {
+        phoneImg.src = item.phone;
+        phoneImg.alt = item.phoneAlt;
+      } else {
+        phoneScreen.src = item.phone;
+        phoneScreen.alt = item.phoneAlt;
+      }
+      pcImg.src = item.desktop;
+      pcImg.alt = item.desktopAlt;
+      urlEl.textContent = item.url;
+    }
+
+    function setMode(next) {
+      mode = next;
+      deviceLab.dataset.mode = next;
+      modeButtons.forEach((button) => {
+        const on = button.dataset.deviceMode === next;
+        button.classList.toggle("is-selected", on);
+        button.setAttribute("aria-selected", on ? "true" : "false");
+      });
+    }
+
+    function renderState() {
+      deviceLab.classList.toggle("is-asleep", asleep);
+      sleepBtn.classList.toggle("is-active", asleep);
+      sleepBtn.setAttribute("aria-pressed", asleep ? "true" : "false");
+      if (sleepLabel) sleepLabel.textContent = asleep ? "Розбудити телефон" : "Сон на телефоні";
+      const dim = Number(dimInput.value);
+      deviceLab.style.setProperty("--dim", String(dim));
+      deviceLab.style.setProperty("--dim-fill", String((dim / Number(dimInput.max)) * 100));
+      dimValue.textContent = dim + "%";
+      dimInput.setAttribute("aria-valuenow", String(dim));
+      const sleepText = asleep ? "Телефон спить." : "Екран телефону увімкнено.";
+      const where =
+        mode === "both" ? " Порівняння: телефон проти ПК." : mode === "pc" ? " Зараз показано ПК." : " Зараз показано телефон.";
+      statusEl.textContent = sleepText + " Затемнення " + dim + "% діє на телефон і на ПК." + where;
+    }
+
+    modeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setMode(button.dataset.deviceMode);
+        renderState();
+      });
+    });
+
+    sleepBtn.addEventListener("click", () => {
+      asleep = !asleep;
+      if (asleep && mode === "pc") setMode("both");
+      renderState();
+    });
+
+    $$(".js-wake", deviceLab).forEach((button) => {
+      button.addEventListener("click", () => {
+        asleep = false;
+        renderState();
+      });
+    });
+
+    dimInput.addEventListener("input", renderState);
+
+    $$("[data-device-case]").forEach((link) => {
+      link.addEventListener("click", () => selectCase(link.dataset.deviceCase));
+    });
+
+    paintClock();
+    setInterval(paintClock, 1000);
+    selectCase(caseId);
+    renderState();
+  }
 })();

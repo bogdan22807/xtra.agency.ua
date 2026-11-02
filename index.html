@@ -43,6 +43,7 @@
       <nav class="site-nav" aria-label="Головне меню">
         <a href="#services" class="nav-link">Послуги</a>
         <a href="#cases" class="nav-link">Портфоліо</a>
+        <a href="#devices" class="nav-link">Телефон / ПК</a>
         <a href="#prices" class="nav-link">Ціни</a>
         <a href="#process" class="nav-link">Процес</a>
         <a href="#calculator" class="nav-link">Калькулятор</a>
@@ -61,6 +62,7 @@
   <nav id="mobileMenu" class="mobile-menu" aria-label="Мобільне меню">
     <a href="#services">Послуги</a>
     <a href="#cases">Портфоліо</a>
+    <a href="#devices">Телефон і ПК</a>
     <a href="#prices">Ціни</a>
     <a href="#process">Процес</a>
     <a href="#calculator">Калькулятор</a>
@@ -191,7 +193,7 @@
 
         <div class="ds-grid ds-grid--3">
           <article class="ds-card case-card reveal">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="coffee">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-business.svg" loading="lazy" alt="Бізнес сайт для кавового магазину">
                 <div class="case-card__gradient"></div>
@@ -201,13 +203,13 @@
               <div class="case-card__body">
                 <h3>Бізнес сайт для кавового магазину</h3>
                 <p>Сучасний односторінковий сайт з каталогом продукції та формою замовлення.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
 
           <article class="ds-card case-card reveal reveal-delay-1">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="clothes">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-ecommerce.svg" loading="lazy" alt="Бізнес сайт для магазину одягу">
                 <div class="case-card__gradient"></div>
@@ -217,13 +219,13 @@
               <div class="case-card__body">
                 <h3>Бізнес сайт для магазину одягу</h3>
                 <p>Інтернет-магазин з фільтрами, кошиком та адаптивним дизайном.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
 
           <article class="ds-card case-card reveal reveal-delay-2">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="realty">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-corporate.svg" loading="lazy" alt="Корпоративний сайт у сфері нерухомості">
                 <div class="case-card__gradient"></div>
@@ -233,13 +235,13 @@
               <div class="case-card__body">
                 <h3>Корпоративний сайт у сфері нерухомості</h3>
                 <p>Багатосторінковий сайт з каталогом об'єктів та CRM-інтеграцією.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
 
           <article class="ds-card case-card reveal">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="landing">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-landing.svg" loading="lazy" alt="Сайт агенції для послуг">
                 <div class="case-card__gradient"></div>
@@ -249,13 +251,13 @@
               <div class="case-card__body">
                 <h3>Сайт агенції для послуг</h3>
                 <p>Конверсійний лендинг з калькулятором та формою заявки.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
 
           <article class="ds-card case-card reveal reveal-delay-1">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="interior">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-webapp.svg" loading="lazy" alt="Веб-сайт компанії з дизайну інтер'єру">
                 <div class="case-card__gradient"></div>
@@ -265,13 +267,13 @@
               <div class="case-card__body">
                 <h3>Веб-сайт компанії з дизайну інтерʼєру</h3>
                 <p>Портфоліо-проєкт з 3D-галереєю та системою бронювання консультацій.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
 
           <article class="ds-card case-card reveal reveal-delay-2">
-            <a href="#calculator">
+            <a href="#devices" data-device-case="tours">
               <div class="case-card__media browser-frame">
                 <img src="assets/mockup-saas.svg" loading="lazy" alt="Онлайн сервіс для бронювання турів">
                 <div class="case-card__gradient"></div>
@@ -281,10 +283,90 @@
               <div class="case-card__body">
                 <h3>Онлайн сервіс для бронювання турів</h3>
                 <p>Платформа з пошуком, оплатою та особистим кабінетом клієнта.</p>
-                <span class="case-card__link">Детальніше <i data-lucide="arrow-right"></i></span>
+                <span class="case-card__link">На телефоні та ПК <i data-lucide="arrow-right"></i></span>
               </div>
             </a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phone vs PC -->
+    <section id="devices" class="ds-section devices-section">
+      <div class="ds-container">
+        <div class="ds-heading ds-heading--center reveal">
+          <span class="ds-kicker">Телефон і компʼютер</span>
+          <h2 class="ds-title">Сон екрана, затемнення і <span class="accent">телефон проти ПК</span></h2>
+          <p class="ds-desc">Відкрийте кейс на телефоні, присипте екран або зробіть його тьмянішим — і поставте поруч версію для компʼютера.</p>
+        </div>
+
+        <div class="device-lab reveal" id="deviceLab" data-mode="phone">
+          <div class="device-lab__toolbar">
+            <div class="device-lab__cases" role="tablist" aria-label="Оберіть кейс"></div>
+            <div class="device-lab__modes" role="tablist" aria-label="Режим перегляду">
+              <button type="button" class="device-mode is-selected" data-device-mode="phone" role="tab" aria-selected="true">Телефон</button>
+              <button type="button" class="device-mode" data-device-mode="pc" role="tab" aria-selected="false">ПК</button>
+              <button type="button" class="device-mode" data-device-mode="both" role="tab" aria-selected="false">Телефон проти ПК</button>
+            </div>
+            <div class="device-lab__controls">
+              <button type="button" class="device-sleep" id="deviceSleep" aria-pressed="false">
+                <i data-lucide="moon"></i>
+                <span>Сон на телефоні</span>
+              </button>
+              <label class="device-dim">
+                <span class="device-dim__label"><i data-lucide="sun"></i> Затемнення</span>
+                <input id="deviceDim" type="range" min="0" max="78" value="0" aria-valuemin="0" aria-valuemax="78" aria-valuenow="0" aria-label="Затемнення екрана телефону і ПК">
+                <output id="deviceDimValue" for="deviceDim">0%</output>
+              </label>
+            </div>
+          </div>
+          <p class="device-lab__status" id="deviceStatus" role="status">Екран телефону увімкнено. Затемнення діє і на телефон, і на ПК.</p>
+
+          <div class="device-stage">
+            <figure class="device-col device-col--phone">
+              <div class="device-phone" id="devicePhone">
+                <div class="device-phone__photo" id="phonePhotoWrap">
+                  <img id="devicePhoneImg" alt="" width="900" height="1350">
+                  <div class="device-glass device-glass--photo">
+                    <div class="device-glass__dim"></div>
+                    <button type="button" class="device-glass__sleep js-wake">
+                      <span class="device-clock">00:00</span>
+                      <span class="device-date"></span>
+                      <small>Торкніться, щоб розбудити</small>
+                    </button>
+                  </div>
+                </div>
+                <div class="css-phone" id="phoneCssWrap" hidden>
+                  <div class="css-phone__screen">
+                    <img id="devicePhoneScreen" alt="" width="1280" height="820">
+                    <div class="device-glass device-glass--fill">
+                      <div class="device-glass__dim"></div>
+                      <button type="button" class="device-glass__sleep js-wake">
+                        <span class="device-clock">00:00</span>
+                        <span class="device-date"></span>
+                        <small>Торкніться, щоб розбудити</small>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Телефон</figcaption>
+            </figure>
+
+            <figure class="device-col device-col--pc">
+              <div class="device-browser">
+                <div class="device-browser__bar">
+                  <span class="device-browser__dots" aria-hidden="true"></span>
+                  <span class="device-browser__url" id="deviceUrl">xtra.agency</span>
+                </div>
+                <div class="device-browser__view">
+                  <img id="devicePcImg" alt="" width="1280" height="820">
+                  <div class="device-glass__dim device-glass__dim--pc"></div>
+                </div>
+              </div>
+              <figcaption>ПК</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -706,6 +788,7 @@
           <nav class="site-footer__links" aria-label="Footer navigation">
             <a href="#services">Послуги</a>
             <a href="#cases">Портфоліо</a>
+            <a href="#devices">Телефон і ПК</a>
             <a href="#prices">Ціни</a>
             <a href="#faq">FAQ</a>
           </nav>
